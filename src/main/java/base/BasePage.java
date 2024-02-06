@@ -2,6 +2,8 @@ package base;
 
 import java.io.File;
 
+
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -728,6 +730,5 @@ public class BasePage {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;		
 		String psudoCssValue =jse.executeScript(script).toString();
 		return psudoCssValue;
-	}
-	
+	}	
 }

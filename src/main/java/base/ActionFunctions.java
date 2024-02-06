@@ -1,6 +1,7 @@
 package base;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -24,9 +25,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ActionClass extends BasePage {
+public class ActionFunctions extends BasePage {
 
-	public ActionClass(WebDriver driver, WebDriverWait wait) {
+	public ActionFunctions(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
 	}
 
@@ -39,7 +40,6 @@ public class ActionClass extends BasePage {
 	public Sheet wbs;
 	public Cell C;
 	public Row R;
-	public String URTag, ULTag = getCurrentEnvironment() + "_dms";
 
 	// Object declarations.
 	JavascriptExecutor JS = (JavascriptExecutor) driver;
@@ -48,14 +48,13 @@ public class ActionClass extends BasePage {
 
 	public String Path(String filename) {
 		if (filename == null) {
-			return this.path = getFilepath("TestData.xlsx");
+			return this.path = getFilepath(System.getProperty("user.dir") + "/src/main/java/testdata/TestData.xlsx");
 		} else {
 			return this.path = getFilepath(filename);
 		}
 	}
 
 	public void getSheet(String SN) throws IOException {
-
 		FileInputStream fi = new FileInputStream(this.path);
 		wb = new XSSFWorkbook(fi);
 		wbs = wb.getSheet(SN);
@@ -64,7 +63,6 @@ public class ActionClass extends BasePage {
 	}
 
 	public String getcelldata(int RNO, int CNO) {
-
 		R = wbs.getRow(RNO);
 		C = wbs.getRow(RNO).getCell(CNO);
 		DataFormatter DF = new DataFormatter();
@@ -247,21 +245,6 @@ public class ActionClass extends BasePage {
 
 	public String getProjectDirectory() {
 		return System.getProperty("user.dir");
-	}
-
-	/*************** Environment setup(or)Login&Logout operations ***************/
-
-	public String getCurrentEnvironment() {
-		String environment;
-		try {
-			String configFilePath = System.getProperty("user.dir") + "\\config.txt";
-			@SuppressWarnings("resource")
-			BufferedReader configText = new BufferedReader(new FileReader(configFilePath));
-			environment = configText.readLine();
-		} catch (Exception e) {
-			environment = null;
-		}
-		return environment;
 	}
 
 	public boolean findElementsSize(By element) {

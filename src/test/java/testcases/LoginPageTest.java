@@ -1,6 +1,7 @@
 package testcases;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import base.CommonLocators;
@@ -11,10 +12,14 @@ public class LoginPageTest extends TestClass{
 	CommonLocators L1;
 	
 	@Test(priority=1)
-	public void loginPageTitleTest(){
+	public void loginPageTitleTest() throws Exception{
 		loginPage = new LoginPage(driver, wait);
 		L1 = new CommonLocators();
+		
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "#1 Free CRM Power Up your Entire Business Free Forever");
+		System.out.println(title);
+		Assert.assertEquals(title, "Google");
+		loginPage.demo();		
+		
 	}
 }

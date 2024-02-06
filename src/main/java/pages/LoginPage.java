@@ -4,8 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import base.ActionFunctions;
 import base.BasePage;
+import base.CommonLocators;
 
 public class LoginPage extends BasePage{
 	
@@ -25,16 +28,19 @@ public class LoginPage extends BasePage{
 		return driver.getTitle();
 	}
 	
-	public boolean validateCRMImage(){
-		return driver.findElement(crmLogo).isDisplayed();
-	}
-	
-	public HomePage login(String un, String pwd){
-		driver.findElement(username).sendKeys(un);
-		driver.findElement(password).sendKeys(pwd);
-		//loginBtn.click();
-		    	JavascriptExecutor js = (JavascriptExecutor)driver;
-		    	js.executeScript("arguments[0].click();", loginBtn);
-		return new HomePage();
+	public void demo() throws Exception {
+		// Object declaration.
+//				CommonLocators FN1 = new CommonLocators();
+				ActionFunctions FN2 = new ActionFunctions(driver, wait);
+		
+				try {
+						FN2.getSheet("contacts");
+						String data1 = FN2.getcelldata(1, 1);
+						System.out.println(data1);
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+					Assert.fail();
+				}
 	}
 }
