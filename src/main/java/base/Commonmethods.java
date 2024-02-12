@@ -754,7 +754,7 @@ public class Commonmethods {
 		      
 		      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 		      LocalDateTime now1 = LocalDateTime.now();  
-		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+dtf1.format(now1).toString());
+		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString());
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 	
@@ -764,9 +764,9 @@ public class Commonmethods {
        
     }
 	
-	public void wait_timeunit(int waittime,String time_unit) throws InterruptedException {
+	public void wait_timeunit(int waittime,String TU) throws InterruptedException {
 		TimeUnit time = null;
-		switch(time_unit) {
+		switch(TU) {
 		case "SECONDS":
 			time=time.SECONDS;
 			time.sleep(waittime);

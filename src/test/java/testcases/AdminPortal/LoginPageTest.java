@@ -39,6 +39,8 @@ public class LoginPageTest extends TestClass{
 		base.wait(12);
 		base.takescreenshoot();
 		
+		Assert.assertEquals("ITTF-Admin Center", driver.getTitle());
+		
 		System.out.println(CommonPaths.Screenshot_path);
 		  
 		

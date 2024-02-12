@@ -9,6 +9,7 @@
       <class name="testcases.AdminPortal.LoginPageTest">
         <methods>
           <include name="destroyDriver"/>
+          <include name="screenShot"/>
           <include name="setUp"/>
           <include name="admin_portal_loginPageTitleTest"/>
         </methods>
