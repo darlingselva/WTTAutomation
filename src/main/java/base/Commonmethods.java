@@ -6,8 +6,11 @@ import java.io.File;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +19,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -25,13 +29,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.AssertJUnit;
+import org.openqa.selenium.OutputType;
 
-public class BasePage {
+import org.apache.commons.io.FileUtils;
+
+
+
+
+public class Commonmethods {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
 	// Constructor
-	public BasePage(WebDriver driver, WebDriverWait wait) {
+	public Commonmethods(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
 		this.wait = wait;
 	}
@@ -53,7 +63,7 @@ public class BasePage {
 
 	public void click(WebElement webElement) {
 		
-		wait.until(ExpectedConditions.elementToBeClickable(webElement));
+//		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		webElement.click();
 		
 	}
@@ -731,4 +741,67 @@ public class BasePage {
 		String psudoCssValue =jse.executeScript(script).toString();
 		return psudoCssValue;
 	}	
+	
+	public void takescreenshoot() throws IOException {
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+		   LocalDateTime now = LocalDateTime.now();  
+		      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+		      if (!f1.exists()){
+		    	  f1.mkdirs();
+		    	}
+		      
+		      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		      LocalDateTime now1 = LocalDateTime.now();  
+		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+dtf1.format(now1).toString());
+		FileUtils.copyFile(SrcFile, DestFile);
+	}
+	
+	public void Sendkey(WebElement  objName,String key) throws Exception {
+       
+		objName.sendKeys(key);
+       
+    }
+	
+	public void wait_timeunit(int waittime,String time_unit) throws InterruptedException {
+		TimeUnit time = null;
+		switch(time_unit) {
+		case "SECONDS":
+			time=time.SECONDS;
+			time.sleep(waittime);
+			break;
+		case "MINUTES":
+			time=time.MINUTES;
+			time.sleep(waittime);
+			break;
+			
+		case "MILLISECONDS":
+			time=time.MILLISECONDS;
+			time.sleep(waittime);
+			break;
+		case "NANOSECONDS":
+			time=time.NANOSECONDS;
+			time.sleep(waittime);
+			break;	
+		default:
+			time=time.SECONDS;
+			time.sleep(waittime);
+			break;
+		
+		}
+	}
+	
+	public void wait(int waittime) throws InterruptedException {
+		TimeUnit time=TimeUnit.SECONDS;
+		time.sleep(waittime);
+		
+	}
+	
+//	public static void main(String[] args) {
+//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+//		   LocalDateTime now = LocalDateTime.now(); 
+//		   
+//		   System.out.println(CommonPaths.Screenshot_path+dtf.format(now).toString());
+//	}
 }

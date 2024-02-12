@@ -9,7 +9,7 @@
 
 	<test name="WTT App Test Cases">
 		<classes>
-			<class name="testcases.LoginPageTest"></class>
+			<class name="testcases.AdminPortal.LoginPageTest"></class>
 
 		</classes>
 	</test>

@@ -7,10 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import base.ActionFunctions;
-import base.BasePage;
-import base.CommonLocators;
+import base.Commonmethods;
+import base.CommonPaths;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends Commonmethods{
 	
 	public LoginPage(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
@@ -27,6 +27,7 @@ public class LoginPage extends BasePage{
 	public String validateLoginPageTitle(){
 		return driver.getTitle();
 	}
+	
 	
 	public void demo() throws Exception {
 		// Object declaration.

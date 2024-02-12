@@ -14,18 +14,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestBase {
+
+
+public class DriverInitialisation {
 
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 
-	public TestBase() {
+	public DriverInitialisation() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java" + "/config/config.properties");
+			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + "/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -38,8 +39,10 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+//			System.setProperty("webdriver.chrome.driver",
+//					System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",CommonPaths.driver_path+"chromedriver.exe");
+					
 			driver = new ChromeDriver();
 		} else if (browserName.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", 

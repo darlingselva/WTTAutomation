@@ -2,9 +2,9 @@ package testcases;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import base.TestBase;
+import base.DriverInitialisation;
 
-public class TestClass extends TestBase{
+public class TestClass extends DriverInitialisation{
 	
 	@BeforeSuite
 	public void setUp(){
