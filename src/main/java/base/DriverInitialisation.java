@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -22,7 +23,10 @@ public class DriverInitialisation {
 	public static WebDriverWait wait;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
+	
 
+	
+	
 	public DriverInitialisation() {
 		try {
 			prop = new Properties();
@@ -36,7 +40,10 @@ public class DriverInitialisation {
 	}
 
 	public static void initialization() {
-		String browserName = prop.getProperty("browser");
+		
+		
+		//String browserName = prop.getProperty("browser");
+	    String browserName = base.Commonmethods.getvaluefrompropertiesfile("browser");
 
 		if (browserName.equals("chrome")) {
 //			System.setProperty("webdriver.chrome.driver",

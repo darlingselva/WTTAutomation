@@ -30,8 +30,9 @@ public class LoginPageTest extends TestClass{
 		
         Commonmethods base=new Commonmethods(driver,wait);
         
-        admin.ittf_username.sendKeys("oesadmin@wtt.com");
-        admin.ittf_password.sendKeys("oesadmin@123");
+        admin.ittf_username.sendKeys(Commonmethods.getvaluefrompropertiesfile("username"));
+        //admin.ittf_password.sendKeys("oesadmin@123");
+        admin.ittf_password.sendKeys(Commonmethods.getvaluefrompropertiesfile("password"));
 		base.wait(4);
         
 		base.click(admin.ittf_Sign_button);

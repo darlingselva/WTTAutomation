@@ -8,8 +8,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import base.CommonPaths;
@@ -21,6 +23,8 @@ public class TestClass extends DriverInitialisation{
 	public void setUp(){
 		initialization();	
 	}
+	
+	
 	@AfterMethod
 	public void screenShot(ITestResult result){
 	//using ITestResult.FAILURE is equals to result.getStatus then it enter into if condition
@@ -47,6 +51,8 @@ public class TestClass extends DriverInitialisation{
 			} 
 	}
 	}
+	
+	
 	
 	@AfterSuite
 	public void destroyDriver(){

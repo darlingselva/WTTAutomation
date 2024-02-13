@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [WTTTest by packages]" guice-stage="DEVELOPMENT">
+  <test name="testcases.*(failed)">
+    <classes>
+      <class name="testcases.OVR.OVRLoginpageTest">
+        <methods>
+          <include name="destroyDriver"/>
+          <include name="screenShot"/>
+          <include name="admin_portal_loginPageTitleTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.OVR.OVRLoginpageTest -->
+      <class name="testcases.OES.OESloginpageTest">
+        <methods>
+          <include name="destroyDriver"/>
+          <include name="screenShot"/>
+          <include name="admin_portal_loginPageTitleTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.OES.OESloginpageTest -->
+    </classes>
+  </test> <!-- testcases.*(failed) -->
+</suite> <!-- Failed suite [WTTTest by packages] -->

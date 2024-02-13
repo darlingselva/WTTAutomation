@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,13 +33,23 @@ import org.testng.AssertJUnit;
 import org.openqa.selenium.OutputType;
 
 import org.apache.commons.io.FileUtils;
-
+import java.util.ResourceBundle;
 
 
 
 public class Commonmethods {
 	public WebDriver driver;
 	public WebDriverWait wait;
+	
+	public static ResourceBundle resource;
+	
+	public static String properties_file="Adminportal";
+	
+	
+	public static String getvaluefrompropertiesfile(String value) {
+		resource=ResourceBundle.getBundle(properties_file);
+	     return resource.getObject(value).toString();
+	}
 
 	// Constructor
 	public Commonmethods(WebDriver driver, WebDriverWait wait) {
@@ -754,7 +765,7 @@ public class Commonmethods {
 		      
 		      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 		      LocalDateTime now1 = LocalDateTime.now();  
-		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString());
+		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 	
@@ -764,6 +775,7 @@ public class Commonmethods {
        
     }
 	
+	/*
 	public void wait_timeunit(int waittime,String TU) throws InterruptedException {
 		TimeUnit time = null;
 		switch(TU) {
@@ -791,7 +803,7 @@ public class Commonmethods {
 		
 		}
 	}
-	
+	*/
 	public void wait(int waittime) throws InterruptedException {
 		TimeUnit time=TimeUnit.SECONDS;
 		time.sleep(waittime);
@@ -799,9 +811,9 @@ public class Commonmethods {
 	}
 	
 //	public static void main(String[] args) {
-//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-//		   LocalDateTime now = LocalDateTime.now(); 
-//		   
-//		   System.out.println(CommonPaths.Screenshot_path+dtf.format(now).toString());
+//		ResourceBundle resource = ResourceBundle.getBundle("config");
+//		
+//		//resource.getStringArray("url");
+//		System.out.println(resource.getObject("username"));
 //	}
 }
