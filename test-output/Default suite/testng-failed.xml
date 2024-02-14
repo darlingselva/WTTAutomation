@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.AdminPortal.LoginPageTest">
+      <class name="testcases.AdminPortal.Eventcreation">
         <methods>
           <include name="destroyDriver"/>
           <include name="screenShot"/>
+          <include name="crateevent"/>
           <include name="setUp"/>
-          <include name="admin_portal_loginPageTitleTest"/>
         </methods>
-      </class> <!-- testcases.AdminPortal.LoginPageTest -->
+      </class> <!-- testcases.AdminPortal.Eventcreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

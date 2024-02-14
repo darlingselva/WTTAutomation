@@ -45,6 +45,8 @@ public class Commonmethods {
 	
 	public static String properties_file="Adminportal";
 	
+
+	
 	
 	public static String getvaluefrompropertiesfile(String value) {
 		resource=ResourceBundle.getBundle(properties_file);
@@ -72,6 +74,14 @@ public class Commonmethods {
 		
 	}
 
+	public void doubleClick(WebElement Webelement) {
+		
+		wait.until(ExpectedConditions.elementToBeClickable(Webelement));
+		Actions action = new Actions(driver);
+		//WebElement element = driver.findElement(elementLocation);
+		action.doubleClick(Webelement).perform();
+		
+	}
 	public void click(WebElement webElement) {
 		
 //		wait.until(ExpectedConditions.elementToBeClickable(webElement));
