@@ -1,5 +1,7 @@
 package base;
 
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 
 
@@ -16,6 +18,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
+import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
@@ -36,6 +39,13 @@ import org.apache.commons.io.FileUtils;
 import java.util.ResourceBundle;
 
 
+import java.awt.*;
+import org.monte.media.Format;
+import org.monte.media.math.Rational;
+import static org.monte.media.AudioFormatKeys.*;
+import static org.monte.media.VideoFormatKeys.*;
+
+import util.SpecializedScreenRecorder;
 
 public class Commonmethods {
 	public WebDriver driver;
@@ -44,6 +54,8 @@ public class Commonmethods {
 	public static ResourceBundle resource;
 	
 	public static String properties_file="Adminportal";
+	
+	public ScreenRecorder screenRecorder;
 	
 
 	
@@ -819,6 +831,53 @@ public class Commonmethods {
 		time.sleep(waittime);
 		
 	}
+	
+	
+	public void startRecording() throws Exception
+    {
+		File srcfile = new File(CommonPaths.Video_recording_path);
+        
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = screenSize.width;
+        int height = screenSize.height;
+                      
+        Rectangle captureSize = new Rectangle(0,0, width, height);
+                      
+      GraphicsConfiguration gc = GraphicsEnvironment
+         .getLocalGraphicsEnvironment()
+         .getDefaultScreenDevice()
+         .getDefaultConfiguration();
+
+     this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
+         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
+         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+              CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+              DepthKey, 24, FrameRateKey, Rational.valueOf(15),
+              QualityKey, 1.0f,
+              KeyFrameIntervalKey, 15 * 60),
+         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
+              FrameRateKey, Rational.valueOf(30)),
+         null, srcfile, "MyVideo");
+    this.screenRecorder.start();
+                         
+//    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+//	   LocalDateTime now = LocalDateTime.now();  
+//	      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+//	      if (!f1.exists()){
+//	    	  f1.mkdirs();
+//	    	}
+//	      
+//	      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+//	      LocalDateTime now1 = LocalDateTime.now();  
+//	File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
+//	FileUtils.copyFile(srcfile, DestFile);
+     
+    }
+
+    public void stopRecording() throws Exception
+    {
+      this.screenRecorder.stop();
+    }
 	
 //	public static void main(String[] args) {
 //		ResourceBundle resource = ResourceBundle.getBundle("config");

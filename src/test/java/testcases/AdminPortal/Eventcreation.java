@@ -22,6 +22,8 @@ public class Eventcreation extends TestClass{
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
 		WebDriverWait wait1 = new WebDriverWait(driver,20);
 		Commonmethods base=new Commonmethods(driver,wait1);
+		base.startRecording();
+		
 		event.tab_event.click();
 		base.wait(1);
 		event.button_event_core_tab_creation.click();
@@ -123,8 +125,8 @@ public class Eventcreation extends TestClass{
 		base.wait(1);
 		//event.checkbox_event_creation_TournamentAgeCategorysearchresult.click();
 		base.doubleClick(event.checkbox_event_creation_TournamentAgeCategorysearchresult);
-
-		
+		base.wait(5);
+	    base.stopRecording();
 		
 	}
 	
