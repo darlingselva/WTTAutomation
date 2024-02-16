@@ -879,6 +879,10 @@ public class Commonmethods {
       this.screenRecorder.stop();
     }
 	
+    public void jclick(WebElement element) {
+    	JavascriptExecutor executor = (JavascriptExecutor)driver;
+    	executor.executeScript("arguments[0].click();", element);
+    }
 //	public static void main(String[] args) {
 //		ResourceBundle resource = ResourceBundle.getBundle("config");
 //		

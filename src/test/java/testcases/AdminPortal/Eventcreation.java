@@ -29,6 +29,8 @@ public class Eventcreation extends TestClass{
 		base.wait(1);
 		event.button_event_core_tab_creation.click();
 		base.wait(1);
+		
+	
 		event.text_event_core_tab_creation_EventName.sendKeys("test");
 		base.wait(1);
 		event.button_event_core_tab_creation_EventCoreType.click();;
@@ -207,13 +209,91 @@ public class Eventcreation extends TestClass{
 
    
 		
-		
+		//Event creation - 3: Participant Organizations
 		event.tab_event_creation_ParticipantOrganizations.click();
 		base.wait(2);
+		event.button_event_creation_ParticipantOrganizations_AddNew.click();
+		base.wait(2);
+        event.button_event_creation_ParticipantOrganizations_Organization.click();
+        base.wait(2);
+        event.text_event_creation_ParticipantOrganizations_Organizationsearch.sendKeys("india");
+        base.wait(2);
+        event.text_event_creation_ParticipantOrganizations_Organizationsearch.sendKeys(Keys.ENTER);
+        //event.checkbox_event_creation_ParticipantOrganizations_Organizationsearchresult.click();
+        //base.doubleClick(event.checkbox_event_creation_ParticipantOrganizations_Organizationsearchresult);
+        base.wait(2);
+        event.button_event_creation_ParticipantOrganizations_Organizationclose.click();
+        base.wait(2);
+        //event.checkbox_event_creation_selectallcontitent.click();
+        //base.doubleClick(event.checkbox_event_creation_selectallcontitent);
+        //base.wait(12);
+       //base.doubleClick(event.checkbox_event_creation_deselectallcontitent);
+        //event.checkbox_event_creation_selectallcontitent.click();
+        //base.wait(12);
+        //event.button_event_creation_Proceed.click();
+        base.doubleClick(event.button_event_creation_Proceed);
+        base.wait(8);
+        
+		
+        //Event creation - 4: Profile Quotas
+		
 		event.tab_event_creation_ProfileQuotas.click();
 		base.wait(2);
+		
+		event.button_event_creation_ProfileQuotas_AddNew.click();
+		base.wait(2);
+		event.button_event_creation_ProfileQuotas_Profile.click();
+		base.wait(2);
+		event.text_event_creation_ProfileQuotas_Profilesearch.sendKeys("father");
+		base.wait(2);
+		event.checkbox_event_creation_ProfileQuotas_ProfilesearchFather.click();
+		base.wait(6);
+		//event.button_event_creation_ProfileQuotas_Profilearrowicon.click();
+		base.jclick(event.button_event_creation_ProfileQuotas_Profilearrowicon);
+		base.wait(2);
+		event.text_event_creation_ProfileQuotas_ProfilesearchAccreditationCode.sendKeys("1");
+		base.wait(2);
+		event.text_event_creation_ProfileQuotas_ProfilesearchHostCount.sendKeys("1");
+		base.wait(2);
+		event.text_event_creation_ProfileQuotas_ProfilesearchGeneralCount.sendKeys("1");
+		base.wait(2);
+		event.button_event_creation_ProfileQuotas_ProfileProceed.click();
+		base.wait(2);
+		event.button_event_creation_ProfileQuotas_DeleteAll.click();
+		
+		
+		
+		
+		//Event creation - 5: Key Persons
+		
 		event.tab_event_creation_KeyPersons.click();
 		base.wait(2);
+		
+		event.button_event_creation_KeyPersonsAddNew.click();
+		base.wait(2);
+		event.button_event_creation_KeyPersonsProfile.click();
+		base.wait(2);
+		base.jclick(event.checkbox_event_creation_KeyPersonsProfileTournamentSupervisor);
+		base.wait(2);
+		//base.jclick(event.button_event_creation_KeyPersonsIndividualNamedownarrowicon);
+		//event.button_event_creation_KeyPersonsIndividualNamedownarrowicon.click();
+		event.button_event_creation_KeyPersonsIndividualName.click();
+		base.wait(2);
+		event.text_event_creation_KeyPersonsIndividualNamesearch.sendKeys("ken");
+		base.wait(10);
+		//event.text_event_creation_KeyPersonsIndividualNamesearch.sendKeys(Keys.ENTER);
+		event.text_event_creation_KeyPersonsIndividualNamesearchresult.click();
+		base.wait(2);
+		base.jclick(event.button_event_creation_KeyPersonsIndividualNameuparrowicon);
+		base.wait(2);
+		//event.toggle_event_creation_KeyPersonsactive.click();
+		//base.jclick(event.toggle_event_creation_KeyPersonsactive);
+		//base.wait(2);
+		event.button_event_creation_KeyPersonsProceed.click();
+		base.wait(2);
+		
+		//Event creation - 6: Dates
+		
 		event.tab_event_creation_Dates.click();
 		base.wait(2);
 		event.tab_event_creation_Draws.click();
@@ -254,7 +334,8 @@ public class Eventcreation extends TestClass{
 		base.wait(2);
 		event.tab_event_creation_Review.click();
 		base.wait(2);
-
+		
+		
 		
 	    base.stopRecording();
 		

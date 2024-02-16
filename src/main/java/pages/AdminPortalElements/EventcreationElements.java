@@ -257,6 +257,9 @@ public class EventcreationElements {
 		@FindBy(xpath = "//button[text()='Add New']")
 	    public WebElement button_event_creation_ParticipantOrganizations_AddNew;
 		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_ParticipantOrganizations_DeleteAll;
+		
 		@FindBy(xpath = "//input[@name='searchText']")
 	    public WebElement text_event_creation_ParticipantOrganizations_searchText;
 		
@@ -266,23 +269,144 @@ public class EventcreationElements {
 		@FindBy(xpath = "//input[@placeholder='Search Organization']")
 	    public WebElement text_event_creation_ParticipantOrganizations_Organizationsearch;
 		
-		@FindBy(className = "mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted")
+		@FindBy(xpath = "//mat-pseudo-checkbox[@class='mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted']")
 	    public WebElement checkbox_event_creation_ParticipantOrganizations_Organizationsearchresult;
 		
 		@FindBy(xpath = "//mat-icon[text()='close']")
 	    public WebElement button_event_creation_ParticipantOrganizations_Organizationclose;
 		
+		@FindBy(xpath = "//div[@class='mat-checkbox-frame']")
+	    public WebElement checkbox_event_creation_selectallcontitent;
+		
+		@FindBy(xpath = "(//span[contains(text(),'Deselect')])[1]")
+	    public WebElement checkbox_event_creation_deselectallcontitent;
+		
+		@FindBy(xpath = "//span[text()='Proceed']")
+	    public WebElement button_event_creation_Proceed;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_Cancel;
 		
 		//Event creation - 4: Profile Quotas
 		
 		@FindBy(xpath = "//div[text()='4: Profile Quotas']")
 	    public WebElement tab_event_creation_ProfileQuotas;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_ProfileQuotas_AddNew;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_ProfileQuotas_DeleteAll;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../parent::div//span")
+	    public WebElement button_event_creation_ProfileQuotas_Profile;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../parent::div//span[@class='c-angle-up ng-star-inserted']//c-icon")
+	    public WebElement button_event_creation_ProfileQuotas_Profilearrowicon;
+		
+			
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='text']")
+	    public WebElement text_event_creation_ProfileQuotas_Profilesearch;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Coach']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchCoach;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Daughter']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchDaughter;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Father']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchFather;
+        
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Mother']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchMother;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Player']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchPlayer;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Player Guest']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchPlayerGuest;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Referee']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchReferee;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Son']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchSon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Spouse']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchSpouse;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Umpire']")
+	    public WebElement checkbox_event_creation_ProfileQuotas_ProfilesearchUmpire;
+		
+		@FindBy(xpath = "//div[contains(text(),'Accreditation Code')]/../parent::div//input")
+	    public WebElement text_event_creation_ProfileQuotas_ProfilesearchAccreditationCode;
+		
+		@FindBy(xpath = "//div[contains(text(),'Host Count')]/../parent::div//input")
+	    public WebElement text_event_creation_ProfileQuotas_ProfilesearchHostCount;
+		
+		@FindBy(xpath = "//div[contains(text(),'General Count')]/../parent::div//input")
+	    public WebElement text_event_creation_ProfileQuotas_ProfilesearchGeneralCount;
+		
+		@FindBy(xpath = "//span[text()='Proceed']")
+	    public WebElement button_event_creation_ProfileQuotas_ProfileProceed;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_ProfileQuotas_ProfileCancel;
+		
+		//Event creation - 5: Key Persons
+		
 		@FindBy(xpath = "//div[text()='5: Key Persons']")
 	    public WebElement tab_event_creation_KeyPersons;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_KeyPersonsAddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_KeyPersonssearchbar;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../parent::div//span")
+	    public WebElement button_event_creation_KeyPersonsProfile;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='text']")
+	    public WebElement text_event_creation_KeyPersonsProfilesearch;
+		
+		@FindBy(xpath = "//div[contains(text(),'Profile')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Tournament Supervisor']")
+	    public WebElement checkbox_event_creation_KeyPersonsProfileTournamentSupervisor;
+		
+		@FindBy(xpath = "//div[contains(text(),'Individual Name')]/../../parent::div//span[text()='Select Individual Name']")
+	    public WebElement button_event_creation_KeyPersonsIndividualName;
+		
+		@FindBy(xpath = "//div[contains(text(),'Individual Name')]/../parent::div//span[@class='c-angle-down ng-star-inserted']//c-icon")
+	    public WebElement button_event_creation_KeyPersonsIndividualNamedownarrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Individual Name')]/../parent::div//span[@class='c-angle-up ng-star-inserted']//c-icon")
+	    public WebElement button_event_creation_KeyPersonsIndividualNameuparrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Individual Name')]/../../parent::div//input[@type='text']")
+	    public WebElement text_event_creation_KeyPersonsIndividualNamesearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Individual Name')]/../../parent::div//li)[1]")
+	    public WebElement text_event_creation_KeyPersonsIndividualNamesearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Active')]//parent::div//following-sibling::div//label")
+	    public WebElement toggle_event_creation_KeyPersonsactive;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+		public WebElement button_event_creation_KeyPersonsdeleteall;
+		
+		@FindBy(xpath = "//span[text()='Proceed']")
+	    public WebElement button_event_creation_KeyPersonsProceed;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_KeyPersonsCancel;
+		
+		//Event creation - 6: Dates
+		
 		@FindBy(xpath = "//div[text()='6: Dates']")
 	    public WebElement tab_event_creation_Dates;
+		
+		
+		//Event creation - 7: Draws
 		
 		@FindBy(xpath = "//div[text()='7: Draws']")
 	    public WebElement tab_event_creation_Draws;
