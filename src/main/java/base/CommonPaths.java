@@ -10,5 +10,4 @@ public class CommonPaths {
 	public static String Video_recording_path=System.getProperty("user.dir")+"/target/VideoRecording/";
 	
 	
-	
 }
