@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import base.CommonPaths;
 import base.Commonmethods;
 import pages.AdminPortalElements.Admin_login_page_Elements;
-import testcases.TestClass;
+import Snippet.TestClass;
 import testcases.AdminPortal.LoginPageTest;
 
 public class OVRLoginpageTest extends TestClass{

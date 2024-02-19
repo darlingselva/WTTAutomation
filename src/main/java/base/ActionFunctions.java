@@ -50,7 +50,7 @@ public class ActionFunctions extends Commonmethods {
 		if (filename == null) {
 			return this.path = getFilepath(System.getProperty("user.dir") + "/src/main/java/testdata/TestData.xlsx");
 		} else {
-			return this.path = getFilepath(filename);
+			return this.path = getFilepath(CommonPaths.Test_data+filename);
 		}
 	}
 

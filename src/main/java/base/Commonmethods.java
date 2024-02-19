@@ -51,20 +51,23 @@ public class Commonmethods {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	
-	public static ResourceBundle resource;
-	
-	public static String properties_file="Adminportal";
-	
-	public ScreenRecorder screenRecorder;
-	
 
+	public ScreenRecorder screenRecorder;
+public static ResourceBundle resource;
 	
+	public static String properties_file="null";
+	
+	
+	public static String setpropertiesname(String properties_file1) {
+		return properties_file=properties_file1;
+	}
 	
 	public static String getvaluefrompropertiesfile(String value) {
 		resource=ResourceBundle.getBundle(properties_file);
 	     return resource.getObject(value).toString();
 	}
-
+	
+	
 	// Constructor
 	public Commonmethods(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
@@ -792,6 +795,8 @@ public class Commonmethods {
 	}
 	
 	public void Sendkey(WebElement  objName,String key) throws Exception {
+		
+		wait.until(ExpectedConditions.visibilityOf(objName));
        
 		objName.sendKeys(key);
        

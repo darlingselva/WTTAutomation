@@ -24,9 +24,11 @@ public class DriverInitialisation {
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	
+	public static String properties_file1="config";
+	public static ResourceBundle resource1;
+	
+	
 
-	
-	
 	public DriverInitialisation() {
 		try {
 			prop = new Properties();
@@ -43,8 +45,12 @@ public class DriverInitialisation {
 		
 		
 		//String browserName = prop.getProperty("browser");
-	    String browserName = base.Commonmethods.getvaluefrompropertiesfile("browser");
+		resource1=ResourceBundle.getBundle(properties_file1);
+	    //String browserName = base.Commonmethods.getvaluefrompropertiesfile("browser");
+	    String browserName = resource1.getObject("browser").toString();
 
+	    
+        //String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		if (browserName.equals("chrome")) {
 //			System.setProperty("webdriver.chrome.driver",
 //					System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
@@ -57,10 +63,11 @@ public class DriverInitialisation {
 			driver = new FirefoxDriver();
 		}
 
-		driver.manage().window().maximize();
+	driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
+	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.get(prop.getProperty("url"));
+		//driver.get(url);
 	}
 }

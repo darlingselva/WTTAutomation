@@ -1,4 +1,4 @@
-package testcases;
+package Snippet;
 
 import java.io.File;
 import java.time.LocalDateTime;
