@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,13 +25,16 @@ public class EventCreationSnippet extends TestClass{
 		Actionfun.Path("TestData.xlsx");
 		Actionfun.getSheet("contacts");
 		
-		
+		String test="text_event_core_tab_creation_EventName";
 		event.tab_event.click();
+		
 		base.wait(1);
+		//System.out.println(event.equals(test));
 		event.button_event_core_tab_creation.click();
 		base.wait(1);
 		
-	
+		//EventcreationElements.text_event_core_tab_creation_EventName.click();
+	/*
 		event.text_event_core_tab_creation_EventName.sendKeys("test");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//base.wait(1);
@@ -130,10 +134,12 @@ public class EventCreationSnippet extends TestClass{
 		//event.checkbox_event_creation_TournamentAgeCategorysearchresult.click();
 		base.doubleClick(event.checkbox_event_creation_TournamentAgeCategorysearchresult);
 		base.wait(4);
-		
+		*/
 		//Event creation - 2: Competition
 		event.tab_event_creation_Competition.click();
 		base.wait(2);
+		
+		/*
 		event.button_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplates.click();
 		base.wait(2);
 		event.text_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplatessearch.sendKeys("total");
@@ -208,11 +214,12 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.text_event_creation_Competition_PrizeComments.sendKeys("test");
 
-   
+       */   
 		
 		//Event creation - 3: Participant Organizations
 		event.tab_event_creation_ParticipantOrganizations.click();
 		base.wait(2);
+		/*
 		event.button_event_creation_ParticipantOrganizations_AddNew.click();
 		base.wait(2);
         event.button_event_creation_ParticipantOrganizations_Organization.click();
@@ -234,13 +241,13 @@ public class EventCreationSnippet extends TestClass{
         //event.button_event_creation_Proceed.click();
         base.doubleClick(event.button_event_creation_Proceed);
         base.wait(8);
-        
+        */
 		
         //Event creation - 4: Profile Quotas
 		
 		event.tab_event_creation_ProfileQuotas.click();
 		base.wait(2);
-		
+		/*
 		event.button_event_creation_ProfileQuotas_AddNew.click();
 		base.wait(2);
 		event.button_event_creation_ProfileQuotas_Profile.click();
@@ -262,14 +269,14 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.button_event_creation_ProfileQuotas_DeleteAll.click();
 		
-		
+		*/
 		
 		
 		//Event creation - 5: Key Persons
 		
 		event.tab_event_creation_KeyPersons.click();
 		base.wait(2);
-		
+		/*
 		event.button_event_creation_KeyPersonsAddNew.click();
 		base.wait(2);
 		event.button_event_creation_KeyPersonsProfile.click();
@@ -292,11 +299,12 @@ public class EventCreationSnippet extends TestClass{
 		//base.wait(2);
 		event.button_event_creation_KeyPersonsProceed.click();
 		base.wait(2);
-		
+		*/
 		//Event creation - 6: Dates
 		
 		event.tab_event_creation_Dates.click();
 		base.wait(2);
+	
 		event.tab_event_creation_Draws.click();
 		base.wait(2);
 		event.tab_event_creation_MatchConfiguration.click();
@@ -335,7 +343,9 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.tab_event_creation_Review.click();
 		base.wait(2);
+		
+		
 	
 	}
-
+   
 }

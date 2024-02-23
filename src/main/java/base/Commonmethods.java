@@ -878,6 +878,11 @@ public static ResourceBundle resource;
 //	FileUtils.copyFile(srcfile, DestFile);
      
     }
+	
+	public void scrolldown(WebElement element) {
+		JavascriptExecutor je = (JavascriptExecutor)driver;
+		je.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	}
 
     public void stopRecording() throws Exception
     {

@@ -24,7 +24,7 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation;
 		
 		@FindBy(xpath = "//input[@placeholder='Name']")
-	    public WebElement text_event_core_tab_creation_EventName;
+	    public static WebElement text_event_core_tab_creation_EventName;
 		
 		@FindBy(xpath = "//span[text()='All Event Core Types']/../../parent::mat-select")
 	    public WebElement button_event_core_tab_creation_EventCoreType;
@@ -406,61 +406,380 @@ public class EventcreationElements {
 	    public WebElement tab_event_creation_Dates;
 		
 		
+		@FindBy(xpath = "//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Dates_Startingdate;
+		
+		@FindBy(xpath = "//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Dates_Enddate;
+		
+		
 		//Event creation - 7: Draws
 		
 		@FindBy(xpath = "//div[text()='7: Draws']")
 	    public WebElement tab_event_creation_Draws;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Draws_AddNew;
+		
+		@FindBy(xpath = "//div[contains(text(),'Draw Name')]//parent::div//parent::div//mat-select")
+	    public WebElement button_event_creation_Draws_DrawName;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Draw Name']")
+	    public WebElement text_event_creation_Draws_SearchDrawName;
+		
+		@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_Draws_StartDateTime;
+		
+		@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Draws_TimeZone;
+		
+		@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input")
+	    public WebElement text_event_creation_Draws_TimeZonesearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_Draws_TimeZonesearchresult;
+        
+		@FindBy(xpath = "(//div[contains(text(),'Venue')])[4]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Draws_Venue;
+		
+		@FindBy(xpath = "//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_Draws_EndDate;
+		
+		@FindBy(xpath = "(//button[text()='Add New'])[2]")
+	    public WebElement button_event_creation_Draws_DrawNames_AddNew;
+		
+		@FindBy(xpath = "//input[@placeholder='Enter Draw Name']")
+	    public WebElement text_event_creation_Draws_DrawNames_EnterDrawName;
+		
+		@FindBy(xpath = "//span[text()='Select Default Language Code']")
+	    public WebElement button_event_creation_Draws_DrawNames_SelectDefaultLanguageCode;
+		
+		@FindBy(xpath = "//button[text()='Remove']")
+	    public WebElement button_event_creation_Draws_DrawNames_Remove;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Draws_DeleteAll;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Draws_searchbar;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='View']")
+	    public WebElement button_event_creation_Draws_table_view;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='Edit']")
+	    public WebElement button_event_creation_Draws_table_Edit;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='Delete']")
+	    public WebElement button_event_creation_Draws_table_Delete;
+		
+		@FindBy(xpath = "//div[text()='Draw Name']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Draws_view_DrawName;
+        
+		@FindBy(xpath = "//div[text()='Start Date Time']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Draws_view_StartDateTime;
+		
+		@FindBy(xpath = "//div[text()='Time Zone']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Draws_view_TimeZone;
+		
+		@FindBy(xpath = "//div[text()='Venue']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Draws_view_Venue;
+		
+		@FindBy(xpath = "//div[text()='End Date Time']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Draws_view_EndDateTime;
+		
+		@FindBy(xpath = "((//table)[2]//td)[1]")
+	    public WebElement text_event_creation_Draws_view_table_drawname;
+		
+		@FindBy(xpath = "((//table)[2]//td)[2]")
+	    public WebElement text_event_creation_Draws_view_table_Language;
+		
+		@FindBy(xpath = "//span[text()='Close']")
+	    public WebElement button_event_creation_Draws_view_close;
+		
+		//Event creation - 8: Match Configuration
+		
 		@FindBy(xpath = "//div[text()='8: Match Configuration']")
 	    public WebElement tab_event_creation_MatchConfiguration;
-
+		
+		@FindBy(xpath = "//i[@mattooltip='Quick Action']")
+	    public WebElement text_event_creation_MatchConfiguration_QuickAction;
+		
+		@FindBy(xpath = "//i[@mattooltip='Refresh']")
+	    public WebElement text_event_creation_MatchConfiguration_Refresh;
+		
+		@FindBy(xpath = "//div[contains(text(),'Prefill from Match Configuration Templates')]//parent::div//parent::div//span")
+	    public WebElement button_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplates;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Match Configuration']")
+	    public WebElement text_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplatessearch;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max Points/Game')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__MaxPointsGame;
+		
+		@FindBy(xpath = "//div[contains(text(),'Advantage/Game')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__AdvantageGame;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sudden Death Point')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__SuddenDeathPoint;
+		
+		@FindBy(xpath = "//div[contains(text(),'Best Of X Games')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__BestOfXGames;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max Challenges/Competitor')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__MaxChallengesCompetitor;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Total(For XT)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__TeamMatchTotalForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Best Of X Games(For XT)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration__TeamMatchBestOfXGamesForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Winner Number Of Games(For XT)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_TeamMatchWinnerNumberOfGamesForXT;
+		
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Sequence(For XT)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_TeamMatchSequenceForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'TTR Review')]//parent::div//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_TTRReview;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Card')]//parent::div//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_YellowCard;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Red 1')]//parent::div//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_YellowRed1;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Red 2')]//parent::div//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_YellowRed2;
+		
+		@FindBy(xpath = "//div[contains(text(),'Active')]//parent::div//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_Active;
+		
+		
+		@FindBy(xpath = "//input[@placeholder='Search by Match Config Name']")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_searchbar;
+		
+		@FindBy(xpath = "//span[text()='Close']")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_Close;
+		
+		@FindBy(xpath = "//button[contains(text(),' Match Configuration')]")
+	    public WebElement button_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Match Config Name')])[2]//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_MatchConfigName;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Best Of X Games')])[2]//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_BestOfXGames;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Max Points/Game')])[2]//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_MaxPointsGame;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Advantage/Game')])[2]//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_AdvantageGame;
+        
+		@FindBy(xpath = "(//div[contains(text(),' Sudden Death Point')])[2]//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_SuddenDeathPoint;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Max Challenges/Competitor')])//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_MaxChallengesCompetitor;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Team Match Total(For XT)')])//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_TeamMatchTotalForXT;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Team Match Best Of X Games(For XT)')])//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_TeamMatchBestOfXGamesForXT;
+		
+		@FindBy(xpath = "(//div[contains(text(),' Team Match Sequence(For XT)')])//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_TeamMatchSequenceForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),' TTR Review')]//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_TTRReview;
+		
+		@FindBy(xpath = "//div[contains(text(),' Yellow Card')]//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_YellowCard;
+		
+		@FindBy(xpath = "//div[contains(text(),' Yellow Red 1')]//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_YellowRed1;
+		
+		@FindBy(xpath = "//div[contains(text(),' Yellow Red 2')]//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_YellowRed2;
+		
+		@FindBy(xpath = "//div[contains(text(),' Active')]//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_Active;
+		
+		@FindBy(xpath = "//span[text()='Save']")
+	    public WebElement button_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_Save;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_MatchConfiguration_MatchConfigurations_createMatchConfiguration_Cancel;
+		
+		
+		
+		
+		//Event creation - 9: Logos
+		
 		@FindBy(xpath = "//div[text()='9: Logos']")
 	    public WebElement tab_event_creation_Logos;
-
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Logos_additem;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Logos_search;
+		
+		@FindBy(xpath = "//div[contains(text(),'Logo Name')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoName;
+		
+		@FindBy(xpath = "//div[contains(text(),'Logo Area')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoArea;
+		
+		@FindBy(xpath = "//div[contains(text(),'Logo Type')]//parent::div//parent::div//span")
+	    public WebElement button_event_creation_Logos_AddLogos_LogoType;
+		
+		@FindBy(xpath = "//div[contains(text(),'Logo Type')]//parent::div//parent::div//i[@mattooltip='Quick Action']")
+	    public WebElement button_event_creation_Logos_AddLogos_LogoType_QuickAction;
+		
+		@FindBy(xpath = "//input[@placeholder='Search by Logo Type']")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoType_addLogoTypes_SearchbyLogoType;
+		
+		@FindBy(xpath = "//span[text()='Close']")
+	    public WebElement button_event_creation_Logos_AddLogos_LogoType_addLogoTypes_Close;
+		
+		@FindBy(xpath = "//button[contains(text(),' Logo Type')]")
+	    public WebElement button_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType;
+		
+		@FindBy(xpath = "//div[text()=' Type']//parent::div//input")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType_Type;
+		
+		@FindBy(xpath = "//div[text()=' Width']//parent::div//input")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType_Width;
+		
+		@FindBy(xpath = "//div[text()=' Height']//parent::div//input")
+	    public WebElement text_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType_Height;
+		
+		@FindBy(xpath = "//div[text()=' Active']//parent::div//input[@type='checkbox']")
+	    public WebElement toggle_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType_Active;
+		
+		@FindBy(xpath = "//span[text()='Save']")
+	    public WebElement button_event_creation_Logos_AddLogos_LogoType_addLogoTypes_createLogoType_Save;
+		
+		
+		@FindBy(xpath = "//input[@placeholder='Search Logo Type']")
+	    public WebElement button_event_creation_Logos_AddLogos_SearchLogoType;
+		
+		@FindBy(xpath = "//label[text()=' Select Image ']")
+	    public WebElement button_event_creation_Logos_AddLogos_SelectImage;
+		
+		@FindBy(xpath = "//span[text()='Proceed']")
+	    public WebElement button_event_creation_Logos_AddLogos_Proceed;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_Logos_AddLogos_Cancel;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Logos_DeleteAll;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='View']")
+	    public WebElement button_event_creation_Logos_table_view;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='Edit']")
+	    public WebElement button_event_creation_Logos_table_Edit;
+		
+		@FindBy(xpath = "//table//button[@mattooltip='Delete']")
+	    public WebElement button_event_creation_Logos_table_Delete;
+		
+		@FindBy(xpath = "//div[text()='Logo Name']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Logos_table_view_LogoName;
+		
+		@FindBy(xpath = "//div[text()='Logo Type']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Logos_table_view_LogoType;
+		
+		@FindBy(xpath = "//div[text()='Logo Area']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Logos_table_view_LogoArea;
+		
+		@FindBy(xpath = "//div[text()='Logo']//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Logos_table_view_Logo;
+		
+		@FindBy(xpath = "//span[text()='Close']")
+	    public WebElement button_event_creation_Logos_table_view_Close;
+        
+		//Event creation - 10: Equipment
+		
 		@FindBy(xpath = "//div[text()='10: Equipment']")
 	    public WebElement tab_event_creation_Equipment;
+		
+		//Event creation - 11: Online Entry System
 		
 		@FindBy(xpath = "//div[text()='11: Online Entry System']")
 	    public WebElement tab_event_creation_OnlineEntrySystem;
 		
+		//Event creation - 12: Payment Options
+		
 		@FindBy(xpath = "//div[text()='12: Payment Options']")
 	    public WebElement tab_event_creation_PaymentOptions;
+		
+		//Event creation - 13: Tournament Fee
 		
 		@FindBy(xpath = "//div[text()='13: Tournament Fee']")
 	    public WebElement tab_event_creation_TournamentFee;
 		
+		//Event creation - 14: Non-MA Tournament Fee
+		
 		@FindBy(xpath = "//div[text()='14: Non-MA Tournament Fee']")
 	    public WebElement tab_event_creation_NonMATournamentFee;
+		
+		//Event creation - 15: Hospitality
 		
 		@FindBy(xpath = "//div[text()='15: Hospitality']")
 	    public WebElement tab_event_creation_Hospitality;
 		
+		//Event creation - 16: Non-MA Hospitality
+		
 		@FindBy(xpath = "//div[text()='16: Non-MA Hospitality']")
 	    public WebElement tab_event_creation_NonMAHospitality;
+		
+		//Event creation - 17: Miscellaneous
 		
 		@FindBy(xpath = "//div[text()='17: Miscellaneous']")
 	    public WebElement tab_event_creation_Miscellaneous;
 		
+		//Event creation - 18: Travel
+		
 		@FindBy(xpath = "//div[text()='18: Travel']")
 	    public WebElement tab_event_creation_Travel;
+		
+		//Event creation - 19: Transportation
 		
 		@FindBy(xpath = "//div[text()='19: Transportation']")
 	    public WebElement tab_event_creation_Transportation;
 		
+		//Event creation - 20: Sponsors
+		
 		@FindBy(xpath = "//div[text()='20: Sponsors']")
 	    public WebElement tab_event_creation_Sponsors;
 		
+		//Event creation - 21: Documents
+		
 		@FindBy(xpath = "//div[text()='21: Documents']")
 	    public WebElement tab_event_creation_Documents;
-
+        
+		//Event creation - 22: Accreditation
+		
 		@FindBy(xpath = "//div[text()='22: Accreditation']")
 	    public WebElement tab_event_creation_Accreditation;
+		
+		//Event creation - 23: Visa
 		
 		@FindBy(xpath = "//div[text()='23: Visa']")
 	    public WebElement tab_event_creation_Visa;
 		
+		//Event creation - 24: Comments
+		
 		@FindBy(xpath = "//div[text()='24: Comments']")
 	    public WebElement tab_event_creation_Comments;
+		
+		//Event creation - 25: Review
 		
 		@FindBy(xpath = "//div[text()='25: Review']")
 	    public WebElement tab_event_creation_Review;
