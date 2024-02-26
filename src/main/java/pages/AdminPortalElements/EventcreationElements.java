@@ -709,10 +709,152 @@ public class EventcreationElements {
 		@FindBy(xpath = "//div[text()='10: Equipment']")
 	    public WebElement tab_event_creation_Equipment;
 		
+		@FindBy(xpath = "//div[contains(text(),'Selected Balls')]//parent::div//parent::div//div[@class='selected-list']")
+	    public WebElement button_event_creation_Equipment_SelectedBalls;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Balls')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Equipment_SelectedBallssearch;
+		
+		
+		@FindBy(xpath = "(//div[contains(text(),'Selected Balls')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+	    public WebElement checkbox_event_creation_Equipment_SelectedBallssearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Balls')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedBallsuparrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Balls')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedBallsdownarrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Tables')]//parent::div//parent::div//div[@class='selected-list']")
+	    public WebElement button_event_creation_Equipment_SelectedTables;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Tables')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Equipment_SelectedTablessearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Selected Tables')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+	    public WebElement checkbox_event_creation_Equipment_SelectedTablessearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Tables')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedTablessearchuparrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Tables')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedTablessearchdownarrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Nets')]//parent::div//parent::div//div[@class='selected-list']")
+	    public WebElement button_event_creation_Equipment_SelectedNets;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Nets')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Equipment_SelectedNetssearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Selected Nets')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+	    public WebElement checkbox_event_creation_Equipment_SelectedNetsresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Nets')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedNetsuparrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Nets')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedNetsdownarrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//div[@class='selected-list']")
+	    public WebElement button_event_creation_Equipment_SelectedFlooring;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Equipment_SelectedFlooringsearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+	    public WebElement checkbox_event_creation_Equipment_SelectedFlooringsearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedFlooringsearchuparrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Selected Flooring ')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement button_event_creation_Equipment_SelectedFlooringsearchdownarrowicon;
+		
+		@FindBy(xpath = "//div[contains(text(),'Number of Competition Tables')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Equipment_NumberofCompetitionTables;
+		
+		@FindBy(xpath = "//div[contains(text(),'Number of Practice Tables')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Equipment_NumberofPracticeTables;
+		
+		@FindBy(xpath = "//div[contains(text(),'Number of Warm-Up Tables')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Equipment_NumberofWarmUpTables;
+		
 		//Event creation - 11: Online Entry System
 		
 		@FindBy(xpath = "//div[text()='11: Online Entry System']")
 	    public WebElement tab_event_creation_OnlineEntrySystem;
+		
+		@FindBy(xpath = "//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//div[@class='selected-list']")
+	    public WebElement button_event_creation_OnlineEntrySystem_DeadlineTimeZone;
+		
+		@FindBy(xpath = "//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_OnlineEntrySystem_DeadlineTimeZonessearch;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_OnlineEntrySystem_DeadlineTimeZonessearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Travel Details Deadline')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_TravelDetailsDeadline;
+		
+		@FindBy(xpath = "//div[contains(text(),'Cancellation Deadline')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_CancellationDeadline;
+		
+		@FindBy(xpath = "//div[contains(text(),'Participant Registration Deadline')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_ParticipantRegistrationDeadline;
+		
+		@FindBy(xpath = "//div[contains(text(),'Accommodation Details Deadline')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_AccommodationDetailsDeadline;
+		
+		@FindBy(xpath = "//div[contains(text(),'Visa Details Deadline')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_VisaDetailsDeadline;
+		
+		@FindBy(xpath = "//div[contains(text(),'Enable OES')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_OnlineEntrySystem_EnableOES;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max No. Of Profiles per Person')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_OnlineEntrySystem_MaxNoOfProfilesperPerson;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_AddNew;
+		
+		@FindBy(xpath = "//div[contains(text(),'Deadline Name')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_OnlineEntrySystem_AdditionalDeadlines_DeadlineName;
+		
+		@FindBy(xpath = "//div[contains(text(),' Start Date Time')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_DeadlineName;
+		
+		@FindBy(xpath = "//div[contains(text(),'End Date Time')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_EndDateTime;
+		
+		@FindBy(xpath = "//span[text()='Proceed']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_Proceed;
+		
+		@FindBy(xpath = "//span[text()='Cancel']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_Cancel;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_DeleteAll;
+		
+		@FindBy(xpath = "//button[@mattooltip='View']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_view;
+		
+		@FindBy(xpath = "((//mat-dialog-container//div[contains(text(),'Deadline Name')]//parent::div//parent::div)[1]//span)[6]")
+	    public WebElement text_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_view_DeadlineName;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Start Date Time')]//parent::div//parent::div//span)[8]")
+	    public WebElement text_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_view_StartDateTime;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'End Date Time')]//parent::div//parent::div//span)[8]")
+	    public WebElement text_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_view_EndDateTime;
+		
+		@FindBy(xpath = "//button//span[text()='Close']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_view_Close;
+		
+		@FindBy(xpath = "//button[@mattooltip='Edit']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_Edit;
+		
+		@FindBy(xpath = "//button[@mattooltip='Delete']")
+	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_table_Delete;
 		
 		//Event creation - 12: Payment Options
 		
