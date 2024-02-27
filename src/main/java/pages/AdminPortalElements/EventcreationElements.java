@@ -882,37 +882,480 @@ public class EventcreationElements {
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Transfer to WTT Bank Account']")
 	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchTransfertoWTTBankAccount;
 		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Comments')]//parent::div//parent::div//textarea")
+	    public WebElement checkbox_event_creation_PaymentOptions_Comments;
 		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_PaymentOptions_active;
+		
+		@FindBy(xpath = "//mat-dialog-container//span[text()='Proceed']")
+	    public WebElement button_event_creation_PaymentOptions_Proceed;
+		
+		@FindBy(xpath = "//mat-dialog-container//span[text()='Cancel']")
+	    public WebElement button_event_creation_PaymentOptions_Cancel;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_PaymentOptions_DeleteAll;
+		
+		@FindBy(xpath = "//button[@mattooltip='View']")
+	    public WebElement button_event_creation_PaymentOptions_view;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[text()='Payment Account']//parent::div//parent::div//span)[6]")
+	    public WebElement text_event_creation_PaymentOptions_view_PaymentAccount;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[text()='Comments']//parent::div//parent::div//span)[6]")
+	    public WebElement text_event_creation_PaymentOptions_view_Comments;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[text()='Active']//parent::div//parent::div//span)[2]")
+	    public WebElement text_event_creation_PaymentOptions_view_Active;
+		
+		@FindBy(xpath = "//mat-dialog-container//Span[text()='Close']")
+	    public WebElement button_event_creation_PaymentOptions_view_Close;
+		
+		@FindBy(xpath = "//button[@mattooltip='Edit']")
+	    public WebElement button_event_creation_PaymentOptions_Edit;
+		
+		@FindBy(xpath = "//button[@mattooltip='Delete']")
+	    public WebElement button_event_creation_PaymentOptions_Delete;
 		
 		//Event creation - 13: Tournament Fee
 		
 		@FindBy(xpath = "//div[text()='13: Tournament Fee']")
 	    public WebElement tab_event_creation_TournamentFee;
 		
+		@FindBy(xpath = "//div[contains(text(),'Fee Deposit (%)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_TournamentFee_FeeDeposit;
+		
+		@FindBy(xpath = "//div[contains(text(),'Turn Off Fee')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_TournamentFee_TurnOffFee;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_TournamentFee_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_TournamentFee_searchbar;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_Profile;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_TournamentFee_AddFeebyProfileType_Profilesearch;
+
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_Profileselectall;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Coach']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileCoach;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Daughter']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileDaughter;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Father']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileFather;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Mother']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileMother;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Player']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfilePlayer;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Player Guest']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfilePlayerGuest;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Referee']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileReferee;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Son']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileSon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Spouse']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileSpouse;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Umpire']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileUmpire;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileUparrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_ProfileDownarrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Participation Fee')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_TournamentFee_AddFeebyProfileType_ParticitionFee;
+		
+		@FindBy(xpath = "//mat-dialog-content//button[text()='Add New']")
+	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_AddNew;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[1]//input")
+	    public WebElement text_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_BeforeXDays;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[2]//mat-radio-button//span[text()='Amount']")
+	    public WebElement radio_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_AmountPercentageAmount;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[2]//mat-radio-button//span[text()='Percentage']")
+	    public WebElement radio_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_AmountPercentagePercentage;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[3]//input")
+	    public WebElement text_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_Value;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[4]//input")
+	    public WebElement toggle_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_active;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[5]//button[text()='Remove']")
+	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_CancellationInformation_Remove;
+		
+		@FindBy(xpath = "//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_Proceed;
+		
+		@FindBy(xpath = "//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_Cancel;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_TournamentFee_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_TournamentFee_table;
+		
+		
 		//Event creation - 14: Non-MA Tournament Fee
 		
 		@FindBy(xpath = "//div[text()='14: Non-MA Tournament Fee']")
 	    public WebElement tab_event_creation_NonMATournamentFee;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_NonMATournamentFee_searchbar;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Profile;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ProfileSearch;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//span[text()='Select All']")
+	    public WebElement checkbox_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ProfileSelectAll;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+	    public WebElement checkbox_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Profileresult;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Profiledownarrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Profileuparrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Participation Fee')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ParticipationFee;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_NonMATournamentFee_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_NonMATournamentFee_table;
 		
 		//Event creation - 15: Hospitality
 		
 		@FindBy(xpath = "//div[text()='15: Hospitality']")
 	    public WebElement tab_event_creation_Hospitality;
 		
+		@FindBy(xpath = "//div[contains(text(),'Allowed First Arrival Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AllowedFirstArrivalDate;
+		
+		@FindBy(xpath = "//div[contains(text(),'Allowed Last Departure Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AllowedLastDepartureDate;
+		
+		@FindBy(xpath = "//div[contains(text(),'Force Hospitality')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Hospitality_ForceHospitality;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Hospitality_AddNew;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Profile;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
+		 public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Profilesearch;
+
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Profileselectall;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Coach']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileCoach;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Daughter']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileDaughter;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Father']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileFather;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Mother']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileMother;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Player']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfilePlayer;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Player Guest']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfilePlayerGuest;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Referee']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileReferee;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Son']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileSon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Spouse']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileSpouse;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Umpire']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUmpire;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUparrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileDownarrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Accommodation;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch;
+		
+		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearchresult;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_RoomType;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch;
+		
+		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearchresult;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost(per night/person)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_Costpernightperson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost(whole event/person)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_Costwholeeventperson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost Extra Night/Person')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_CostExtraNightPerson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Min. Nights')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_MinNights;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Early Check In Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_EarlyCheckInCost;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Late CheckOut Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_LateCheckOutCost;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Complimentary Nights')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_ComplimentaryNights;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Description')]//parent::div//parent::div//textarea")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_Description;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Filled')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Hospitality_AddHospitalityInformation_Filled;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Hospitality_AddHospitalityInformation_Active;
+		
+		@FindBy(xpath = "//mat-dialog-content//button[text()='Add New']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_AddNew;
+		
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[1]//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_BeforeXDays;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[2]//mat-radio-button//span[text()='Amount']")
+	    public WebElement radio_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_AmountPercentageAmount;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[2]//mat-radio-button//span[text()='Percentage']")
+	    public WebElement radio_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_AmountPercentagePercentage;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[3]//input")
+	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_Value;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[4]//input")
+	    public WebElement toggle_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_active;
+		
+		@FindBy(xpath = "//mat-dialog-content//table//tr//td[5]//button[text()='Remove']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_CancellationInformation_Remove;
+		
+		@FindBy(xpath = "//mat-dialog-actions//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-actions//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Hospitality_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_Hospitality_table;
+		
+	
 		//Event creation - 16: Non-MA Hospitality
 		
 		@FindBy(xpath = "//div[text()='16: Non-MA Hospitality']")
 	    public WebElement tab_event_creation_NonMAHospitality;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_NonMAHospitality_AddNew;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Profile;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
+		 public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Profilesearch;
+
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
+	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_Profileselectall;
+		
+		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox'])[3]")
+		 public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_Profilesearchresult;
+		
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_ProfileUparrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_ProfileDownarrowicon;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodation;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodationsearch;
+		
+		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodationsearchresult;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_RoomType;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_RoomTypesearch;
+		
+		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_RoomTypesearchresult;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost(per night/person)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_Costpernightperson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost(whole event/person)')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_Costwholeeventperson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost Extra Night/Person')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_CostExtraNightPerson;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Min. Nights')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_MinNights;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Early Check In Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_EarlyCheckInCost;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Late CheckOut Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_LateCheckOutCost;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Complimentary Nights')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_ComplimentaryNights;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Description')]//parent::div//parent::div//textarea")
+	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_Description;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Filled')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_NonMAHospitality_AddHospitalityInformation_Filled;
+		
+		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_NonMAHospitality_AddHospitalityInformation_Active;
+		
+		@FindBy(xpath = "//mat-dialog-actions//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-actions//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_NonMAHospitality_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_NonMAHospitality_table;
 		
 		//Event creation - 17: Miscellaneous
 		
 		@FindBy(xpath = "//div[text()='17: Miscellaneous']")
 	    public WebElement tab_event_creation_Miscellaneous;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Miscellaneous_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Miscellaneous_searchbar;
+		
+		@FindBy(xpath = "//div[contains(text(),'Name')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Miscellaneous_AddMiscellaneous_Name;
+		
+		@FindBy(xpath = "//div[contains(text(),'Description')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Miscellaneous_AddMiscellaneous_Description;
+		
+		@FindBy(xpath = "//div[contains(text(),'Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Miscellaneous_AddMiscellaneous_Cost;
+		
+		@FindBy(xpath = "//div[contains(text(),'Is Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Miscellaneous_AddMiscellaneous_IsActive;
+		
+		@FindBy(xpath = "//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Miscellaneous_AddMiscellaneous_Cancel;
+		
+		@FindBy(xpath = "//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Miscellaneous_AddMiscellaneous_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Miscellaneous_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Name ']//ancestor::table")
+	    public WebElement table_event_creation_Miscellaneous_table;
+		
 		//Event creation - 18: Travel
 		
 		@FindBy(xpath = "//div[text()='18: Travel']")
 	    public WebElement tab_event_creation_Travel;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Travel_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Travel_searchbar;
+		
+		@FindBy(xpath = "//div[contains(text(),'Location')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Travel_AddTravelInformation_Location;
+		
+		@FindBy(xpath = "//div[contains(text(),'Is Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Travel_AddTravelInformation_IsActive;
+		
+		@FindBy(xpath = "//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Travel_AddTravelInformation_Cancel;
+		
+		@FindBy(xpath = "//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Travel_AddTravelInformation_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Travel_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Location ']//ancestor::table")
+	    public WebElement table_event_creation_Travel_table;
 		
 		//Event creation - 19: Transportation
 		
