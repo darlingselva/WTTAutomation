@@ -861,6 +861,29 @@ public class EventcreationElements {
 		@FindBy(xpath = "//div[text()='12: Payment Options']")
 	    public WebElement tab_event_creation_PaymentOptions;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_PaymentOptions_AddNew;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//span")
+	    public WebElement button_event_creation_PaymentOptions_PaymentAccount;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_PaymentOptions_PaymentAccountsearch;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
+	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchSelectAll;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Cash Collection ']")
+	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchCashCollection;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Stripe']")
+	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchStripe;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Transfer to WTT Bank Account']")
+	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchTransfertoWTTBankAccount;
+		
+		
+		
 		//Event creation - 13: Tournament Fee
 		
 		@FindBy(xpath = "//div[text()='13: Tournament Fee']")
