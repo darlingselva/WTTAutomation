@@ -1421,6 +1421,9 @@ public class EventcreationElements {
 		@FindBy(xpath = "//button[text()='Add New']")
 	    public WebElement button_event_creation_Sponsors_AddNew;
 		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Sponsors_searchbar;
+		
 		@FindBy(xpath = "//div[contains(text(),'Sponsor Name')]//parent::div//parent::div//input")
 	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorName;
 		
@@ -1489,26 +1492,131 @@ public class EventcreationElements {
 		
 		@FindBy(xpath = "//div[text()='21: Documents']")
 	    public WebElement tab_event_creation_Documents;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Documents_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Documents_searchbar;
         
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Documents_AddDocuments;
+		
+		@FindBy(xpath = "//div[contains(text(),'Document Title')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Documents_AddDocuments_DocumentTitle;
+		
+		@FindBy(xpath = "//div[contains(text(),'Place')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Documents_AddDocuments_Place;
+		
+		@FindBy(xpath = "//div[contains(text(),'Version')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Documents_AddDocuments_Version;
+		
+		@FindBy(xpath = "//div[contains(text(),'Notes')]//parent::div//parent::div//textarea")
+	    public WebElement text_event_creation_Documents_AddDocuments_Notes;
+		
+		@FindBy(xpath = "//div[contains(text(),'Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Documents_AddDocuments_Active;
+		
+		@FindBy(xpath = "//div[contains(text(),'Public Document')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Documents_AddDocuments_PublicDocument;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Document Type')]//parent::div//parent::div//div[@class='mat-select-value']")
+	    public WebElement button_event_creation_Documents_AddDocuments_DocumentType;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Document Type']")
+	    public WebElement text_event_creation_Documents_AddDocuments_DocumentTypesearch;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Category')]//parent::div//parent::div//div[@class='mat-select-value']")
+	    public WebElement button_event_creation_Documents_AddDocuments_Category;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Category']")
+	    public WebElement text_event_creation_Documents_AddDocuments_Categorysearch;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid From')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_Documents_AddDocuments_ValidFrom;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid To')]//parent::div//parent::div//input")
+	    public WebElement button_event_creation_Documents_AddDocuments_ValidTo;
+		
+		@FindBy(xpath = "//div[contains(text(),'Document')]//parent::div//parent::div//label[@class='file_upload_button']")
+	    public WebElement button_event_creation_Documents_AddDocuments_Documentuploadbutton;
+		
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Documents_AddDocuments_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Documents_AddDocuments_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Documents_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Document Title ']//ancestor::table")
+	    public WebElement table_event_creation_Documents_table;
+		
 		//Event creation - 22: Accreditation
 		
 		@FindBy(xpath = "//div[text()='22: Accreditation']")
 	    public WebElement tab_event_creation_Accreditation;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Accreditation_AddNew;
+		
+		@FindBy(xpath = "//input[@name='searchText']")
+	    public WebElement text_event_creation_Accreditation_searchbar;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_StartDate;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_EndDate;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Location')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_Location;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Comments')]//parent::div//parent::div//textarea")
+	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_Comments;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Accreditation_AddAccreditationInformation_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Accreditation_AddAccreditationInformation_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Accreditation_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Start Date ']//ancestor::table")
+	    public WebElement table_event_creation_Accreditation_table;
+        
 		
 		//Event creation - 23: Visa
 		
 		@FindBy(xpath = "//div[text()='23: Visa']")
 	    public WebElement tab_event_creation_Visa;
 		
+		@FindBy(xpath = "//div[contains(text(),'Visa Information')]//parent::div//parent::div//p")
+	    public WebElement textarea_event_creation_Visa_VisaInformation;
+		
 		//Event creation - 24: Comments
 		
 		@FindBy(xpath = "//div[text()='24: Comments']")
 	    public WebElement tab_event_creation_Comments;
 		
+		@FindBy(xpath = "//div[contains(text(),'Comments')]//parent::div//parent::div//p")
+	    public WebElement textarea_event_creation_Comments_Comments;
+		
 		//Event creation - 25: Review
 		
 		@FindBy(xpath = "//div[text()='25: Review']")
 	    public WebElement tab_event_creation_Review;
+		
+		@FindBy(xpath = "//button//span[text()='Create']")
+	    public WebElement button_event_creation_cCreate;
+		
+		@FindBy(xpath = "//button[text()='Cancel']")
+	    public WebElement button_event_creation_Cancels;
+		
 		
 
 
