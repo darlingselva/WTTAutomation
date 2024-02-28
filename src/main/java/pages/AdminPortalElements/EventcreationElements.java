@@ -1362,10 +1362,128 @@ public class EventcreationElements {
 		@FindBy(xpath = "//div[text()='19: Transportation']")
 	    public WebElement tab_event_creation_Transportation;
 		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Transportation_AddNew;
+		
+		@FindBy(xpath = "//div[contains(text(),'Name')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_Name;
+		
+		@FindBy(xpath = "//div[contains(text(),'Pickup Place')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_PickupPlace;
+		
+		@FindBy(xpath = "//div[contains(text(),'Cost')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_Cost;
+		
+		@FindBy(xpath = "//div[contains(text(),'Drop Place')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_DropPlace;
+		
+		@FindBy(xpath = "//div[contains(text(),'Seating Capacity')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_SeatingCapacity;
+		
+		@FindBy(xpath = "//div[contains(text(),'In Hospitality Pack')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Transportation_AddTransportationInformation_InHospitalityPack;
+		
+		@FindBy(xpath = "//div[contains(text(),'Is Active')]//parent::div//parent::div//input")
+	    public WebElement toggle_event_creation_Transportation_AddTransportationInformation_IsActive;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Transportation_AddTransportationInformation_TransportType;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Transportation_AddTransportationInformation_TransportTypesearch;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//label[text()='Car (Standard Sedan / Hatchback)']//parent::li//input[@type='checkbox']")
+	    public WebElement checkbox_event_creation_Transportation_AddTransportationInformation_TransportTypeCarStandardSedanHatchback;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//label[text()='Limosine (Stretch / Luxury Sedan)']//parent::li//input[@type='checkbox']")
+	    public WebElement checkbox_event_creation_Transportation_AddTransportationInformation_TransportTypeLimosineStretchLuxurySedan;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//label[text()='Shuttle Bus']//parent::li//input[@type='checkbox']")
+	    public WebElement checkbox_event_creation_Transportation_AddTransportationInformation_TransportTypeShuttleBus;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Transportation_AddTransportationInformation_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Transportation_AddTransportationInformation_Proceed;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Transportation_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Name ']//ancestor::table")
+	    public WebElement table_event_creation_Transportation_table;
+		
 		//Event creation - 20: Sponsors
 		
 		@FindBy(xpath = "//div[text()='20: Sponsors']")
 	    public WebElement tab_event_creation_Sponsors;
+		
+		@FindBy(xpath = "//button[text()='Add New']")
+	    public WebElement button_event_creation_Sponsors_AddNew;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sponsor Name')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorName;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sponsor Link')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorLink;
+		
+		@FindBy(xpath = "//div[contains(text(),'Priority')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_Priority;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sponsor Core Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_SponsorCoreType;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Sponsor Core Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearch;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Sponsor Core Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sponsor Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_SponsorType;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Sponsor Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearch;
+		
+		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Sponsor Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	    public WebElement checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearchresult;
+		
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Organization')]//parent::div//parent::div//div[@class='mat-select-trigger']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_Organization;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Organization']")
+	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SearchOrganization;
+		
+		@FindBy(xpath = "//div[contains(text(),'Light Logo')]//parent::div//parent::div//label[@class='file_upload_button']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_LightLogofileuploadbutton;
+		
+		@FindBy(xpath = "//div[contains(text(),'Light Logo')]//parent::div//parent::div//label[@class='file_upload_button' and text()=' Change ']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_LightLogofileuploadChangebutton;
+		
+		@FindBy(xpath = "//div[contains(text(),'Light Logo')]//parent::div//parent::div//span[text()='Remove']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_LightLogoRemove;
+		
+		@FindBy(xpath = "//div[contains(text(),'Dark Logo')]//parent::div//parent::div//label[@class='file_upload_button']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_DarkLogo;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_Cancel;
+		
+		@FindBy(xpath = "//mat-dialog-container//button//span[text()='Proceed']")
+	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_Proceed;
+		
+		@FindBy(xpath = "//div[@class='mat-select-value']//span[text()='Select Sponsor Template Name']")
+	    public WebElement button_event_creation_Sponsors_SelectSponsorTemplateName;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Sponsor Template']")
+	    public WebElement text_event_creation_Sponsors_SelectSponsorTemplateNamesearch;
+		
+		@FindBy(xpath = "//button[text()='Delete All']")
+	    public WebElement button_event_creation_Sponsors_DeleteAll;
+		
+		@FindBy(xpath = "//span[text()=' Sponsor Name ']//ancestor::table")
+	    public WebElement table_event_creation_Sponsors_table;
+		
 		
 		//Event creation - 21: Documents
 		
