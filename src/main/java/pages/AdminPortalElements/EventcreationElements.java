@@ -1611,6 +1611,225 @@ public class EventcreationElements {
 		@FindBy(xpath = "//div[text()='25: Review']")
 	    public WebElement tab_event_creation_Review;
 		
+		@FindBy(xpath = "(//div[contains(text(),'Event Name ')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_EventName;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Event Core Type ')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_EventCoreType;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Is Closed Event ')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_IsClosedEvent;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Is Front End Platform Visible ')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_IsFrontEndPlatformVisible;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Is Betting Enabled')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_IsBettingEnabled;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Is AI Enabled')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_IsAIEnabled;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Is Masters Event')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_IsMastersEvent;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Active')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Active;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Organizer')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Organizer;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Show Organizer in OES')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_ShowOrganizerinOES;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Currency')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Currency;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Website')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Website;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Tags')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Tags;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Tournament Logo')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_TournamentLogo;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Time Zone')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_TimeZone;
+		
+		@FindBy(xpath = "(//div[contains(text(),'WYC Deadline Hours')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_WYCDeadlineHours;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Venue')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Venue;
+		
+		@FindBy(xpath = "(//div[contains(text(),'GPS Co-Ordinates')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_GPSCoOrdinates;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Address Line1')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_AddressLine1;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Address Line2')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_AddressLine2;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Address Line3')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_AddressLine3;
+		
+		@FindBy(xpath = "(//div[contains(text(),'City')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_City;
+		
+		@FindBy(xpath = "(//div[contains(text(),'State')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_State;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Country')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Country;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Postcode')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_Postcode;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Tournament Category Group')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_TournamentCategoryGroup;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Tournament Category')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_TournamentCategory;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Tournament Age Category')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Core_TournamentAgeCategory;
+		
+		@FindBy(xpath = "(//div[contains(text(),'No. of Qualification Rounds')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Competition_NoofQualificationRounds;
+		
+		@FindBy(xpath = "(//div[contains(text(),'No. of Total Matches')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Competition_NoofTotalMatches;
+		
+		@FindBy(xpath = "(//div[contains(text(),'Entries Ranking Year')]//parent::div//parent::div//span)")
+	    public WebElement text_event_creation_Review_Competition_EntriesRankingYear;
+		
+		@FindBy(xpath = "//div[contains(text(),'Entries Ranking Week')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_EntriesRankingWeek;
+		
+		@FindBy(xpath = "//div[contains(text(),'Entries Ranking Month')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_EntriesRankingMonth;
+		
+		@FindBy(xpath = "//div[contains(text(),'Count Ranking Year')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_CountRankingYear;
+		
+		@FindBy(xpath = "//div[contains(text(),'Count Ranking Week')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_CountRankingWeek;
+		
+		@FindBy(xpath = "//div[contains(text(),'Count Ranking Month')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_CountRankingMonth;
+		
+		@FindBy(xpath = "//div[contains(text(),'Seeding Ranking Year')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_SeedingRankingYear;
+		
+		@FindBy(xpath = "//div[contains(text(),'Seeding Ranking Week')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_SeedingRankingWeek;
+		
+		@FindBy(xpath = "//div[contains(text(),'Seeding Ranking Month')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_SeedingRankingMonth;
+		
+		@FindBy(xpath = "//div[contains(text(),'Ranking Expiry Year')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_RankingExpiryYear;
+		
+		@FindBy(xpath = "//div[contains(text(),'Ranking Expiry Week')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_RankingExpiryWeek;
+		
+		@FindBy(xpath = "//div[contains(text(),'Ranking Expiry Month')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_RankingExpiryMonth;
+		
+		@FindBy(xpath = "//div[contains(text(),'System of Play')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_SystemofPlay;
+		
+		@FindBy(xpath = "//div[contains(text(),'Prize Currency')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_PrizeCurrency;
+		
+		@FindBy(xpath = "//div[contains(text(),'Overall Prize Money')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_OverallPrizeMoney;
+		
+		@FindBy(xpath = "//div[contains(text(),'Prize Money Tax')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Competition_PrizeMoneyTax;
+		
+		@FindBy(xpath = "//div[contains(text(),'Prize Comments')]//parent::div//parent::div//div[@class='view-input']")
+	    public WebElement text_event_creation_Review_Competition_PrizeComments;
+		
+		@FindBy(xpath = "//th[text()=' Draw Name ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Draws_table;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max Points/Game')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_MaxPointsGame;
+		
+		@FindBy(xpath = "//div[contains(text(),'Advantage/Game')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_AdvantageGame;
+		
+		@FindBy(xpath = "//div[contains(text(),'Sudden Death Point')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_SuddenDeathPoint;
+		
+		@FindBy(xpath = "//div[contains(text(),'Best Of X Games')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_BestOfXGames;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max Challenges/Competitor')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_MaxChallengesCompetitor;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Total(For XT)')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_TeamMatchTotalForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Best Of X Games(For XT)')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_TeamMatchBestOfXGamesForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Winner Number Of Games(For XT)')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_TeamMatchWinnerNumberOfGamesForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'Team Match Sequence(For XT)')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_TeamMatchSequenceForXT;
+		
+		@FindBy(xpath = "//div[contains(text(),'TTR Review')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_TTRReview;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Card')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_YellowCard;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Red 1')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_YellowRed1;
+		
+		@FindBy(xpath = "//div[contains(text(),'Yellow Red 2')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_YellowRed2;
+		
+		@FindBy(xpath = "//div[contains(text(),'Active')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_MatchConfiguration_Active;
+		
+		@FindBy(xpath = "//th[text()=' Start Date ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Accreditation_table;
+		
+		@FindBy(xpath = "(//div[text()='Profile Quotas']//following-sibling::common_sub_table_view)[1]//th[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_Review_ProfileQuotas_table;
+		
+		@FindBy(xpath = "(//div[text()='Payment Options']//following-sibling::common_sub_table_view)[1]//th[text()=' Payment Account ']//ancestor::table")
+	    public WebElement table_event_creation_Review_PaymentOptions_table;
+		
+		@FindBy(xpath = "//div[text()='Key Persons']//following-sibling::div//th[text()=' Profile ']//ancestor::table")
+	    public WebElement table_event_creation_Review_KeyPersons_table;
+		
+		@FindBy(xpath = "//div[contains(text(),'Start Date')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Dates_StartDate;
+		
+		@FindBy(xpath = "//div[contains(text(),'End Date')]//parent::div//parent::div//span")
+	    public WebElement text_event_creation_Review_Dates_EndDate;
+		
+		@FindBy(xpath = "(//div[text()='Associations']//following-sibling::common_sub_table_view)[1]//th[text()=' Organization ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Associations_table;
+		
+		@FindBy(xpath = "(//div[text()='Sponsors']//following-sibling::common_sub_table_view)[1]//th[text()=' Sponsor Name ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Sponsors_table;
+		
+		@FindBy(xpath = "(//div[text()='Documents']//following-sibling::common_sub_table_view)[1]//th[text()=' Document Title ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Documents_table;
+		
+		@FindBy(xpath = "(//div[text()='Logos']//following-sibling::common_sub_table_view)[1]//th[text()=' Logo Name ']//ancestor::table")
+	    public WebElement table_event_creation_Review_Logos_table;
+		
+		
+		//common
+		
 		@FindBy(xpath = "//button//span[text()='Create']")
 	    public WebElement button_event_creation_cCreate;
 		

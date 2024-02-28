@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import Snippet.TestClass;
 import base.ActionFunctions;
@@ -21,22 +22,21 @@ public class EventCreationSnippet extends TestClass{
 	     LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
 		Commonmethods base=new Commonmethods(driver,wait);
-		ActionFunctions Actionfun=new ActionFunctions(driver,wait);
-		Actionfun.Path("TestData.xlsx");
-		Actionfun.getSheet("contacts");
-		
-		String test="text_event_core_tab_creation_EventName";
-		event.tab_event.click();
+	
+	     event.tab_event.click();
 		
 		base.wait(1);
-		//System.out.println(event.equals(test));
+		
 		event.button_event_core_tab_creation.click();
 		base.wait(1);
 		
-		//EventcreationElements.text_event_core_tab_creation_EventName.click();
-	/*
+	EventcreationElements.text_event_core_tab_creation_EventName.click();
+	
 		event.text_event_core_tab_creation_EventName.sendKeys("test");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		
+		/*
 		//base.wait(1);
 		event.button_event_core_tab_creation_EventCoreType.click();;
 		base.wait(1);
@@ -136,6 +136,8 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(4);
 		*/
 		//Event creation - 2: Competition
+		
+		
 		event.tab_event_creation_Competition.click();
 		base.wait(2);
 		
@@ -216,6 +218,7 @@ public class EventCreationSnippet extends TestClass{
 
        */   
 		
+		
 		//Event creation - 3: Participant Organizations
 		event.tab_event_creation_ParticipantOrganizations.click();
 		base.wait(2);
@@ -245,6 +248,7 @@ public class EventCreationSnippet extends TestClass{
 		
         //Event creation - 4: Profile Quotas
 		
+		
 		event.tab_event_creation_ProfileQuotas.click();
 		base.wait(2);
 		/*
@@ -272,11 +276,12 @@ public class EventCreationSnippet extends TestClass{
 		*/
 		
 		
-		//Event creation - 5: Key Persons
 		
+		//Event creation - 5: Key Persons
+		/*
 		event.tab_event_creation_KeyPersons.click();
 		base.wait(2);
-		/*
+		
 		event.button_event_creation_KeyPersonsAddNew.click();
 		base.wait(2);
 		event.button_event_creation_KeyPersonsProfile.click();
@@ -300,6 +305,8 @@ public class EventCreationSnippet extends TestClass{
 		event.button_event_creation_KeyPersonsProceed.click();
 		base.wait(2);
 		*/
+		
+	    
 		//Event creation - 6: Dates
 		
 		event.tab_event_creation_Dates.click();
@@ -341,9 +348,16 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.tab_event_creation_Comments.click();
 		base.wait(2);
+		
+	   
+		
 		event.tab_event_creation_Review.click();
 		base.wait(2);
+		System.out.println("------------------------------------------------------");
+		System.out.println(event.text_event_creation_Review_Core_EventName.getText());
+		System.out.println("------------------------------------------------------");
 		
+		Assert.assertEquals("test", event.text_event_creation_Review_Core_EventName.getText());
 		
 	
 	}
