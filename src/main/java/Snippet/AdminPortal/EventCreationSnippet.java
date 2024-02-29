@@ -354,10 +354,10 @@ public class EventCreationSnippet extends TestClass{
 		event.tab_event_creation_Review.click();
 		base.wait(2);
 		System.out.println("------------------------------------------------------");
-		System.out.println(event.text_event_creation_Review_Core_EventName.getText());
+		System.out.println(event.text1_event_creation_Review_Core_EventName.getText());
 		System.out.println("------------------------------------------------------");
 		
-		Assert.assertEquals("test", event.text_event_creation_Review_Core_EventName.getText());
+		Assert.assertEquals("test", event.text1_event_creation_Review_Core_EventName.getText());
 		
 	
 	}
