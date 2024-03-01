@@ -36,8 +36,8 @@ public class EventCreationSnippet extends TestClass{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		
-		/*
-		//base.wait(1);
+		
+		base.wait(1);
 		event.button_event_core_tab_creation_EventCoreType.click();;
 		base.wait(1);
 		event.text_event_core_tab_creation_searchEventCoreType.sendKeys("WTT");
@@ -61,14 +61,14 @@ public class EventCreationSnippet extends TestClass{
 	    event.text_event_core_tab_creation_SelectOrganizationsearch.sendKeys("india");
 	    base.wait(3);
 		//event.checkbox_event_core_tab_creation_SelectOrganizationsearchresult.click();
-	    base.doubleClick(event.checkbox_event_core_tab_creation_SelectOrganizationsearchresult);
+	    base.jclick(event.checkbox_event_core_tab_creation_SelectOrganizationsearchresult);
 		base.wait(4);
 		event.button_event_core_tab_creation_SelectCurrency.click();
 		base.wait(1);
 		event.text_event_creation_SelectCurrencysearch.sendKeys("sg");
 		base.wait(1);
 		//event.checkbox_event_creation_SelectCurrencysearchresult.click();
-		base.doubleClick(event.checkbox_event_creation_SelectCurrencysearchresult);
+		base.jclick(event.checkbox_event_creation_SelectCurrencysearchresult);
 		base.wait(1);
 		//event.text_event_creation_SelectCurrencysearch.sendKeys("test");
 		base.wait(1);
@@ -83,7 +83,7 @@ public class EventCreationSnippet extends TestClass{
 		event.text_event_core_tab_creation_SelectTimeZonesearch.sendKeys("utc");
 		base.wait(1);
 		//event.checkbox_event_core_tab_creation_SelectTimeZonesearchresult.click();
-		base.doubleClick(event.checkbox_event_core_tab_creation_SelectTimeZonesearchresult);
+		base.jclick(event.checkbox_event_core_tab_creation_SelectTimeZonesearchresult);
 		base.wait(1);
 		event.button_event_core_tab_creation_SelectVenue.click();
 		base.wait(1);
@@ -132,16 +132,16 @@ public class EventCreationSnippet extends TestClass{
 		event.button_event_creation_TournamentAgeCategorysearch.sendKeys("m");
 		base.wait(1);
 		//event.checkbox_event_creation_TournamentAgeCategorysearchresult.click();
-		base.doubleClick(event.checkbox_event_creation_TournamentAgeCategorysearchresult);
+		base.jclick(event.checkbox_event_creation_TournamentAgeCategorysearchresult);
 		base.wait(4);
-		*/
+		
 		//Event creation - 2: Competition
 		
 		
 		event.tab_event_creation_Competition.click();
 		base.wait(2);
 		
-		/*
+		
 		event.button_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplates.click();
 		base.wait(2);
 		event.text_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplatessearch.sendKeys("total");
@@ -203,9 +203,9 @@ public class EventCreationSnippet extends TestClass{
 		event.button_event_creation_Competition_SystemofPlay.click();
 		base.wait(2);
 		//event.text_event_creation_Competition_SystemofPlaysearch
-		base.doubleClick(event.check_event_creation_Competition_SystemofPlayGroupBased);
+		base.jclick(event.check_event_creation_Competition_SystemofPlayGroupBased);
 		base.wait(2);
-		base.doubleClick(event.check_event_creation_Competition_SystemofPlayKnockout);
+		base.jclick(event.check_event_creation_Competition_SystemofPlayKnockout);
 		base.wait(2);
 		//event.check_event_creation_Competition_SystemofPlayKnockout
 		event.text_event_creation_Competition_PlayingSystem.sendKeys("test");
@@ -216,13 +216,13 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.text_event_creation_Competition_PrizeComments.sendKeys("test");
 
-       */   
+         
 		
 		
 		//Event creation - 3: Participant Organizations
 		event.tab_event_creation_ParticipantOrganizations.click();
 		base.wait(2);
-		/*
+		
 		event.button_event_creation_ParticipantOrganizations_AddNew.click();
 		base.wait(2);
         event.button_event_creation_ParticipantOrganizations_Organization.click();
@@ -242,16 +242,16 @@ public class EventCreationSnippet extends TestClass{
         //event.checkbox_event_creation_selectallcontitent.click();
         //base.wait(12);
         //event.button_event_creation_Proceed.click();
-        base.doubleClick(event.button_event_creation_Proceed);
+        base.jclick(event.button_event_creation_Proceed);
         base.wait(8);
-        */
+       
 		
         //Event creation - 4: Profile Quotas
 		
 		
 		event.tab_event_creation_ProfileQuotas.click();
 		base.wait(2);
-		/*
+		
 		event.button_event_creation_ProfileQuotas_AddNew.click();
 		base.wait(2);
 		event.button_event_creation_ProfileQuotas_Profile.click();
@@ -273,12 +273,12 @@ public class EventCreationSnippet extends TestClass{
 		base.wait(2);
 		event.button_event_creation_ProfileQuotas_DeleteAll.click();
 		
-		*/
+		
 		
 		
 		
 		//Event creation - 5: Key Persons
-		/*
+		
 		event.tab_event_creation_KeyPersons.click();
 		base.wait(2);
 		
@@ -304,7 +304,7 @@ public class EventCreationSnippet extends TestClass{
 		//base.wait(2);
 		event.button_event_creation_KeyPersonsProceed.click();
 		base.wait(2);
-		*/
+		
 		
 	    
 		//Event creation - 6: Dates
