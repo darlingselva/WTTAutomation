@@ -3,6 +3,7 @@ package Snippet.AdminPortal;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -13,6 +14,7 @@ import Snippet.TestClass;
 import base.ActionFunctions;
 import base.Commonmethods;
 import pages.AdminPortalElements.EventcreationElements;
+import util.Testutil;
 
 
 public class EventCreationSnippet extends TestClass{
@@ -22,12 +24,16 @@ public class EventCreationSnippet extends TestClass{
 	     LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
 		Commonmethods base=new Commonmethods(driver,wait);
-	
+		
+		
+		base.wait(5);
 	     event.tab_event.click();
 		
-		base.wait(1);
-		
-		event.button_event_core_tab_creation.click();
+		base.wait(5);
+		WebElement b = (WebElement) EventcreationElements.class.getField("button_event_core_tab_creation").get(event);
+		b.click();
+		//driver.findElement((By) event.button_event_core_tab_creation).click();
+		//event.button_event_core_tab_creation.click();
 		base.wait(1);
 		
 	EventcreationElements.text_event_core_tab_creation_EventName.click();

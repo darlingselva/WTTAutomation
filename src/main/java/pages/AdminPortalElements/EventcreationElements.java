@@ -1,5 +1,7 @@
 package pages.AdminPortalElements;
 
+import java.lang.reflect.Field;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,11 +12,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EventcreationElements {
 	
 	 WebDriver driver;
+	 
+	
 
 		public EventcreationElements(WebDriver driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(driver, this);
 	    }
+		
+		
+		
 		
 		@FindBy(xpath = "//a[@href='#/list/events/tournaments']")
 	    public WebElement tab_event;
@@ -22,6 +29,7 @@ public class EventcreationElements {
 
 		@FindBy(xpath = "//button[@class='prime_button mob-mt-10 ng-star-inserted']")
 	    public WebElement button_event_core_tab_creation;
+		
 		
 		@FindBy(xpath = "//input[@placeholder='Name']")
 	    public static WebElement text_event_core_tab_creation_EventName;
