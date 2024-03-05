@@ -32,7 +32,7 @@ public class DriverInitialisation {
 	public DriverInitialisation() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + "/config.properties");
+			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + "config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
