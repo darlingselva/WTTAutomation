@@ -794,6 +794,23 @@ public static ResourceBundle resource;
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 	
+	public void takescreenshoot(String screenshotname) throws IOException {
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+		   LocalDateTime now = LocalDateTime.now();  
+		      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+		      if (!f1.exists()){
+		    	  f1.mkdirs();
+		    	}
+		      
+		     // DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		     // LocalDateTime now1 = LocalDateTime.now();  
+		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+screenshotname.toString()+".png");
+		FileUtils.copyFile(SrcFile, DestFile);
+	}
+	
+	
 	public void Sendkey(WebElement  objName,String key) throws Exception {
 		
 		wait.until(ExpectedConditions.visibilityOf(objName));

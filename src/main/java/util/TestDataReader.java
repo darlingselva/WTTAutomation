@@ -42,11 +42,11 @@ public class TestDataReader
 			    switch (cell.getCellType()) {
 			      case Cell.CELL_TYPE_NUMERIC:
 			    	  TestheaderArray[j]=cell.getNumericCellValue();
-			    	  System.out.print(cell.getNumericCellValue() + "\n");
+			    	  //System.out.print(cell.getNumericCellValue() + "\n");
 			        break;
 			      case Cell.CELL_TYPE_STRING:
 			    	  TestheaderArray[j]=cell.getStringCellValue();
-			        System.out.print(cell.getStringCellValue() + "\n");
+			        //System.out.print(cell.getStringCellValue() + "\n");
 			        break;
 			    }		
 		}
@@ -60,11 +60,11 @@ public class TestDataReader
 		    		  switch (cell1.getCellType()) {
 					    case Cell.CELL_TYPE_NUMERIC:
 					    	TestdataArray[l]=cell1.getNumericCellValue();
-					    	  System.out.print(cell1.getNumericCellValue() + "\n");
+					    	  //System.out.print(cell1.getNumericCellValue() + "\n");
 					        break;
 					      case Cell.CELL_TYPE_STRING:
 					    	  TestdataArray[l]=cell1.getStringCellValue();
-					        System.out.print(cell1.getStringCellValue() + "\n");
+					        //System.out.print(cell1.getStringCellValue() + "\n");
 					        break;
 					    }
 		    	}

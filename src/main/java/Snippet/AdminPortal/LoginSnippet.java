@@ -33,7 +33,7 @@ public class LoginSnippet extends TestClass{
 			base.wait(2);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-	      	base.takescreenshoot();
+	      	base.takescreenshoot("loginpage");
 			
 			//base.wait(2);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

@@ -15,6 +15,7 @@ import base.ActionFunctions;
 import base.Commonmethods;
 import pages.AdminPortalElements.EventcreationElements;
 import util.Testutil;
+import util.TestDataReader;
 
 
 public class EventCreationSnippet extends TestClass{
@@ -23,9 +24,55 @@ public class EventCreationSnippet extends TestClass{
 	public static void Adminportal_event_creation() throws Exception {
 	     LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
-		Commonmethods base=new Commonmethods(driver,wait);
+		Commonmethods base=new Commonmethods(driver,wait);		
+		WebElement b;
+		TestDataReader.tetsdatareader("TestData.xlsx");
+		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
+			String[] a=TestDataReader.TestheaderArray[i].toString().split("_");
+
+		switch(a[0].toString()) {
+		case "tab":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 b.click();
+			 base.wait(2);
+			 break;			 
+		case "button":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 b.click();
+			 base.wait(2);
+			 break;
+		case "text":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 b.clear();
+			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			 base.wait(2);
+			 break;
+		case "searchtext":
+			b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			base.wait(2);
+			b.sendKeys(Keys.ENTER);
+			base.wait(1);
+			break;
+		case "toggle":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 b.click();
+			 base.wait(2);
+			 break;			 
+		case "checkbox":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 base.wait(2);
+			 base.jclick(b);
+			 base.wait(2);
+			 break;		 
+			 
+		default:
+			break;
+		}
+		}
 		
 		
+		/*
 		base.wait(5);
 	     event.tab_event.click();
 		
@@ -365,7 +412,31 @@ public class EventCreationSnippet extends TestClass{
 		
 		Assert.assertEquals("test", event.text1_event_creation_Review_Core_EventName.getText());
 		
+	*/
+	}
 	
+	public static void main(String[] args) {
+		TestDataReader.tetsdatareader("TestData.xlsx");
+		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
+			String[] a=TestDataReader.TestheaderArray[i].toString().split("_");
+			//System.out.println(a[0].toString());
+			
+			switch(a[0].toString()) {
+			case "tab":
+				 System.out.println(TestDataReader.TestheaderArray[i].toString());
+
+				 break;
+			case "button":
+				
+				 break;
+			case "text":
+				
+				 break;
+			default:
+				break;
+			}
+			}
+		
 	}
    
 }

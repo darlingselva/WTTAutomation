@@ -31,15 +31,15 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation;
 		
 		
-		@FindBy(xpath = "//input[@placeholder='Name']")
-	    public static WebElement text_event_core_tab_creation_EventName;
+		@FindBy(xpath = "//div[contains(text(),'Event Name')]//parent::div//parent::div//input")
+	    public  WebElement text_event_core_tab_creation_EventName;
 		
 		@FindBy(xpath = "//span[text()='All Event Core Types']/../../parent::mat-select")
 	    public WebElement button_event_core_tab_creation_EventCoreType;
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search Event Core Type']")
-	    public WebElement text_event_core_tab_creation_searchEventCoreType;
+	    public WebElement searchtext_event_core_tab_creation_searchEventCoreType;
 		
 		@FindBy(xpath = "//div[contains(text(),'Is Closed Event')]//parent::div//following-sibling::div//label")
 	    public WebElement toggle_event_core_tab_creation_IsClosedEvent;
@@ -63,7 +63,7 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation_SelectOrganization;
 		
 		@FindBy(xpath = "//span[text()='Select Organization']/../../parent::div[@class='cuppa-dropdown']//input")
-	    public WebElement text_event_core_tab_creation_SelectOrganizationsearch;
+	    public WebElement searchtext_event_core_tab_creation_SelectOrganizationsearch;
 		
 		@FindBy(xpath ="(//span[text()='Select Organization']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_core_tab_creation_SelectOrganizationsearchresult;
@@ -73,7 +73,7 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation_SelectCurrency;
 		
 		@FindBy(xpath = "//span[text()='Select Currency']/../../parent::div[@class='cuppa-dropdown']//input")
-	    public WebElement text_event_creation_SelectCurrencysearch;
+	    public WebElement searchtext_event_creation_SelectCurrencysearch;
 		
 		@FindBy(xpath = "(//span[text()='Select Currency']/../../parent::div[@class='cuppa-dropdown']//input)[2]")
 	    public WebElement checkbox_event_creation_SelectCurrencysearchresult;
@@ -91,7 +91,7 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation_SelectTimeZone;
 		
 		@FindBy(xpath = "//span[text()='Select Time Zone']/../../parent::div[@class='cuppa-dropdown']//input")
-	    public WebElement text_event_core_tab_creation_SelectTimeZonesearch;
+	    public WebElement searchtext_event_core_tab_creation_SelectTimeZonesearch;
 		
 		@FindBy(xpath = "(//span[text()='Select Time Zone']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_core_tab_creation_SelectTimeZonesearchresult;
@@ -103,7 +103,7 @@ public class EventcreationElements {
 	    public WebElement button_event_core_tab_creation_SelectVenue;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Venue']")
-	    public WebElement text_event_core_tab_creation_SelectVenuesearch;
+	    public WebElement searchtext_event_core_tab_creation_SelectVenuesearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'GPS Co-Ordinates')]/../parent::div//input")
 	    public WebElement text_event_core_tab_creation_GPSCoOrdinates;
@@ -128,7 +128,7 @@ public class EventcreationElements {
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search Country']")
-	    public WebElement text_event_core_tab_creation_Countrysearch;
+	    public WebElement searchtext_event_core_tab_creation_Countrysearch;
 		
 
 		@FindBy(xpath = "//div[contains(text(),'Postcode')]/../parent::div//input")
@@ -138,27 +138,27 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_TournamentCategoryGroup;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Tournament Category Group']")
-	    public WebElement text_event_creation_TournamentCategoryGroupsearch;
+	    public WebElement searchtext_event_creation_TournamentCategoryGroupsearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Tournament Category')]/../parent::div//mat-select)[2]")
 	    public WebElement button_event_creation_TournamentCategory;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Tournament Category']")
-	    public WebElement text_event_creation_TournamentCategory;
+	    public WebElement searchtext_event_creation_TournamentCategory;
 		
 		@FindBy(xpath = "//div[contains(text(),'Tournament Category Group') and contains(text(),'Select Tournament Category')]//parent::div/../parent::div//mat-select")
 	    public WebElement button_event_creation_TournamentCategoryGroup1;
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search Tournament Category']")
-	    public WebElement text_event_creation_TournamentCategoryGroupsearch1;
+	    public WebElement searchtext_event_creation_TournamentCategoryGroupsearch1;
 		
 		
 		@FindBy(xpath = "(//div[contains(text(),'Tournament Age Category')]/../parent::div//span)[1]")
 	    public WebElement button_event_creation_TournamentAgeCategory;
 		
 		@FindBy(xpath = "(//span[text()='Select Tournament Age Category']/../../parent::div[@class='cuppa-dropdown']//input)[2]")
-	    public WebElement button_event_creation_TournamentAgeCategorysearch;
+	    public WebElement searchtext_event_creation_TournamentAgeCategorysearch;
 		
 		@FindBy(xpath = "(//span[text()='Select Tournament Age Category']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[3]")
 	    public WebElement checkbox_event_creation_TournamentAgeCategorysearchresult;
@@ -172,7 +172,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplates;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Tournament Competition Round']")
-	    public WebElement text_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplatessearch;
+	    public WebElement searchtext_event_creation_Competition_PrefillfromTournamentCompetitionRoundTemplatessearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'No. of Qualification Rounds')]/../parent::div//input")
 	    public WebElement text_event_creation_Competition_NofQualificationRounds;
@@ -184,49 +184,49 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Competition_EntriesRankingYear;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Entries Ranking Year']")
-	    public WebElement text_event_creation_Competition_EntriesRankingYearsearch;
+	    public WebElement searchtext_event_creation_Competition_EntriesRankingYearsearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Entries Ranking Week')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_EntriesRankingWeek;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Entries Ranking Week']")
-	    public WebElement text_event_creation_Competition_EntriesRankingWeeksearch;    
+	    public WebElement searchtext_event_creation_Competition_EntriesRankingWeeksearch;    
 	    
 		@FindBy(xpath = "//div[contains(text(),'Count Ranking Year')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_CountRankingYear;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Count Ranking Year']")
-	    public WebElement text_event_creation_Competition_CountRankingYear;
+	    public WebElement searchtext_event_creation_Competition_CountRankingYear;
 		
 		@FindBy(xpath = "//div[contains(text(),'Count Ranking Week')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_CountRankingWeek;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Count Ranking Week']")
-	    public WebElement text_event_creation_Competition_CountRankingWeeksearch;
+	    public WebElement searchtext_event_creation_Competition_CountRankingWeeksearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Seeding Ranking Year')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_SeedingRankingYear;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Seeding Ranking Year']")
-	    public WebElement text_event_creation_Competition_SeedingRankingYearsearch;
+	    public WebElement searchtext_event_creation_Competition_SeedingRankingYearsearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Seeding Ranking Week')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_SeedingRankingWeek;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Seeding Ranking Week']")
-	    public WebElement text_event_creation_Competition_SeedingRankingWeeksearch;
+	    public WebElement searchtext_event_creation_Competition_SeedingRankingWeeksearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Ranking Expiry Year')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_RankingExpiryYear;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Ranking Expiry Year']")
-	    public WebElement text_event_creation_Competition_RankingExpiryYearsearch;
+	    public WebElement searchtext_event_creation_Competition_RankingExpiryYearsearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Ranking Expiry Week')]/../parent::div//mat-select")
 	    public WebElement button_event_creation_Competition_RankingExpiryWeek;
 	    
 		@FindBy(xpath = "//input[@placeholder='Search Ranking Expiry Week']")
-	    public WebElement text_event_creation_Competition_RankingExpiryWeeksearch;
+	    public WebElement searchtext_event_creation_Competition_RankingExpiryWeeksearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'System of Play')]/../parent::div//span")
 	    public WebElement button_event_creation_Competition_SystemofPlay;
@@ -275,7 +275,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_ParticipantOrganizations_Organization;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Organization']")
-	    public WebElement text_event_creation_ParticipantOrganizations_Organizationsearch;
+	    public WebElement bartext_event_creation_ParticipantOrganizations_Organizationsearch;
 		
 		@FindBy(xpath = "//mat-pseudo-checkbox[@class='mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted']")
 	    public WebElement checkbox_event_creation_ParticipantOrganizations_Organizationsearchresult;
@@ -433,7 +433,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Draws_DrawName;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Draw Name']")
-	    public WebElement text_event_creation_Draws_SearchDrawName;
+	    public WebElement searchtext_event_creation_Draws_SearchDrawName;
 		
 		@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
 	    public WebElement button_event_creation_Draws_StartDateTime;
@@ -442,7 +442,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Draws_TimeZone;
 		
 		@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input")
-	    public WebElement text_event_creation_Draws_TimeZonesearch;
+	    public WebElement searchtext_event_creation_Draws_TimeZonesearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Draws_TimeZonesearchresult;
@@ -457,7 +457,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Draws_DrawNames_AddNew;
 		
 		@FindBy(xpath = "//input[@placeholder='Enter Draw Name']")
-	    public WebElement text_event_creation_Draws_DrawNames_EnterDrawName;
+	    public WebElement searchtext_event_creation_Draws_DrawNames_EnterDrawName;
 		
 		@FindBy(xpath = "//span[text()='Select Default Language Code']")
 	    public WebElement button_event_creation_Draws_DrawNames_SelectDefaultLanguageCode;
@@ -519,7 +519,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplates;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Match Configuration']")
-	    public WebElement text_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplatessearch;
+	    public WebElement searchtext_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplatessearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Max Points/Game')]//parent::div//parent::div//input")
 	    public WebElement text_event_creation_MatchConfiguration__MaxPointsGame;
@@ -566,7 +566,7 @@ public class EventcreationElements {
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search by Match Config Name']")
-	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_searchbar;
+	    public WebElement searchtext_event_creation_MatchConfiguration_MatchConfigurations_searchbar;
 		
 		@FindBy(xpath = "//span[text()='Close']")
 	    public WebElement text_event_creation_MatchConfiguration_MatchConfigurations_Close;
@@ -649,7 +649,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Logos_AddLogos_LogoType_QuickAction;
 		
 		@FindBy(xpath = "//input[@placeholder='Search by Logo Type']")
-	    public WebElement text_event_creation_Logos_AddLogos_LogoType_addLogoTypes_SearchbyLogoType;
+	    public WebElement searchtext_event_creation_Logos_AddLogos_LogoType_addLogoTypes_SearchbyLogoType;
 		
 		@FindBy(xpath = "//span[text()='Close']")
 	    public WebElement button_event_creation_Logos_AddLogos_LogoType_addLogoTypes_Close;
@@ -674,7 +674,7 @@ public class EventcreationElements {
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search Logo Type']")
-	    public WebElement button_event_creation_Logos_AddLogos_SearchLogoType;
+	    public WebElement searchbutton_event_creation_Logos_AddLogos_SearchLogoType;
 		
 		@FindBy(xpath = "//label[text()=' Select Image ']")
 	    public WebElement button_event_creation_Logos_AddLogos_SelectImage;
@@ -721,7 +721,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Equipment_SelectedBalls;
 		
 		@FindBy(xpath = "//div[contains(text(),'Selected Balls')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Equipment_SelectedBallssearch;
+	    public WebElement bartext_event_creation_Equipment_SelectedBallssearch;
 		
 		
 		@FindBy(xpath = "(//div[contains(text(),'Selected Balls')]//parent::div//parent::div//input[@type='checkbox'])[3]")
@@ -737,7 +737,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Equipment_SelectedTables;
 		
 		@FindBy(xpath = "//div[contains(text(),'Selected Tables')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Equipment_SelectedTablessearch;
+	    public WebElement bartext_event_creation_Equipment_SelectedTablessearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Selected Tables')]//parent::div//parent::div//input[@type='checkbox'])[3]")
 	    public WebElement checkbox_event_creation_Equipment_SelectedTablessearchresult;
@@ -752,7 +752,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Equipment_SelectedNets;
 		
 		@FindBy(xpath = "//div[contains(text(),'Selected Nets')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Equipment_SelectedNetssearch;
+	    public WebElement bartext_event_creation_Equipment_SelectedNetssearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Selected Nets')]//parent::div//parent::div//input[@type='checkbox'])[3]")
 	    public WebElement checkbox_event_creation_Equipment_SelectedNetsresult;
@@ -767,7 +767,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Equipment_SelectedFlooring;
 		
 		@FindBy(xpath = "//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Equipment_SelectedFlooringsearch;
+	    public WebElement bartext_event_creation_Equipment_SelectedFlooringsearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Selected Flooring')]//parent::div//parent::div//input[@type='checkbox'])[3]")
 	    public WebElement checkbox_event_creation_Equipment_SelectedFlooringsearchresult;
@@ -796,7 +796,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_OnlineEntrySystem_DeadlineTimeZone;
 		
 		@FindBy(xpath = "//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_OnlineEntrySystem_DeadlineTimeZonessearch;
+	    public WebElement bartext_event_creation_OnlineEntrySystem_DeadlineTimeZonessearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_OnlineEntrySystem_DeadlineTimeZonessearchresult;
@@ -876,7 +876,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_PaymentOptions_PaymentAccount;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_PaymentOptions_PaymentAccountsearch;
+	    public WebElement bartext_event_creation_PaymentOptions_PaymentAccountsearch;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
 	    public WebElement checkbox_event_creation_PaymentOptions_PaymentAccountsearchSelectAll;
@@ -947,7 +947,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_TournamentFee_AddFeebyProfileType_Profile;
 		
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_TournamentFee_AddFeebyProfileType_Profilesearch;
+	    public WebElement bartext_event_creation_TournamentFee_AddFeebyProfileType_Profilesearch;
 
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
 	    public WebElement checkbox_event_creation_TournamentFee_AddFeebyProfileType_Profileselectall;
@@ -1040,7 +1040,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_Profile;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ProfileSearch;
+	    public WebElement bartext_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ProfileSearch;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//span[text()='Select All']")
 	    public WebElement checkbox_event_creation_NonMATournamentFee_AddNonMAFeebyProfileType_ProfileSelectAll;
@@ -1090,7 +1090,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Profile;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
-		 public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Profilesearch;
+		 public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_Profilesearch;
 
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
 	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Profileselectall;
@@ -1135,7 +1135,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Accommodation;
 		
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch;
+	    public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch;
 		
 		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearchresult;
@@ -1144,7 +1144,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Hospitality_AddHospitalityInformation_RoomType;
 		
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch;
+	    public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch;
 		
 		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearchresult;
@@ -1226,7 +1226,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Profile;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
-		 public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Profilesearch;
+		 public WebElement bartext_event_creation_NonMAHospitality_AddHospitalityInformation_Profilesearch;
 
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
 	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_Profileselectall;
@@ -1245,7 +1245,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodation;
 		
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodationsearch;
+	    public WebElement bartext_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodationsearch;
 		
 		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_Accommodationsearchresult;
@@ -1254,7 +1254,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_NonMAHospitality_AddHospitalityInformation_RoomType;
 		
 		@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_NonMAHospitality_AddHospitalityInformation_RoomTypesearch;
+	    public WebElement bartext_event_creation_NonMAHospitality_AddHospitalityInformation_RoomTypesearch;
 		
 		@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_NonMAHospitality_AddHospitalityInformation_RoomTypesearchresult;
@@ -1398,7 +1398,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Transportation_AddTransportationInformation_TransportType;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Transportation_AddTransportationInformation_TransportTypesearch;
+	    public WebElement bartext_event_creation_Transportation_AddTransportationInformation_TransportTypesearch;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Transport Type')]//parent::div//parent::div//label[text()='Car (Standard Sedan / Hatchback)']//parent::li//input[@type='checkbox']")
 	    public WebElement checkbox_event_creation_Transportation_AddTransportationInformation_TransportTypeCarStandardSedanHatchback;
@@ -1445,7 +1445,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_SponsorCoreType;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Sponsor Core Type')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearch;
+	    public WebElement bartext_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearch;
 		
 		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Sponsor Core Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearchresult;
@@ -1454,7 +1454,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_SponsorType;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Sponsor Type')]//parent::div//parent::div//input[@placeholder='Search']")
-	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearch;
+	    public WebElement bartext_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearch;
 		
 		@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Sponsor Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearchresult;
@@ -1463,7 +1463,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_Organization;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Organization']")
-	    public WebElement text_event_creation_Sponsors_AddSponsorInformation_SearchOrganization;
+	    public WebElement searchtext_event_creation_Sponsors_AddSponsorInformation_SearchOrganization;
 		
 		@FindBy(xpath = "//div[contains(text(),'Light Logo')]//parent::div//parent::div//label[@class='file_upload_button']")
 	    public WebElement button_event_creation_Sponsors_AddSponsorInformation_LightLogofileuploadbutton;
@@ -1487,7 +1487,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Sponsors_SelectSponsorTemplateName;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Sponsor Template']")
-	    public WebElement text_event_creation_Sponsors_SelectSponsorTemplateNamesearch;
+	    public WebElement searchtext_event_creation_Sponsors_SelectSponsorTemplateNamesearch;
 		
 		@FindBy(xpath = "//button[text()='Delete All']")
 	    public WebElement button_event_creation_Sponsors_DeleteAll;
@@ -1532,13 +1532,13 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_Documents_AddDocuments_DocumentType;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Document Type']")
-	    public WebElement text_event_creation_Documents_AddDocuments_DocumentTypesearch;
+	    public WebElement searchtext_event_creation_Documents_AddDocuments_DocumentTypesearch;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Category')]//parent::div//parent::div//div[@class='mat-select-value']")
 	    public WebElement button_event_creation_Documents_AddDocuments_Category;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Category']")
-	    public WebElement text_event_creation_Documents_AddDocuments_Categorysearch;
+	    public WebElement searchtext_event_creation_Documents_AddDocuments_Categorysearch;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid From')]//parent::div//parent::div//input")
 	    public WebElement button_event_creation_Documents_AddDocuments_ValidFrom;
