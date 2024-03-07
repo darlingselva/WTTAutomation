@@ -2,34 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-05T12:51:17Z" name="Default suite" finished-at="2024-03-05T12:52:58Z" duration-ms="100284">
+  <suite started-at="2024-03-07T12:02:58Z" name="Default suite" finished-at="2024-03-07T12:11:31Z" duration-ms="513537">
     <groups>
     </groups>
-    <test started-at="2024-03-05T12:51:17Z" name="Default test" finished-at="2024-03-05T12:52:58Z" duration-ms="100284">
+    <test started-at="2024-03-07T12:02:58Z" name="Default test" finished-at="2024-03-07T12:11:31Z" duration-ms="513537">
       <class name="testcases.AdminPortal.Eventcreation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-05T18:21:16Z" name="setUp" finished-at="2024-03-05T18:21:17Z" duration-ms="1086" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-07T17:32:57Z" name="setUp" finished-at="2024-03-07T17:32:58Z" duration-ms="1159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="crateevent()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-05T18:21:17Z" name="crateevent" finished-at="2024-03-05T18:22:57Z" duration-ms="100102" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="crateevent()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-07T17:32:58Z" name="crateevent" finished-at="2024-03-07T17:41:31Z" duration-ms="513357" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element <mat-select _ngcontent-ycj-c21="" class="input-label capitalizetext dropdown-size mat-select ng-tns-c12-38 mat-select-empty ng-untouched ng-pristine ng-valid" matinput="" placeholder="Select Category" role="listbox" id="mat-select-6" tabindex="0" aria-label="Select Category" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">...</mat-select> is not clickable at point (1125, 504). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
-  (Session info: chrome=122.0.6261.95)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Cash Collection ']"}
+  (Session info: chrome=122.0.6261.111)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-O9NMSRM', ip: '192.168.113.252', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+System info: host: 'DESKTOP-O9NMSRM', ip: '192.168.35.252', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\SELVAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55545}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6393b8a7facd2eb9cfca76a8c4207fb3]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.111, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\SELVAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59471}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0388ad537a849a67e91e6beb857d3393
+*** Element info: {Using=xpath, value=//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Cash Collection ']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-select _ngcontent-ycj-c21="" class="input-label capitalizetext dropdown-size mat-select ng-tns-c12-38 mat-select-empty ng-untouched ng-pristine ng-valid" matinput="" placeholder="Select Category" role="listbox" id="mat-select-6" tabindex="0" aria-label="Select Category" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">...</mat-select> is not clickable at point (1125, 504). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
-  (Session info: chrome=122.0.6261.95)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Cash Collection ']"}
+  (Session info: chrome=122.0.6261.111)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-O9NMSRM', ip: '192.168.113.252', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+System info: host: 'DESKTOP-O9NMSRM', ip: '192.168.35.252', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\SELVAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55545}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6393b8a7facd2eb9cfca76a8c4207fb3
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.111, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\SELVAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59471}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0388ad537a849a67e91e6beb857d3393
+*** Element info: {Using=xpath, value=//mat-dialog-container//div[contains(text(),'Payment Account')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Cash Collection ']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -41,14 +45,24 @@ Session ID: 6393b8a7facd2eb9cfca76a8c4207fb3
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-	at Snippet.AdminPortal.EventCreationSnippet.Adminportal_event_creation(EventCreationSnippet.java:41)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:480)
+	at base.Commonmethods.jclick(Commonmethods.java:911)
+	at Snippet.AdminPortal.EventCreationSnippet.Adminportal_event_creation(EventCreationSnippet.java:82)
 	at testcases.AdminPortal.Eventcreation.crateevent(Eventcreation.java:24)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -77,11 +91,11 @@ Session ID: 6393b8a7facd2eb9cfca76a8c4207fb3
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- crateevent -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-05T18:22:57Z" name="screenShot" finished-at="2024-03-05T18:22:58Z" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-07T17:41:31Z" name="screenShot" finished-at="2024-03-07T17:41:31Z" duration-ms="159" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,7 +106,7 @@ Session ID: 6393b8a7facd2eb9cfca76a8c4207fb3
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-05T18:22:58Z" name="destroyDriver" finished-at="2024-03-05T18:22:58Z" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-07T17:41:31Z" name="destroyDriver" finished-at="2024-03-07T17:41:32Z" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->

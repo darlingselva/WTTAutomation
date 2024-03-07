@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.poi.ss.usermodel.Cell;  
@@ -71,7 +72,17 @@ public class TestDataReader
 		    }
 		    
 		    
-		  
+		    if(TestheaderArray.length==TestdataArray.length) {
+		    for(int i=0;i<TestheaderArray.length;i++) {
+		    	Testdata.put(TestheaderArray[i], TestdataArray[i]);	    
+		    }
+		    }
+		    
+//		    for(Map.Entry m : Testdata.entrySet()){    
+//		        System.out.println(m.getKey());
+//		        System.out.println(m.getValue());
+//		       }  
+		    
 		
 		}
 		

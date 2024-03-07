@@ -235,10 +235,10 @@ public class EventcreationElements {
 	    public WebElement text_event_creation_Competition_SystemofPlaysearch;
 		
 		@FindBy(xpath = "//div[contains(text(),'System of Play')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Group Based']")
-	    public WebElement check_event_creation_Competition_SystemofPlayGroupBased;
+	    public WebElement checkbox_event_creation_Competition_SystemofPlayGroupBased;
 	    
 		@FindBy(xpath = "//div[contains(text(),'System of Play')]/../../parent::div//input[@type='checkbox']//following-sibling::label[text()='Knockout']")
-	    public WebElement check_event_creation_Competition_SystemofPlayKnockout;
+	    public WebElement checkbox_event_creation_Competition_SystemofPlayKnockout;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Playing System')])[2]/../parent::div//div[@data-placeholder='Enter Content...']")
 	    public WebElement text_event_creation_Competition_PlayingSystem;
@@ -394,7 +394,7 @@ public class EventcreationElements {
 	    public WebElement text_event_creation_KeyPersonsIndividualNamesearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Individual Name')]/../../parent::div//li)[1]")
-	    public WebElement text_event_creation_KeyPersonsIndividualNamesearchresult;
+	    public WebElement checkbox_event_creation_KeyPersonsIndividualNamesearchresult;
 		
 		@FindBy(xpath = "//div[contains(text(),'Active')]//parent::div//following-sibling::div//label")
 	    public WebElement toggle_event_creation_KeyPersonsactive;
@@ -415,10 +415,16 @@ public class EventcreationElements {
 		
 		
 		@FindBy(xpath = "//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Dates_Startingdate;
+	    public WebElement button_event_creation_Dates_Startingdate;
+		
+		@FindBy(xpath = "//mat-datepicker-content//td[@class='mat-calendar-body-cell mat-calendar-body-active ng-star-inserted']")
+	    public WebElement button_event_creation_Dates_Startingdatedatepicker;
 		
 		@FindBy(xpath = "//div[contains(text(),'End Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Dates_Enddate;
+	    public WebElement button_event_creation_Dates_Enddate;
+		
+		@FindBy(xpath = "//mat-datepicker-content//td[@class='mat-calendar-body-cell mat-calendar-body-active ng-star-inserted']//following-sibling::td")
+	    public WebElement button_event_creation_Dates_Enddatedatedatepicker;
 		
 		
 		//Event creation - 7: Draws
@@ -436,34 +442,46 @@ public class EventcreationElements {
 	    public WebElement searchtext_event_creation_Draws_SearchDrawName;
 		
 		@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_Draws_StartDateTime;
+	    public WebElement date_event_creation_Draws_StartDateTime;
 		
 		@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']")
 	    public WebElement button_event_creation_Draws_TimeZone;
 		
 		@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input")
-	    public WebElement searchtext_event_creation_Draws_TimeZonesearch;
+	    public WebElement text_event_creation_Draws_TimeZonesearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_Draws_TimeZonesearchresult;
         
-		@FindBy(xpath = "(//div[contains(text(),'Venue')])[4]//parent::div//parent::div//input")
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Venue')]//parent::div//parent::div//input")
 	    public WebElement text_event_creation_Draws_Venue;
 		
-		@FindBy(xpath = "//div[contains(text(),'End Date')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_Draws_EndDate;
+		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	    public WebElement date_event_creation_Draws_EndDate;
 		
-		@FindBy(xpath = "(//button[text()='Add New'])[2]")
+		@FindBy(xpath = "//mat-dialog-container//button[text()='Add New']")
 	    public WebElement button_event_creation_Draws_DrawNames_AddNew;
 		
-		@FindBy(xpath = "//input[@placeholder='Enter Draw Name']")
+		@FindBy(xpath = "//mat-dialog-container//input[@placeholder='Enter Draw Name']")
 	    public WebElement searchtext_event_creation_Draws_DrawNames_EnterDrawName;
 		
-		@FindBy(xpath = "//span[text()='Select Default Language Code']")
+		@FindBy(xpath = "//mat-dialog-container//span[text()='Select Default Language Code']")
 	    public WebElement button_event_creation_Draws_DrawNames_SelectDefaultLanguageCode;
 		
-		@FindBy(xpath = "//button[text()='Remove']")
+		@FindBy(xpath = "//mat-dialog-container//span[text()='Select Default Language Code']/../parent::div//parent::div//label[text()='English - US']//parent::li//input[@type='checkbox']")
+	    public WebElement checkbox_event_creation_Draws_DrawNames_SelectDefaultLanguageCode_EnglishUS;
+		
+		@FindBy(xpath = "//mat-dialog-container//span[text()='Select Default Language Code']/../parent::div//parent::div//label[text()='English - Zimbawe']//parent::li//input[@type='checkbox']")
+	    public WebElement checkbox_event_creation_Draws_DrawNames_SelectDefaultLanguageCode_EnglishZimbawe;
+		
+		@FindBy(xpath = "//mat-dialog-container//button[text()='Remove']")
 	    public WebElement button_event_creation_Draws_DrawNames_Remove;
+		
+		@FindBy(xpath = "//mat-dialog-container//button/span[text()='Proceed']")
+	    public WebElement button_event_creation_Draws_Proceed;
+		
+		@FindBy(xpath = "//mat-dialog-container//button/span[text()='Cancel']")
+	    public WebElement button_event_creation_Draws_Cancel;
 		
 		@FindBy(xpath = "//button[text()='Delete All']")
 	    public WebElement button_event_creation_Draws_DeleteAll;
@@ -510,7 +528,7 @@ public class EventcreationElements {
 	    public WebElement tab_event_creation_MatchConfiguration;
 		
 		@FindBy(xpath = "//i[@mattooltip='Quick Action']")
-	    public WebElement text_event_creation_MatchConfiguration_QuickAction;
+	    public WebElement button_event_creation_MatchConfiguration_QuickAction;
 		
 		@FindBy(xpath = "//i[@mattooltip='Refresh']")
 	    public WebElement text_event_creation_MatchConfiguration_Refresh;
@@ -802,19 +820,19 @@ public class EventcreationElements {
 	    public WebElement checkbox_event_creation_OnlineEntrySystem_DeadlineTimeZonessearchresult;
 		
 		@FindBy(xpath = "//div[contains(text(),'Travel Details Deadline')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_TravelDetailsDeadline;
+	    public WebElement date_event_creation_OnlineEntrySystem_TravelDetailsDeadline;
 		
 		@FindBy(xpath = "//div[contains(text(),'Cancellation Deadline')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_CancellationDeadline;
+	    public WebElement date_event_creation_OnlineEntrySystem_CancellationDeadline;
 		
 		@FindBy(xpath = "//div[contains(text(),'Participant Registration Deadline')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_ParticipantRegistrationDeadline;
+	    public WebElement date_event_creation_OnlineEntrySystem_ParticipantRegistrationDeadline;
 		
 		@FindBy(xpath = "//div[contains(text(),'Accommodation Details Deadline')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_AccommodationDetailsDeadline;
+	    public WebElement date_event_creation_OnlineEntrySystem_AccommodationDetailsDeadline;
 		
 		@FindBy(xpath = "//div[contains(text(),'Visa Details Deadline')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_VisaDetailsDeadline;
+	    public WebElement date_event_creation_OnlineEntrySystem_VisaDetailsDeadline;
 		
 		@FindBy(xpath = "//div[contains(text(),'Enable OES')]//parent::div//parent::div//input")
 	    public WebElement toggle_event_creation_OnlineEntrySystem_EnableOES;
@@ -829,10 +847,10 @@ public class EventcreationElements {
 	    public WebElement text_event_creation_OnlineEntrySystem_AdditionalDeadlines_DeadlineName;
 		
 		@FindBy(xpath = "//div[contains(text(),' Start Date Time')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_DeadlineName;
+	    public WebElement date_event_creation_OnlineEntrySystem_AdditionalDeadlines_StartDateTime;
 		
 		@FindBy(xpath = "//div[contains(text(),'End Date Time')]//parent::div//parent::div//input")
-	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_EndDateTime;
+	    public WebElement date_event_creation_OnlineEntrySystem_AdditionalDeadlines_EndDateTime;
 		
 		@FindBy(xpath = "//span[text()='Proceed']")
 	    public WebElement button_event_creation_OnlineEntrySystem_AdditionalDeadlines_Proceed;
@@ -1075,10 +1093,10 @@ public class EventcreationElements {
 	    public WebElement tab_event_creation_Hospitality;
 		
 		@FindBy(xpath = "//div[contains(text(),'Allowed First Arrival Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Hospitality_AllowedFirstArrivalDate;
+	    public WebElement date_event_creation_Hospitality_AllowedFirstArrivalDate;
 		
 		@FindBy(xpath = "//div[contains(text(),'Allowed Last Departure Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Hospitality_AllowedLastDepartureDate;
+	    public WebElement date_event_creation_Hospitality_AllowedLastDepartureDate;
 		
 		@FindBy(xpath = "//div[contains(text(),'Force Hospitality')]//parent::div//parent::div//input")
 	    public WebElement toggle_event_creation_Hospitality_ForceHospitality;
