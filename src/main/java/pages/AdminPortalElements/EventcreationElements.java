@@ -1561,8 +1561,14 @@ public class EventcreationElements {
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid From')]//parent::div//parent::div//input")
 	    public WebElement button_event_creation_Documents_AddDocuments_ValidFrom;
 		
+		@FindBy(xpath = "//mat-datepicker-content//td[@class='mat-calendar-body-cell mat-calendar-body-active ng-star-inserted']")
+	    public WebElement button_event_creation_Documents_AddDocuments_ValidFrom_datepicker;
+		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid To')]//parent::div//parent::div//input")
 	    public WebElement button_event_creation_Documents_AddDocuments_ValidTo;
+		
+		@FindBy(xpath = "//mat-datepicker-content//td[@class='mat-calendar-body-cell mat-calendar-body-active ng-star-inserted']//following-sibling::td")
+	    public WebElement button_event_creation_Documents_AddDocuments_ValidTo_datepicker;
 		
 		@FindBy(xpath = "//div[contains(text(),'Document')]//parent::div//parent::div//label[@class='file_upload_button']")
 	    public WebElement button_event_creation_Documents_AddDocuments_Documentuploadbutton;
@@ -1592,10 +1598,10 @@ public class EventcreationElements {
 	    public WebElement text_event_creation_Accreditation_searchbar;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_StartDate;
+	    public WebElement date_event_creation_Accreditation_AddAccreditationInformation_StartDate;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
-	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_EndDate;
+	    public WebElement date_event_creation_Accreditation_AddAccreditationInformation_EndDate;
 		
 		@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Location')]//parent::div//parent::div//input")
 	    public WebElement text_event_creation_Accreditation_AddAccreditationInformation_Location;
