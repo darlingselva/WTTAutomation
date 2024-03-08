@@ -75,7 +75,7 @@ public class EventcreationElements {
 		@FindBy(xpath = "//span[text()='Select Currency']/../../parent::div[@class='cuppa-dropdown']//input")
 	    public WebElement searchtext_event_creation_SelectCurrencysearch;
 		
-		@FindBy(xpath = "(//span[text()='Select Currency']/../../parent::div[@class='cuppa-dropdown']//input)[2]")
+		@FindBy(xpath = "(//span[text()='Select Currency']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 	    public WebElement checkbox_event_creation_SelectCurrencysearchresult;
 		
 		@FindBy(xpath = "//div[contains(text(),'Tags')]/../parent::div//input")
@@ -162,6 +162,12 @@ public class EventcreationElements {
 		
 		@FindBy(xpath = "(//span[text()='Select Tournament Age Category']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[3]")
 	    public WebElement checkbox_event_creation_TournamentAgeCategorysearchresult;
+		
+		@FindBy(xpath = "//div[contains(text(),'Tournament Age Category')]/../parent::div//span[@class='c-angle-up ng-star-inserted']//c-icon")
+	    public WebElement button_event_creation_TournamentAgeCategoryupicon;
+		
+		@FindBy(xpath = "//button[text()='Next']")
+	    public WebElement button_event_creation_next;
 		
 		//Event creation - 2: Competition
 		
