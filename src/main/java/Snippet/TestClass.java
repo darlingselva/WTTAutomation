@@ -8,20 +8,25 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import base.CommonPaths;
+import base.Commonmethods;
 import base.DriverInitialisation;
+import util.SpecializedScreenRecorder;
 
 public class TestClass extends DriverInitialisation{
 	
+	Commonmethods commonmethod=new Commonmethods(driver,wait);
+	
 	@BeforeSuite
-	public void setUp(){
-		initialization();	
+	public void setUp() throws Exception{
+	
+		initialization();
+		
+		commonmethod.startRecording();
 	}
 	
 	
@@ -55,7 +60,8 @@ public class TestClass extends DriverInitialisation{
 	
 	
 	@AfterSuite
-	public void destroyDriver(){
+	public void destroyDriver() throws Exception{
+		commonmethod.stopRecording();
 		driver.quit();
 	}
 }

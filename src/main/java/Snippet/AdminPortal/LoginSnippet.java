@@ -1,20 +1,16 @@
 package Snippet.AdminPortal;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import Snippet.TestClass;
-
 import base.Commonmethods;
 import pages.AdminPortalElements.Admin_login_page_Elements;
 
 public class LoginSnippet extends TestClass{
 	
 	public static void login() throws Exception {
+		
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
 		Commonmethods.properties_file="Adminportal";
 		 String url=base.Commonmethods.getvaluefrompropertiesfile("url");

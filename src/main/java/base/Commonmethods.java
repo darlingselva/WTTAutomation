@@ -855,7 +855,7 @@ public static ResourceBundle resource;
 	}
 	
 	
-	public void startRecording() throws Exception
+	public  void startRecording() throws Exception
     {
 		File srcfile = new File(CommonPaths.Video_recording_path);
         
