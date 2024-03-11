@@ -25,18 +25,15 @@ public class LoginSnippet extends TestClass{
 		base.Sendkey(admin.ittf_password, Commonmethods.getvaluefrompropertiesfile("admin.password"));;	        
 			base.click(admin.ittf_Sign_button);
 			
-			//base.wait(12);
-			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//base.takescreenshoot();
+			
 			
 			Assert.assertEquals("ITTF-Admin Center", driver.getTitle());
 			base.wait(2);
-			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
 
 	      	base.takescreenshoot("loginpage");
 			
-			//base.wait(2);
-			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 
 	}
 	

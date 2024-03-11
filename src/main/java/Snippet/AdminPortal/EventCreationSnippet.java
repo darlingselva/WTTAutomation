@@ -142,60 +142,7 @@ public class EventCreationSnippet extends TestClass{
 		base.takescreenshoot("eventcreation");
 		
 		
-		/*
-		event.tab_event.click();
-		event.button_event_core_tab_creation.click();
-		event.tab_event_creation_Competition.click();
-		event.tab_event_creation_ParticipantOrganizations.click();
-		event.tab_event_creation_ProfileQuotas.click();
-		event.tab_event_creation_KeyPersons.click();
-		event.tab_event_creation_Dates.click();
-		event.tab_event_creation_Draws.click();
-		event.tab_event_creation_MatchConfiguration.click();
-		event.tab_event_creation_Logos.click();
-		event.tab_event_creation_Equipment.click();
-		event.tab_event_creation_OnlineEntrySystem.click();
-		event.tab_event_creation_PaymentOptions.click();
-		event.tab_event_creation_TournamentFee.click();
-		event.tab_event_creation_NonMATournamentFee.click();
-		event.tab_event_creation_Hospitality.click();
-		event.tab_event_creation_NonMAHospitality.click();
-		event.tab_event_creation_Miscellaneous.click();
-		event.tab_event_creation_Travel.click();
-		event.tab_event_creation_Transportation.click();
 		
-		 base.wait(2);
-		event.tab_event_creation_Sponsors.click();	
-		base.wait(2);
-		event.button_event_creation_Sponsors_AddNew.click();	
-		base.wait(2);
-		event.text_event_creation_Sponsors_AddSponsorInformation_SponsorName.sendKeys("test");
-		base.wait(2);
-		event.text_event_creation_Sponsors_AddSponsorInformation_SponsorLink.sendKeys("test");
-		base.wait(2);
-		event.text_event_creation_Sponsors_AddSponsorInformation_Priority.sendKeys("test");	
-		base.wait(2);
-		event.button_event_creation_Sponsors_AddSponsorInformation_SponsorCoreType.click();
-		base.wait(2);
-		event.bartext_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearch.sendKeys("ittf");
-		base.wait(2);
-		base.jclick(event.checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorCoreTypesearchresult);
-		base.wait(2);	
-		event.button_event_creation_Sponsors_AddSponsorInformation_SponsorType.click();
-		base.wait(2);
-		event.bartext_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearch.sendKeys("free");
-		base.wait(2);
-		base.jclick(event.checkbox_event_creation_Sponsors_AddSponsorInformation_SponsorTypesearchresult);
-		base.wait(2);	
-		event.button_event_creation_Sponsors_AddSponsorInformation_Organization.click();
-		base.wait(2);
-		event.searchtext_event_creation_Sponsors_AddSponsorInformation_SearchOrganization.sendKeys("india");
-		base.wait(2);
-		event.searchtext_event_creation_Sponsors_AddSponsorInformation_SearchOrganization.sendKeys(Keys.ENTER);
-		base.wait(2);
-		event.button_event_creation_Sponsors_AddSponsorInformation_Proceed.click();
-		base.wait(12);
-       */
 	}
 	
 	public static void main(String[] args) {

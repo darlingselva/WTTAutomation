@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-08T10:28:07Z" name="Default suite" finished-at="2024-03-08T10:36:39Z" duration-ms="511596">
+  <suite started-at="2024-03-11T04:53:21Z" name="Default suite" finished-at="2024-03-11T05:01:45Z" duration-ms="503994">
     <groups>
     </groups>
-    <test started-at="2024-03-08T10:28:07Z" name="Default test" finished-at="2024-03-08T10:36:39Z" duration-ms="511596">
+    <test started-at="2024-03-11T04:53:21Z" name="Default test" finished-at="2024-03-11T05:01:45Z" duration-ms="503994">
       <class name="testcases.AdminPortal.Eventcreation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-08T15:58:06Z" name="setUp" finished-at="2024-03-08T15:58:07Z" duration-ms="1080" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-11T10:23:19Z" name="setUp" finished-at="2024-03-11T10:23:21Z" duration-ms="1755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="crateevent()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-08T15:58:07Z" name="crateevent" finished-at="2024-03-08T16:06:39Z" duration-ms="511582" status="PASS">
+        <test-method signature="crateevent()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-11T10:23:21Z" name="crateevent" finished-at="2024-03-11T10:31:45Z" duration-ms="503971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- crateevent -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-08T16:06:39Z" name="screenShot" finished-at="2024-03-08T16:06:39Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-11T10:31:45Z" name="screenShot" finished-at="2024-03-11T10:31:45Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-08T16:06:39Z" name="destroyDriver" finished-at="2024-03-08T16:06:39Z" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.Eventcreation@d771cc9]" started-at="2024-03-11T10:31:45Z" name="destroyDriver" finished-at="2024-03-11T10:31:45Z" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
