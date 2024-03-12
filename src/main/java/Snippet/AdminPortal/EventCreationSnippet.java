@@ -131,7 +131,9 @@ public class EventCreationSnippet extends TestClass{
 		}
 		
 		base.wait(5);
-		base.takescreenshoot("eventcreation");
+		base.jclick(event.button_event_creation_cCreate);
+		base.wait(5);
+		base.takescreenshoot();
 		
 		
 		
