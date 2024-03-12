@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class EventcreationElements {
 	
-	public static Logger logger = Logger.getLogger(EventcreationElements.class);
 	
 	
 	 WebDriver driver;
