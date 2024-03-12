@@ -23,6 +23,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -910,6 +911,27 @@ public static ResourceBundle resource;
     	JavascriptExecutor executor = (JavascriptExecutor)driver;
     	executor.executeScript("arguments[0].click();", element);
     }
+    
+    
+    public void checkelementvisibility(WebElement element) {
+    	try
+    	{
+    		if(element.isDisplayed()==true) {
+    			
+    		}
+    		else {
+    			new Actions(driver).moveToElement(element).perform();
+    		}
+    	}
+		catch(NoSuchElementException e) {
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		}
+    	catch(Exception e) {
+    		
+    		System.out.println(e.getMessage());
+    	}
+	}
+
 //	public static void main(String[] args) {
 //		ResourceBundle resource = ResourceBundle.getBundle("config");
 //		
