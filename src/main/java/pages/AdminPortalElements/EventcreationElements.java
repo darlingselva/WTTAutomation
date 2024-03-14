@@ -98,7 +98,10 @@ public class EventcreationElements {
 		@FindBy(xpath = "//div[contains(text(),'Tournament Logo')]/../parent::div//label")
 	    public WebElement button_event_core_tab_creation_TournamentLogo;
 		
-		@FindBy(xpath = "//span[text()='Select Venue']/../../parent::mat-select")
+//		@FindBy(xpath = "//span[text()='Select Venue']/../../parent::mat-select")
+//	    public WebElement button_event_core_tab_creation_SelectVenue;
+		
+		@FindBy(xpath = "//span[text()='Select Venue']")
 	    public WebElement button_event_core_tab_creation_SelectVenue;
 		
 		@FindBy(xpath = "//input[@placeholder='Search Venue']")
@@ -543,6 +546,18 @@ public class EventcreationElements {
 		
 		@FindBy(xpath = "//input[@placeholder='Search Match Configuration']")
 	    public WebElement searchtext_event_creation_MatchConfiguration_PrefillfromMatchConfigurationTemplatessearch;
+		
+		@FindBy(xpath = "//div[contains(text(),'Individual Match Type')]//parent::div//parent::div//div[@class='mat-select-value']")
+	    public WebElement button_event_creation_MatchConfiguration_IndividualMatchType;
+		
+		@FindBy(xpath = "//input[@placeholder='Search Individual Match Type']")
+	    public WebElement searchtext_event_creation_MatchConfiguration_IndividualMatchType;
+		
+		@FindBy(xpath = "//div[contains(text(),'Best Of X Games')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_BestOfXGames;
+		
+		@FindBy(xpath = "//div[contains(text(),'Max Games/Individual Match')]//parent::div//parent::div//input")
+	    public WebElement text_event_creation_MatchConfiguration_MaxGamesIndividualMatch;
 		
 		@FindBy(xpath = "//div[contains(text(),'Max Points/Game')]//parent::div//parent::div//input")
 	    public WebElement text_event_creation_MatchConfiguration__MaxPointsGame;

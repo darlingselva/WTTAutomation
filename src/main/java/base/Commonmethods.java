@@ -920,7 +920,7 @@ public static ResourceBundle resource;
     			
     		}
     		else {
-    			new Actions(driver).moveToElement(element).perform();
+    			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     		}
     	}
 		catch(NoSuchElementException e) {

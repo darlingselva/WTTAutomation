@@ -6,6 +6,9 @@
       <class name="testcases.AdminPortal.SubEventcreation">
         <methods>
           <include name="subcrateevent"/>
+          <include name="screenShot"/>
+          <include name="setUp"/>
+          <include name="destroyDriver"/>
         </methods>
       </class> <!-- testcases.AdminPortal.SubEventcreation -->
     </classes>
