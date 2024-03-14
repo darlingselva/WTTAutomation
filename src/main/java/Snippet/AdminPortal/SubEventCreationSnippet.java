@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import Snippet.TestClass;
 import base.Commonmethods;
@@ -15,8 +16,11 @@ import util.TestDataReader;
 
 public class SubEventCreationSnippet extends TestClass{
 	
+	public static String subeventid="null";
+	
 	public static void Adminportal_Subevent_creation() throws Exception {
 		
+	
 		LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
 		SubEventcreationElements subevent =  PageFactory.initElements(driver,SubEventcreationElements.class);
@@ -145,6 +149,19 @@ public class SubEventCreationSnippet extends TestClass{
 	
 		
 		}
+		
+		String subreventsuccesspopmessage=subevent.text1_subevents_successpopupmessage.getText();
+		
+		Assert.assertEquals(subreventsuccesspopmessage, "Sub Event Added Successfully");
+		
+		base.wait(3);
+		String tempsubeventid=subevent.text1_subevents_subeventdeails.getText();
+		
+		String[] tempsubeventid1=tempsubeventid.toString().split("#");
+		
+		subeventid=tempsubeventid1[1].toString();
+		
+		System.out.println("Sub event id="+subeventid);
 		
 	}
 

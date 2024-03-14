@@ -235,5 +235,12 @@ public class SubEventcreationElements {
 		@FindBy (xpath = "//button[text()='Cancel']")
 		public WebElement tab_subevent_Cancel;
 		
-
+       // success message 
+		
+		@FindBy (xpath = "//span[text()='Sub Event Added Successfully']")
+		public WebElement text1_subevents_successpopupmessage;
+		
+		@FindBy (xpath = "//span[contains(text(),'Sub Event Details')]")
+		public WebElement text1_subevents_subeventdeails;
+		
 }
