@@ -96,7 +96,7 @@ public class EventcreationElements {
 	    public WebElement checkbox_event_core_tab_creation_SelectTimeZonesearchresult;
 		
 		@FindBy(xpath = "//div[contains(text(),'Tournament Logo')]/../parent::div//label")
-	    public WebElement button_event_core_tab_creation_TournamentLogo;
+	    public WebElement filebutton_event_core_tab_creation_TournamentLogo;
 		
 //		@FindBy(xpath = "//span[text()='Select Venue']/../../parent::mat-select")
 //	    public WebElement button_event_core_tab_creation_SelectVenue;

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import Snippet.TestClass;
 import base.Commonmethods;
 import pages.AdminPortalElements.EventcreationElements;
+import util.Fileuploadrobotclass;
 import util.TestDataReader;
 
 
@@ -134,7 +135,26 @@ public class EventCreationSnippet extends TestClass{
 			      String date_var=dtf.format(now).toString();
 			      b.sendKeys(date_var);
 			 }
-			 break;	 	 
+			 break;
+		
+		case "filebutton":
+			try {
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 base.checkelementvisibility(b);
+			 b.click();
+			 base.wait(3);
+			 Fileuploadrobotclass.fileuploadmethod(TestDataReader.TestdataArray[i].toString());
+			 base.wait(3);
+			}
+			catch(Exception e) {
+				b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+				 base.checkelementvisibility(b);
+				base.jclick(b);
+				base.wait(3);
+				 Fileuploadrobotclass.fileuploadmethod(TestDataReader.TestdataArray[i].toString());
+				 base.wait(3);
+			}
+			 
 		default:
 			break;
 		}

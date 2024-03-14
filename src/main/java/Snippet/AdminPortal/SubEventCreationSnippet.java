@@ -163,6 +163,8 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		System.out.println("Sub event id="+subeventid);
 		
+		base.takescreenshoot("subevent");
+		
 	}
 
 }
