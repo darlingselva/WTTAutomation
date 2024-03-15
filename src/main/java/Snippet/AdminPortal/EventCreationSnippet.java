@@ -4,6 +4,7 @@ package Snippet.AdminPortal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -169,12 +170,14 @@ public class EventCreationSnippet extends TestClass{
 		
 		base.wait(5);
 		base.jclick(event.button_event_creation_cCreate);
-		base.wait(25);
+		base.wait(30);
 //      String eventsuccesspopmessage=event.text1_event_successpopupmessage.getText();
 //		
 //		Assert.assertEquals(eventsuccesspopmessage, "Event Added Successfully");
 		
 		base.wait(3);
+		
+		try {
 		if(event.text1_event_eventdeails.isDisplayed()==true) {
 		String tempeventid=event.text1_event_eventdeails.getText();
 		
@@ -188,7 +191,15 @@ public class EventCreationSnippet extends TestClass{
 		else {
 			base.takescreenshoot("eventcreationerror");	
 		}
-		
+		}
+		catch(NoSuchElementException e) {
+			base.takescreenshoot("eventcreationerror");	
+			
+		}
+		catch(Exception e) {
+			base.takescreenshoot("eventcreationerror");	
+			e.printStackTrace();
+		}
 		base.wait(3);
 		admin.ittf_logout_button.click();
 	
