@@ -7,16 +7,16 @@ import Snippet.AdminPortal.EventCreationSnippet;
 import Snippet.AdminPortal.LoginSnippet;
 import Snippet.AdminPortal.SubEventCreationSnippet;
 
-public class SubEventcreation extends TestClass {
+public class StaticSubEventcreation  extends TestClass {
 	
 	@Test
-	public static void subcrateevent() throws Exception {
+public static void staticsubcrateevent() throws Exception {
 		
-	    LoginSnippet.login();
-	     EventCreationSnippet.Adminportal_event_creation();
+	  
 		 LoginSnippet.login();
 		SubEventCreationSnippet.Adminportal_Subevent_creation();
 	
 	}
+	
 
 }

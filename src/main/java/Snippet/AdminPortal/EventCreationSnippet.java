@@ -6,8 +6,11 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import Snippet.TestClass;
 import base.Commonmethods;
+import pages.AdminPortalElements.Admin_login_page_Elements;
 import pages.AdminPortalElements.EventcreationElements;
 import util.Fileuploadrobotclass;
 import util.TestDataReader;
@@ -15,13 +18,15 @@ import util.TestDataReader;
 
 public class EventCreationSnippet extends TestClass{
 	
+	public static String eventid;
 	
 	public static void Adminportal_event_creation() throws Exception {
-	     LoginSnippet.login();
+	     //LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
+		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
 		Commonmethods base=new Commonmethods(driver,wait);	
 		
-		
+	
 		WebElement b;
 		TestDataReader.tetsdatareader("Eventcreation.xlsx");
 		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
@@ -164,46 +169,30 @@ public class EventCreationSnippet extends TestClass{
 		
 		base.wait(5);
 		base.jclick(event.button_event_creation_cCreate);
-		base.wait(5);
-		base.takescreenshoot();
+		base.wait(25);
+//      String eventsuccesspopmessage=event.text1_event_successpopupmessage.getText();
+//		
+//		Assert.assertEquals(eventsuccesspopmessage, "Event Added Successfully");
 		
+		base.wait(3);
+		String tempeventid=event.text1_event_eventdeails.getText();
+		
+		String[] tempsubeventid1=tempeventid.toString().split("#");
+		
+		eventid=tempsubeventid1[1].toString();
+		
+		System.out.println("event id="+eventid);
+		
+		base.takescreenshoot("eventcreation");
+		base.wait(3);
+		admin.ittf_logout_button.click();
+	
+		
+       
 		
 		
 	}
 	
-	public static void main(String[] args) {
-		TestDataReader.tetsdatareader("TestData.xlsx");
-		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
-			String[] a=TestDataReader.TestheaderArray[i].toString().split("_");
-			//System.out.println(a[0].toString());
-			
-			switch(a[0].toString()) {
-			
-			case "date":
-				 System.out.println(TestDataReader.TestheaderArray[i].toString());
-				System.out.println("length="+a.length);
-				 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyy, HH:mm:ss");
-				 if(a[a.length-1].toString().contains("Start")) {
-					 System.out.println(TestDataReader.TestheaderArray[i].toString());
-			      LocalDateTime now = LocalDateTime.now(); 
-			      String date_var=dtf.format(now).toString();
-			      
-				 }
-				 else if(a[a.length-1].toString().contains("End")) {
-					System.out.println(TestDataReader.TestheaderArray[i].toString());
-					 LocalDateTime now = LocalDateTime.now().plusDays(1); 
-				      String date_var=dtf.format(now).toString();
-				 }
-				 else {
-					 System.out.println("not available");
-				 }
-				 
-				 break;	 	 
-			default:
-				break;
-			}
-			}
-		
-	}
+
    
 }

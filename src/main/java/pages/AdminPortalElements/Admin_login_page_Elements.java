@@ -23,5 +23,8 @@ public class Admin_login_page_Elements {
 	
 	@FindBy(xpath = "//span[text()='Sign In']")
     public WebElement ittf_Sign_button;
+	
+	@FindBy(xpath = "//div[text()='Logout']")
+    public WebElement ittf_logout_button;
 		
 }

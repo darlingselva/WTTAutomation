@@ -33,6 +33,9 @@ public class SubEventcreationElements {
 		@FindBy(xpath = "//button[@class='prime_button mob-mt-10 ng-star-inserted']")
 		public WebElement button_create_subevents;
 		
+		@FindBy(xpath = "//button//span[text()='Next']")
+		public WebElement button_create_subevents_next;
+		
 		// 1.Basics
 		
 		@FindBy (xpath = "//div[text()='1: Basics']")
@@ -124,6 +127,18 @@ public class SubEventcreationElements {
 		@FindBy (xpath = "//span[text()='Select Event Draws']")
 		public WebElement button_subevent_draws;
 		
+		@FindBy (xpath = "(//div[contains(text(),'Draws')])[2]")
+		public WebElement button_subevent_drawsss;
+		
+		@FindBy (xpath = "//input[@placeholder='Search Event Draws']")
+		public WebElement text_subevent_drawssearch;
+		
+		@FindBy (xpath = "//mat-pseudo-checkbox[@class='mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted']")
+		public WebElement checkbox_subevent_drawssearch;
+		
+		@FindBy (xpath = "//mat-icon[text()='close']")
+		public WebElement button_subevent_drawsicon;
+		
 		//Playing Draws Information
 		
 		@FindBy (xpath = "//span[text()='Select Sub Event Playing Draw']")
@@ -151,11 +166,17 @@ public class SubEventcreationElements {
 		@FindBy (xpath = "(//mat-dialog-container//span[text()='Select Phase']/../../parent::div[@class='cuppa-dropdown']//input)[1]")
 		public WebElement text_subevent_phases_AddPhase_selectphasesearch;
 		
-		@FindBy (xpath = "(//mat-dialog-container//span[text()='Select Phase']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[1]")
+		@FindBy (xpath = "(//mat-dialog-container//span[text()='Select Phase']/../../parent::div[@class='cuppa-dropdown']//input[@type='checkbox'])[2]")
 		public WebElement checkbox_subevent_phases_AddPhase_selectphasesearchresult;
 		
-		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Draw')]//parent::div//parent::div//parent::div//following-sibling::div//div[@class='label-input-header mob-text-left field_label_header input-label p0 fw400 textcamel ng-star-inserted']//span")
-		public WebElement text_subevent_phases_AddPhase_Draw;
+		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Draw')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+		public WebElement button_subevent_phases_AddPhase_Draw;
+		
+		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Draw')]//parent::div//parent::div//input[@type='text']")
+		public WebElement text_subevent_phases_AddPhase_Drawsearch;
+		
+		@FindBy (xpath = "(//mat-dialog-container//div[contains(text(),'Draw')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+		public WebElement checkbox_subevent_phases_AddPhase_Drawsearchresult;
 		
 		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
 		public WebElement date_subevent_phases_AddPhase_StartDateTime;
@@ -185,8 +206,14 @@ public class SubEventcreationElements {
 		@FindBy (xpath = "//button[text()='Add New']")
 		public WebElement button_subevent_addnew_prize;
 		
-		@FindBy (xpath = "//span[text()='Select Event Draw']")
-		public WebElement text_subevents_prize_AddPrizeInformation_selecteventdraw;
+		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Event Draw')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+		public WebElement button_subevents_prize_AddPrizeInformation_selecteventdraw;
+		
+		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Event Draw')]//parent::div//parent::div//input[@type='text']")
+		public WebElement text_subevents_prize_AddPrizeInformation_selecteventdrawsearch;
+		
+		@FindBy (xpath = "(//mat-dialog-container//div[contains(text(),'Event Draw')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+		public WebElement checkbox_subevents_prize_AddPrizeInformation_selecteventdrawsearchresult;
 		
 		@FindBy (xpath = "//mat-dialog-container//div[contains(text(),'Phase')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
 		public WebElement button_subevent_prize_AddPrizeInformation_selectphase;

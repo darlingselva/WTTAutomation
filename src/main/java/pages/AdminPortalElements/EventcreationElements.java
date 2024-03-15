@@ -712,10 +712,10 @@ public class EventcreationElements {
 		
 		
 		@FindBy(xpath = "//input[@placeholder='Search Logo Type']")
-	    public WebElement searchbutton_event_creation_Logos_AddLogos_SearchLogoType;
+	    public WebElement searchtext_event_creation_Logos_AddLogos_SearchLogoType;
 		
 		@FindBy(xpath = "//label[text()=' Select Image ']")
-	    public WebElement button_event_creation_Logos_AddLogos_SelectImage;
+	    public WebElement filebutton_event_creation_Logos_AddLogos_SelectImage;
 		
 		@FindBy(xpath = "//span[text()='Proceed']")
 	    public WebElement button_event_creation_Logos_AddLogos_Proceed;
@@ -1977,7 +1977,13 @@ public class EventcreationElements {
 		@FindBy(xpath = "//button[text()='Cancel']")
 	    public WebElement button_event_creation_Cancels;
 		
+// success message 
 		
+		@FindBy (xpath = "//span[text()='Event Added Successfully']")
+		public WebElement text1_event_successpopupmessage;
+		
+		@FindBy (xpath = "//span[contains(text(),'Tournament Details')]")
+		public WebElement text1_event_eventdeails;
 
 
 }
