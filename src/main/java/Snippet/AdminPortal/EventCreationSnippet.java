@@ -175,6 +175,7 @@ public class EventCreationSnippet extends TestClass{
 //		Assert.assertEquals(eventsuccesspopmessage, "Event Added Successfully");
 		
 		base.wait(3);
+		if(event.text1_event_eventdeails.isDisplayed()==true) {
 		String tempeventid=event.text1_event_eventdeails.getText();
 		
 		String[] tempsubeventid1=tempeventid.toString().split("#");
@@ -182,8 +183,12 @@ public class EventCreationSnippet extends TestClass{
 		eventid=tempsubeventid1[1].toString();
 		
 		System.out.println("event id="+eventid);
-		
 		base.takescreenshoot("eventcreation");
+		}
+		else {
+			base.takescreenshoot("eventcreationerror");	
+		}
+		
 		base.wait(3);
 		admin.ittf_logout_button.click();
 	

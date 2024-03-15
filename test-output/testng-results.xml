@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T10:02:16Z" name="Default suite" finished-at="2024-03-15T10:13:16Z" duration-ms="660438">
+  <suite started-at="2024-03-15T10:49:08Z" name="Default suite" finished-at="2024-03-15T11:00:08Z" duration-ms="659776">
     <groups>
     </groups>
-    <test started-at="2024-03-15T10:02:16Z" name="Default test" finished-at="2024-03-15T10:13:16Z" duration-ms="660438">
-      <class name="testcases.AdminPortal.SubEventcreation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.SubEventcreation@6d167f58]" started-at="2024-03-15T15:32:14Z" name="setUp" finished-at="2024-03-15T15:32:16Z" duration-ms="1517" status="PASS">
+    <test started-at="2024-03-15T10:49:08Z" name="Default test" finished-at="2024-03-15T11:00:08Z" duration-ms="659776">
+      <class name="testcases.AdminPortal.StaticSubEventcreation">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T16:19:07Z" name="setUp" finished-at="2024-03-15T16:19:08Z" duration-ms="1159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="subcrateevent()[pri:0, instance:testcases.AdminPortal.SubEventcreation@6d167f58]" started-at="2024-03-15T15:32:16Z" name="subcrateevent" finished-at="2024-03-15T15:43:16Z" duration-ms="660427" status="PASS">
+        <test-method signature="staticsubcrateevent()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T16:19:08Z" name="staticsubcrateevent" finished-at="2024-03-15T16:30:08Z" duration-ms="659763" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subcrateevent -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.SubEventcreation@6d167f58]" started-at="2024-03-15T15:43:16Z" name="screenShot" finished-at="2024-03-15T15:43:16Z" duration-ms="0" status="PASS">
+        </test-method> <!-- staticsubcrateevent -->
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T16:30:08Z" name="screenShot" finished-at="2024-03-15T16:30:08Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=subcrateevent status=SUCCESS method=SubEventcreation.subcrateevent()[pri:0, instance:testcases.AdminPortal.SubEventcreation@6d167f58] output={null}]]]>
+                <![CDATA[[TestResult name=staticsubcrateevent status=SUCCESS method=StaticSubEventcreation.staticsubcrateevent()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.SubEventcreation@6d167f58]" started-at="2024-03-15T15:43:16Z" name="destroyDriver" finished-at="2024-03-15T15:43:17Z" duration-ms="702" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T16:30:08Z" name="destroyDriver" finished-at="2024-03-15T16:30:09Z" duration-ms="537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
-      </class> <!-- testcases.AdminPortal.SubEventcreation -->
+      </class> <!-- testcases.AdminPortal.StaticSubEventcreation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

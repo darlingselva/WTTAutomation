@@ -16,7 +16,6 @@ public class Eventcreation extends TestClass{
 	@Test
 	public static void crateevent() throws Exception {
 		LoginSnippet.login();
-	
 		EventCreationSnippet.Adminportal_event_creation();
 	
 	}
