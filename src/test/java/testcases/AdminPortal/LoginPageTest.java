@@ -17,7 +17,7 @@ public class LoginPageTest extends TestClass{
 		
 		LoginSnippet.login();
 		
-		
+		LogoutSnippet.Adminportal_logout();
 	}
 	
 

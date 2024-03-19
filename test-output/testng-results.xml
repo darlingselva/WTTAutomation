@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T12:24:53Z" name="Default suite" finished-at="2024-03-15T12:36:06Z" duration-ms="673077">
+  <suite started-at="2024-03-19T12:33:55Z" name="Default suite" finished-at="2024-03-19T12:46:29Z" duration-ms="753602">
     <groups>
     </groups>
-    <test started-at="2024-03-15T12:24:53Z" name="Default test" finished-at="2024-03-15T12:36:06Z" duration-ms="673077">
-      <class name="testcases.AdminPortal.StaticSubEventcreation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T17:54:52Z" name="setUp" finished-at="2024-03-15T17:54:53Z" duration-ms="1316" status="PASS">
+    <test started-at="2024-03-19T12:33:55Z" name="Default test" finished-at="2024-03-19T12:46:29Z" duration-ms="753602">
+      <class name="testcases.OES.OESPlayerEntryDetails">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:03:54Z" name="setUp" finished-at="2024-03-19T18:03:55Z" duration-ms="1156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="staticsubcrateevent()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T17:54:53Z" name="staticsubcrateevent" finished-at="2024-03-15T18:06:06Z" duration-ms="673065" status="PASS">
+        <test-method signature="OEsplayerentrydetails()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:03:55Z" name="OEsplayerentrydetails" finished-at="2024-03-19T18:16:29Z" duration-ms="753592" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- staticsubcrateevent -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T18:06:06Z" name="screenShot" finished-at="2024-03-15T18:06:06Z" duration-ms="1" status="PASS">
+        </test-method> <!-- OEsplayerentrydetails -->
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:16:29Z" name="screenShot" finished-at="2024-03-19T18:16:29Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=staticsubcrateevent status=SUCCESS method=StaticSubEventcreation.staticsubcrateevent()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58] output={null}]]]>
+                <![CDATA[[TestResult name=OEsplayerentrydetails status=SUCCESS method=OESPlayerEntryDetails.OEsplayerentrydetails()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.StaticSubEventcreation@6d167f58]" started-at="2024-03-15T18:06:06Z" name="destroyDriver" finished-at="2024-03-15T18:06:07Z" duration-ms="955" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:16:29Z" name="destroyDriver" finished-at="2024-03-19T18:16:29Z" duration-ms="540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
-      </class> <!-- testcases.AdminPortal.StaticSubEventcreation -->
+      </class> <!-- testcases.OES.OESPlayerEntryDetails -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

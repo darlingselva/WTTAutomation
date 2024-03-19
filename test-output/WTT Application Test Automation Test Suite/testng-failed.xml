@@ -6,14 +6,14 @@
   </listeners>
   <test name="WTT App Test Cases(failed)">
     <classes>
-      <class name="testcases.AdminPortal.LoginPageTest">
+      <class name="testcases.AdminPortal.SubEventcreation">
         <methods>
-          <include name="destroyDriver"/>
+          <include name="subcrateevent"/>
           <include name="screenShot"/>
           <include name="setUp"/>
-          <include name="admin_portal_loginPageTitleTest"/>
+          <include name="destroyDriver"/>
         </methods>
-      </class> <!-- testcases.AdminPortal.LoginPageTest -->
+      </class> <!-- testcases.AdminPortal.SubEventcreation -->
     </classes>
   </test> <!-- WTT App Test Cases(failed) -->
 </suite> <!-- Failed suite [WTT Application Test Automation Test Suite] -->

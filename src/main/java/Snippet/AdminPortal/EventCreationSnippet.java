@@ -3,6 +3,8 @@ package Snippet.AdminPortal;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Random;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -20,6 +22,7 @@ import util.TestDataReader;
 public class EventCreationSnippet extends TestClass{
 	
 	public static String eventid;
+	public static String eventname;
 	
 	public static void Adminportal_event_creation() throws Exception {
 	     //LoginSnippet.login();
@@ -55,12 +58,43 @@ public class EventCreationSnippet extends TestClass{
 			}
 			 break;
 		case "text":
+			if(TestDataReader.TestheaderArray[i].toString().equals("text_event_core_tab_creation_EventName")) {
+				
+				 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+				 base.checkelementvisibility(b);
+				 b.clear();
+				 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";				    
+				    StringBuilder sb = new StringBuilder();
+				    Random random = new Random();
+				    int length = 7;
+				    for(int k = 0; k < length; k++) {
+				      int index = random.nextInt(alphabet.length());
+				      char randomChar = alphabet.charAt(index);
+				      sb.append(randomChar);
+				    }
+
+				    String randomString = sb.toString();
+				    eventname=TestDataReader.TestdataArray[i].toString()+randomString;
+				    System.out.println("event name="+eventname);
+				    b.sendKeys(eventname);
+				    base.wait(1);
+				
+			}
+			else {
 			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
 			 base.checkelementvisibility(b);
 			 b.clear();
 			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
 			 base.wait(1);
+			}
 			 break;
+		case "textsearchbar":
+			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
+			 base.checkelementvisibility(b);
+			 b.clear();
+			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			 base.wait(4);
+			 break;	 
 		case "textarea":
 			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
 			 base.checkelementvisibility(b);
@@ -72,7 +106,7 @@ public class EventCreationSnippet extends TestClass{
 			b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
 			 base.checkelementvisibility(b);
 			b.sendKeys(TestDataReader.TestdataArray[i].toString());
-			base.wait(1);
+			base.wait(2);
 			b.sendKeys(Keys.ENTER);
 			base.wait(1);
 			break;
@@ -201,7 +235,7 @@ public class EventCreationSnippet extends TestClass{
 			e.printStackTrace();
 		}
 		base.wait(3);
-		admin.ittf_logout_button.click();
+		//admin.ittf_logout_button.click();
 	
 		
        

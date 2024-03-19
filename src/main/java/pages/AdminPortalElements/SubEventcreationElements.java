@@ -26,6 +26,24 @@ public class SubEventcreationElements {
 		@FindBy(xpath = "//table//tbody//tr[1]//td[1]//span")
 	    public WebElement button_event_searchresult;
 		
+		@FindBy(xpath = "//button//span[contains(text(),'Actions')]")
+	    public WebElement button_event_action;
+		
+		@FindBy(xpath = "//button[text()='Mark as Host Reviewed']")
+	    public WebElement button_event_action_MarkasHostReviewed;
+		
+		@FindBy(xpath = "//button[text()='Mark as Supervisor Reviewed']")
+	    public WebElement button_event_action_MarkasSupervisorReviewed;
+		
+		@FindBy(xpath = "//button[text()='Set Status as Published']")
+	    public WebElement button_event_action_SetStatusasPublished;
+		
+		@FindBy(xpath = "//span[text()='Status : ']//following-sibling::span")
+	    public WebElement text1_event_status;
+		
+		@FindBy(xpath = "(//simple-snack-bar//span)[1]")
+	    public WebElement text1_event_popupmessage;
+	
 		
 		@FindBy(xpath = "//div[text()='Sub Events']")
 	    public WebElement tab_subevents;

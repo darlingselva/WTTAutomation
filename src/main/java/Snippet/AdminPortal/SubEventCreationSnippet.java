@@ -184,7 +184,7 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		base.takescreenshoot("subevent");
 		
-		admin.ittf_logout_button.click();
+		//admin.ittf_logout_button.click();
 		
 		
 		

@@ -9,6 +9,8 @@ import base.CommonPaths;
 import base.Commonmethods;
 import pages.AdminPortalElements.Admin_login_page_Elements;
 import Snippet.TestClass;
+import Snippet.OES.OESLoginSnippet;
+import Snippet.OES.OESLogoutSnippet;
 import testcases.AdminPortal.LoginPageTest;
 import base.Commonmethods;
 public class OESloginpageTest extends TestClass{
@@ -17,26 +19,9 @@ public class OESloginpageTest extends TestClass{
 	
 
 	@Test(priority=1)
-	public void admin_portal_loginPageTitleTest() throws Exception{
+	public void OES_portal_loginPageTitleTest() throws Exception{
 		
-		
-
-		
-		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class); 
-		
-        Commonmethods base=new Commonmethods(driver,wait);
-        
-        admin.ittf_username.sendKeys("oesadmin@wtt.com");
-        admin.ittf_password.sendKeys("oesadmin@123");
-		base.wait(4);
-        
-		base.click(admin.ittf_Sign_button);
-		
-		base.wait(12);
-		base.takescreenshoot();
-		
-		Assert.assertEquals("ITTF-Admin Center", driver.getTitle());
-		
-		System.out.println(CommonPaths.Screenshot_path);
+		OESLoginSnippet.login();
+		OESLogoutSnippet.logout();
 	}
 }

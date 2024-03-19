@@ -399,7 +399,7 @@ public class EventcreationElements {
 	    public WebElement button_event_creation_KeyPersonsIndividualNameuparrowicon;
 		
 		@FindBy(xpath = "//div[contains(text(),'Individual Name')]/../../parent::div//input[@type='text']")
-	    public WebElement text_event_creation_KeyPersonsIndividualNamesearch;
+	    public WebElement textsearchbar_event_creation_KeyPersonsIndividualNamesearch;
 		
 		@FindBy(xpath = "(//div[contains(text(),'Individual Name')]/../../parent::div//li)[1]")
 	    public WebElement checkbox_event_creation_KeyPersonsIndividualNamesearchresult;
