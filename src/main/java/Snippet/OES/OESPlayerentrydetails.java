@@ -23,8 +23,8 @@ public class OESPlayerentrydetails extends TestClass {
 
 	public static void OEs_playerentrydetails() throws Exception {
 		
-		EventCreationSnippet.eventname="Event_nameALYXDWV";
-		SubEventCreationSnippet.subeventype1="Closed";
+		//EventCreationSnippet.eventname="Event_nameALYXDWV";
+		//SubEventCreationSnippet.subeventype1="Closed";
 		OES_Home_page_Elements OEs_home =  PageFactory.initElements(driver,OES_Home_page_Elements.class);
 		OES_event_page_Elements OEs_event =  PageFactory.initElements(driver,OES_event_page_Elements.class);
 		OES_Playerentries_page_Elements OEs_player =  PageFactory.initElements(driver,OES_Playerentries_page_Elements.class);
@@ -75,9 +75,9 @@ public class OESPlayerentrydetails extends TestClass {
 		Assert.assertEquals(driver.switchTo().alert().getText(), "Are you sure want to update entries ? (Caution : this will clear your existing entries)");
 		base.wait(1);
 		driver.switchTo().alert().accept();
-		base.wait(12);
+		base.wait(16);
 		OEs_player.button_OEs_event_playerentries_Back.click();
-		base.wait(2);
+		base.wait(8);
 		
 		}
 		}
@@ -105,7 +105,7 @@ public class OESPlayerentrydetails extends TestClass {
 			 base.wait(12);
 			 OEs_player.button_OEs_event_playerentries_Actions_ImportRecords_ImportRecords.click();
 			 OEs_player.button_OEs_event_playerentries_Back.click();
-		     base.wait(2);
+		     base.wait(8);
 			}
 			
 		}
