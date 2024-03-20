@@ -3,6 +3,7 @@ package Snippet.AdminPortal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -17,20 +18,28 @@ import util.TestDataReader;
 
 public class SubEventCreationSnippet extends TestClass{
 	
-	public static String subeventid="null";
+	public static String[] subeventid;
 	
-	public static void Adminportal_Subevent_creation() throws Exception {
+	public static String subeventype1;
+	
+	public static void Adminportal_Subevent_creation(String subeventstype) throws Exception {
 		
-	
+		subeventype1=subeventstype; 
 		//LoginSnippet.login();
 		//EventCreationSnippet.Adminportal_event_creation();
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
 		SubEventcreationElements subevent =  PageFactory.initElements(driver,SubEventcreationElements.class);
 		Commonmethods base=new Commonmethods(driver,wait);
+		TestDataReader.tetsdatareader("SubEventcreation.xlsx" , subeventstype);
 		
+		subeventid= new String[TestDataReader.numberrows];
+		for(int j=1;j<=TestDataReader.numberrows;j++) {
+			
+			Object cellvalue = null;
+			Cell cell1;
 		base.wait(3);
-		 String static_eventid="2767";
+		 String static_eventid="2766";
 		event.tab_event.click();
 		base.wait(2);
 		if (EventCreationSnippet.eventid!= null) {
@@ -43,7 +52,7 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		
 		WebElement b;
-		TestDataReader.tetsdatareader("SubEventcreation.xlsx");
+		//TestDataReader.tetsdatareader("SubEventcreation.xlsx");
 		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
 			String[] a=TestDataReader.TestheaderArray[i].toString().split("_");
 		switch(a[0].toString()) {
@@ -72,20 +81,59 @@ public class SubEventCreationSnippet extends TestClass{
 			 b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 			 base.checkelementvisibility(b);
 			 b.clear();
-			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			  cell1=TestDataReader.sheet.getRow(j).getCell(i);
+   		  switch (cell1.getCellType()) {
+			    case Cell.CELL_TYPE_NUMERIC:
+			    	cellvalue=cell1.getNumericCellValue();
+			    	  //System.out.print(cell1.getNumericCellValue() + "\n");
+			        break;
+			      case Cell.CELL_TYPE_STRING:
+			    	  cellvalue=cell1.getStringCellValue();
+			        //System.out.print(cell1.getStringCellValue() + "\n");
+			        break;
+			    }
+   		  
+   		b.sendKeys(cellvalue.toString());
+			 //b.sendKeys(TestDataReader.TestdataArray[i].toString());
 			 base.wait(1);
 			 break;
 		case "textarea":
 			 b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 			 base.checkelementvisibility(b);
 			 b.clear();
-			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			  cell1=TestDataReader.sheet.getRow(j).getCell(i);
+	   		  switch (cell1.getCellType()) {
+				    case Cell.CELL_TYPE_NUMERIC:
+				    	cellvalue=cell1.getNumericCellValue();
+				    	  //System.out.print(cell1.getNumericCellValue() + "\n");
+				        break;
+				      case Cell.CELL_TYPE_STRING:
+				    	  cellvalue=cell1.getStringCellValue();
+				        //System.out.print(cell1.getStringCellValue() + "\n");
+				        break;
+				    }
+	   		  
+	   		b.sendKeys(cellvalue.toString());
+			// b.sendKeys(TestDataReader.TestdataArray[i].toString());
 			 base.wait(1);
 			 break;			 
 		case "searchtext":
 			b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 			 base.checkelementvisibility(b);
-			b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			 cell1=TestDataReader.sheet.getRow(j).getCell(i);
+	   		  switch (cell1.getCellType()) {
+				    case Cell.CELL_TYPE_NUMERIC:
+				    	cellvalue=cell1.getNumericCellValue();
+				    	  //System.out.print(cell1.getNumericCellValue() + "\n");
+				        break;
+				      case Cell.CELL_TYPE_STRING:
+				    	  cellvalue=cell1.getStringCellValue();
+				        //System.out.print(cell1.getStringCellValue() + "\n");
+				        break;
+				    }
+	   		  
+	   		b.sendKeys(cellvalue.toString());
+			//b.sendKeys(TestDataReader.TestdataArray[i].toString());
 			base.wait(1);
 			b.sendKeys(Keys.ENTER);
 			base.wait(1);
@@ -114,7 +162,20 @@ public class SubEventCreationSnippet extends TestClass{
 			 b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 			 base.checkelementvisibility(b);
 			 b.clear();
-			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
+			 cell1=TestDataReader.sheet.getRow(j).getCell(i);
+	   		  switch (cell1.getCellType()) {
+				    case Cell.CELL_TYPE_NUMERIC:
+				    	cellvalue=cell1.getNumericCellValue();
+				    	  //System.out.print(cell1.getNumericCellValue() + "\n");
+				        break;
+				      case Cell.CELL_TYPE_STRING:
+				    	  cellvalue=cell1.getStringCellValue();
+				        //System.out.print(cell1.getStringCellValue() + "\n");
+				        break;
+				    }
+	   		  
+	   		b.sendKeys(cellvalue.toString());
+			 //b.sendKeys(TestDataReader.TestdataArray[i].toString());
 			 base.wait(1);
 			 break;	 		 
 		case "date":
@@ -178,7 +239,7 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		String[] tempsubeventid1=tempsubeventid.toString().split("#");
 		
-		subeventid=tempsubeventid1[1].toString();
+		subeventid[j-1]=tempsubeventid1[1].toString();
 		
 		System.out.println("Sub event id="+subeventid);
 		
@@ -186,9 +247,14 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		//admin.ittf_logout_button.click();
 		
-		
+		}
 		
 	  
+	}
+	
+	public static void main(String[] args) {
+		
+		
 	}
 
 }

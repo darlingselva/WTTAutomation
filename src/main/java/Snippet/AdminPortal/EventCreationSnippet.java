@@ -32,7 +32,7 @@ public class EventCreationSnippet extends TestClass{
 		
 	
 		WebElement b;
-		TestDataReader.tetsdatareader("Eventcreation.xlsx");
+		TestDataReader.tetsdatareader("Eventcreation.xlsx" , "EventCreation");
 		for(int i=0;i<TestDataReader.TestheaderArray.length;i++) {
 			String[] a=TestDataReader.TestheaderArray[i].toString().split("_");
 		switch(a[0].toString()) {

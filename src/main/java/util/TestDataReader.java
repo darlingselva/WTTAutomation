@@ -23,16 +23,21 @@ public class TestDataReader
 	
 	public static Object[] TestdataArray;
 	
+	public static int numberrows;
 	
-	public static void tetsdatareader(String filename) {
+	public static XSSFSheet sheet;
+	
+	
+	public static void tetsdatareader(String filename , String sheetname) {
 		
 		try  
 		{  
 		File file = new File(CommonPaths.Test_data+filename);   
 		FileInputStream fis = new FileInputStream(file);   
 		XSSFWorkbook wb = new XSSFWorkbook(fis);   
-		XSSFSheet sheet = wb.getSheetAt(0);     
+		 sheet = wb.getSheet(sheetname);     
 		
+		numberrows=sheet.getLastRowNum();
 		
 		    for(int i=0;i<1;i++) 
 		    {
@@ -132,8 +137,5 @@ public class TestDataReader
 		
 	}
 	
-public static void main(String[] args)   
-{  
-	tetsdatareader("TestData.xlsx");
-}  
+ 
 }  

@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-19T12:33:55Z" name="Default suite" finished-at="2024-03-19T12:46:29Z" duration-ms="753602">
+  <suite started-at="2024-03-20T13:33:55Z" name="Default suite" finished-at="2024-03-20T13:37:48Z" duration-ms="232985">
     <groups>
     </groups>
-    <test started-at="2024-03-19T12:33:55Z" name="Default test" finished-at="2024-03-19T12:46:29Z" duration-ms="753602">
-      <class name="testcases.OES.OESPlayerEntryDetails">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:03:54Z" name="setUp" finished-at="2024-03-19T18:03:55Z" duration-ms="1156" status="PASS">
+    <test started-at="2024-03-20T13:33:55Z" name="Default test" finished-at="2024-03-20T13:37:48Z" duration-ms="232985">
+      <class name="testcases.AdminPortal.Testtestcase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AdminPortal.Testtestcase@6d167f58]" started-at="2024-03-20T19:03:54Z" name="setUp" finished-at="2024-03-20T19:03:55Z" duration-ms="1174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="OEsplayerentrydetails()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:03:55Z" name="OEsplayerentrydetails" finished-at="2024-03-19T18:16:29Z" duration-ms="753592" status="PASS">
+        <test-method signature="testcases()[pri:0, instance:testcases.AdminPortal.Testtestcase@6d167f58]" started-at="2024-03-20T19:03:55Z" name="testcases" finished-at="2024-03-20T19:07:48Z" duration-ms="232972" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OEsplayerentrydetails -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:16:29Z" name="screenShot" finished-at="2024-03-19T18:16:29Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testcases -->
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.AdminPortal.Testtestcase@6d167f58]" started-at="2024-03-20T19:07:48Z" name="screenShot" finished-at="2024-03-20T19:07:48Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=OEsplayerentrydetails status=SUCCESS method=OESPlayerEntryDetails.OEsplayerentrydetails()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58] output={null}]]]>
+                <![CDATA[[TestResult name=testcases status=SUCCESS method=Testtestcase.testcases()[pri:0, instance:testcases.AdminPortal.Testtestcase@6d167f58] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetails@6d167f58]" started-at="2024-03-19T18:16:29Z" name="destroyDriver" finished-at="2024-03-19T18:16:29Z" duration-ms="540" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.AdminPortal.Testtestcase@6d167f58]" started-at="2024-03-20T19:07:48Z" name="destroyDriver" finished-at="2024-03-20T19:07:49Z" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
-      </class> <!-- testcases.OES.OESPlayerEntryDetails -->
+      </class> <!-- testcases.AdminPortal.Testtestcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
