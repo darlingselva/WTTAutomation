@@ -241,7 +241,7 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		subeventid[j-1]=tempsubeventid1[1].toString();
 		
-		System.out.println("Sub event id="+subeventid);
+		System.out.println("Sub event id="+subeventid[j-1]);
 		
 		base.takescreenshoot("subevent");
 		
