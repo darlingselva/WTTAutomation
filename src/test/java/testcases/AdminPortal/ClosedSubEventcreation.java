@@ -8,10 +8,10 @@ import Snippet.AdminPortal.LoginSnippet;
 import Snippet.AdminPortal.LogoutSnippet;
 import Snippet.AdminPortal.SubEventCreationSnippet;
 
-public class SubEventcreation extends TestClass {
+public class ClosedSubEventcreation extends TestClass {
 	
 	@Test
-	public static void subeventcreation() throws Exception {
+	public static void closedsubeventcreation() throws Exception {
 		
 	    LoginSnippet.login();
 	     EventCreationSnippet.Adminportal_event_creation();
