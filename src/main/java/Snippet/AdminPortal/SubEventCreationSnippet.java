@@ -243,7 +243,7 @@ public class SubEventCreationSnippet extends TestClass{
 		
 		System.out.println("Sub event id="+subeventid[j-1]);
 		
-		base.takescreenshoot("subevent");
+		base.takescreenshoot(subeventid[j-1]+"subeventcreated");
 		
 		//admin.ittf_logout_button.click();
 		

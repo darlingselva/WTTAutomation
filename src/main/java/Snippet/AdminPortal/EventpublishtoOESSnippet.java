@@ -69,6 +69,7 @@ public class EventpublishtoOESSnippet extends TestClass {
         
         Assert.assertEquals(subevent.text1_event_status.getText().toString(), "Published");
         base.wait(1);
+        base.takescreenshoot(static_eventid+"_event_published");
 		
 	}
 

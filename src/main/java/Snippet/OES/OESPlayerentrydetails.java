@@ -47,13 +47,14 @@ public class OESPlayerentrydetails extends TestClass {
 		
 		String listevent;
 		WebElement listdeventelement;
+		String subevent_name;
 		if(SubEventCreationSnippet.subeventype1.equals("Closed")) {
 		for(int i=0;i<listOfElements.size();i++) {
 			base.wait(2);
 		listevent="(//sub-event-entries-list//div[@class='row m0']//div[@class='eventslist-card'])"+"["+(i+1)+"]"+"//div[@class='eventscard-title']";
 		listdeventelement=driver.findElement(By.xpath(listevent));
 			
-			//System.out.println(listdeventelement.getText());
+			 subevent_name=listdeventelement.getText();
 			
 			base.wait(1);
 			base.checkelementvisibility(listdeventelement);
@@ -76,8 +77,10 @@ public class OESPlayerentrydetails extends TestClass {
 		base.wait(1);
 		driver.switchTo().alert().accept();
 		base.wait(16);
+		base.takescreenshoot(subevent_name+"_playerdetailsentry");
 		OEs_player.button_OEs_event_playerentries_Back.click();
 		base.wait(8);
+		
 		
 		}
 		}
@@ -89,6 +92,7 @@ public class OESPlayerentrydetails extends TestClass {
 				listdeventelement=driver.findElement(By.xpath(listevent));
 					
 					//System.out.println(listdeventelement.getText());
+				subevent_name=listdeventelement.getText();
 					
 					base.wait(1);
 					base.checkelementvisibility(listdeventelement);
@@ -104,6 +108,7 @@ public class OESPlayerentrydetails extends TestClass {
 			 Fileuploadrobotclass.fileuploadmethod(TestDataReader.TestdataArray[i].toString());
 			 base.wait(12);
 			 OEs_player.button_OEs_event_playerentries_Actions_ImportRecords_ImportRecords.click();
+			 base.takescreenshoot(subevent_name+"_playerdetailsentry");
 			 OEs_player.button_OEs_event_playerentries_Back.click();
 		     base.wait(8);
 			}
