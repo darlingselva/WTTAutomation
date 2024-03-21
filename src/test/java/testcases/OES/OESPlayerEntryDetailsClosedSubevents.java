@@ -12,10 +12,10 @@ import Snippet.OES.OESLoginSnippet;
 import Snippet.OES.OESLogoutSnippet;
 import Snippet.OES.OESPlayerentrydetails;
 
-public class OESPlayerEntryDetails extends TestClass{
+public class OESPlayerEntryDetailsClosedSubevents extends TestClass{
 	
 	@Test
-	public static void OEsplayerentrydetails() throws Exception {
+	public static void OEsplayerentrydetailsclosedevents() throws Exception {
 		
 		LoginSnippet.login();
 	     EventCreationSnippet.Adminportal_event_creation();

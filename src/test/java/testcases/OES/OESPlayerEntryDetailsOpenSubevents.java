@@ -1,4 +1,4 @@
-package testcases.AdminPortal;
+package testcases.OES;
 
 import org.testng.annotations.Test;
 
@@ -12,12 +12,11 @@ import Snippet.OES.OESLoginSnippet;
 import Snippet.OES.OESLogoutSnippet;
 import Snippet.OES.OESPlayerentrydetails;
 
-public class Testtestcase  extends TestClass {
-	
+public class OESPlayerEntryDetailsOpenSubevents extends TestClass {
+
 	@Test
-	public static void testcases() throws Exception {
+public static void OEsplayerentrydetailsopensubevents() throws Exception {
 		
-		/*
 		LoginSnippet.login();
 	     EventCreationSnippet.Adminportal_event_creation();
 	     LogoutSnippet.Adminportal_logout();
@@ -27,11 +26,10 @@ public class Testtestcase  extends TestClass {
 		LoginSnippet.login();
 		EventpublishtoOESSnippet.Adminportal_event_publish_into_OEs();
 		LogoutSnippet.Adminportal_logout();
-	*/
+	 
 		OESLoginSnippet.login();
 		OESPlayerentrydetails.OEs_playerentrydetails();
 		OESLogoutSnippet.logout();
-	 
 		
 	}
 

@@ -50,6 +50,9 @@ public class OES_Playerentries_page_Elements {
 	@FindBy(xpath = "//mat-dialog-container//label[text()=' Choose File (.xlsx) ']")
     public WebElement filebutton_OEs_event_playerentries_Actions_ImportRecords_ChooseFile;
 	
+	@FindBy(xpath = "//mat-dialog-container//b[text()='Skip All']//following-sibling::input[@type='checkbox']")
+    public WebElement checkbox_OEs_event_playerentries_Actions_ImportRecords_SkipAll;
+	
 	@FindBy(xpath = "//mat-dialog-container//button//span[text()='Cancel']")
     public WebElement button_OEs_event_playerentries_Actions_ImportRecords_Cancel;
 	

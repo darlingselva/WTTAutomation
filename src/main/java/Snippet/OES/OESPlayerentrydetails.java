@@ -23,8 +23,8 @@ public class OESPlayerentrydetails extends TestClass {
 
 	public static void OEs_playerentrydetails() throws Exception {
 		
-		//EventCreationSnippet.eventname="Event_nameALYXDWV";
-		//SubEventCreationSnippet.subeventype1="Closed";
+	     //EventCreationSnippet.eventname="Event_nameFONTIZG";
+	     //SubEventCreationSnippet.subeventype1="Open";
 		OES_Home_page_Elements OEs_home =  PageFactory.initElements(driver,OES_Home_page_Elements.class);
 		OES_event_page_Elements OEs_event =  PageFactory.initElements(driver,OES_event_page_Elements.class);
 		OES_Playerentries_page_Elements OEs_player =  PageFactory.initElements(driver,OES_Playerentries_page_Elements.class);
@@ -60,7 +60,7 @@ public class OESPlayerentrydetails extends TestClass {
 			base.checkelementvisibility(listdeventelement);
 		base.wait(2);
 		listdeventelement.click();
-		base.wait(2);
+		base.wait(6);
 		OEs_player.button_OEs_event_playerentries_Actions.click();
 		base.wait(2);
 		OEs_player.button_OEs_event_playerentries_Actions_PrefillEntries.click();
@@ -98,16 +98,46 @@ public class OESPlayerentrydetails extends TestClass {
 					base.checkelementvisibility(listdeventelement);
 				base.wait(2);
 				listdeventelement.click();
-				base.wait(2);
+				base.wait(6);
 			OEs_player.button_OEs_event_playerentries_Actions.click();
 			base.wait(2);
 			OEs_player.button_OEs_event_playerentries_Actions_ImportRecords.click();
 			base.wait(2);
 			OEs_player.filebutton_OEs_event_playerentries_Actions_ImportRecords_ChooseFile.click();
-			base.wait(2);
-			 Fileuploadrobotclass.fileuploadmethod(TestDataReader.TestdataArray[i].toString());
-			 base.wait(12);
+			base.wait(6);
+			switch(subevent_name) {
+			
+			case "men's singles":
+				 Fileuploadrobotclass.fileuploadmethod("SamplePlayerEntries_Men'sOpenevent.xlsx");
+				break;
+				
+			case "Women's Singles":
+				 Fileuploadrobotclass.fileuploadmethod("SamplePlayerEntries_Women'sOpenevent.xlsx");
+				break;
+				
+			case "Men's Doubles":
+				 Fileuploadrobotclass.fileuploadmethod("PLE_Doubles_Template.xlsx");
+				break;
+				
+			case "Women's Doubles":
+				 Fileuploadrobotclass.fileuploadmethod("PLE_Doubles_Template.xlsx");
+				break;
+			default:
+				break;
+               			
+			}
+			
+			
+			 base.wait(6);
+			 base.jclick(OEs_player.checkbox_OEs_event_playerentries_Actions_ImportRecords_SkipAll);
+			 base.wait(2);
+			 
+			 
 			 OEs_player.button_OEs_event_playerentries_Actions_ImportRecords_ImportRecords.click();
+			 base.wait(2);
+			 Assert.assertEquals( driver.switchTo().alert().getText(), "All old entries will be deleted. Can proceed?");
+			 driver.switchTo().alert().accept();
+			 base.wait(8);
 			 base.takescreenshoot(subevent_name+"_playerdetailsentry");
 			 OEs_player.button_OEs_event_playerentries_Back.click();
 		     base.wait(8);
