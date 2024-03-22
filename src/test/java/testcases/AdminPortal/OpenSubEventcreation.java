@@ -19,6 +19,7 @@ public class OpenSubEventcreation extends TestClass {
 		 LoginSnippet.login();
 		SubEventCreationSnippet.Adminportal_Subevent_creation("Open");
 		LogoutSnippet.Adminportal_logout();
+		
 	
 	}
 

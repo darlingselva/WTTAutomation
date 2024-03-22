@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-21T07:58:45Z" name="Default suite" finished-at="2024-03-21T08:19:59Z" duration-ms="1274150">
+  <suite started-at="2024-03-22T05:17:22Z" name="Default suite" finished-at="2024-03-22T05:39:36Z" duration-ms="1334406">
     <groups>
     </groups>
-    <test started-at="2024-03-21T07:58:45Z" name="Default test" finished-at="2024-03-21T08:19:59Z" duration-ms="1274150">
-      <class name="testcases.OES.OESPlayerEntryDetailsOpenSubevents">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsOpenSubevents@6d167f58]" started-at="2024-03-21T13:28:44Z" name="setUp" finished-at="2024-03-21T13:28:45Z" duration-ms="1141" status="PASS">
+    <test started-at="2024-03-22T05:17:22Z" name="Default test" finished-at="2024-03-22T05:39:36Z" duration-ms="1334406">
+      <class name="testcases.OES.OESPlayerEntryDetailsClosedSubevents">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T10:47:20Z" name="setUp" finished-at="2024-03-22T10:47:22Z" duration-ms="1715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="OEsplayerentrydetailsopensubevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsOpenSubevents@6d167f58]" started-at="2024-03-21T13:28:45Z" name="OEsplayerentrydetailsopensubevents" finished-at="2024-03-21T13:49:59Z" duration-ms="1274140" status="PASS">
+        <test-method signature="OEsplayerentrydetailsclosedevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T10:47:22Z" name="OEsplayerentrydetailsclosedevents" finished-at="2024-03-22T11:09:36Z" duration-ms="1334381" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OEsplayerentrydetailsopensubevents -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetailsOpenSubevents@6d167f58]" started-at="2024-03-21T13:49:59Z" name="screenShot" finished-at="2024-03-21T13:49:59Z" duration-ms="1" status="PASS">
+        </test-method> <!-- OEsplayerentrydetailsclosedevents -->
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T11:09:36Z" name="screenShot" finished-at="2024-03-22T11:09:36Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=OEsplayerentrydetailsopensubevents status=SUCCESS method=OESPlayerEntryDetailsOpenSubevents.OEsplayerentrydetailsopensubevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsOpenSubevents@6d167f58] output={null}]]]>
+                <![CDATA[[TestResult name=OEsplayerentrydetailsclosedevents status=SUCCESS method=OESPlayerEntryDetailsClosedSubevents.OEsplayerentrydetailsclosedevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsOpenSubevents@6d167f58]" started-at="2024-03-21T13:49:59Z" name="destroyDriver" finished-at="2024-03-21T13:50:00Z" duration-ms="623" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T11:09:36Z" name="destroyDriver" finished-at="2024-03-22T11:09:37Z" duration-ms="904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
-      </class> <!-- testcases.OES.OESPlayerEntryDetailsOpenSubevents -->
+      </class> <!-- testcases.OES.OESPlayerEntryDetailsClosedSubevents -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

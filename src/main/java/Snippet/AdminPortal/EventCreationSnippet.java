@@ -93,7 +93,7 @@ public class EventCreationSnippet extends TestClass{
 			 base.checkelementvisibility(b);
 			 b.clear();
 			 b.sendKeys(TestDataReader.TestdataArray[i].toString());
-			 base.wait(4);
+			 base.wait(6);
 			 break;	 
 		case "textarea":
 			 b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);

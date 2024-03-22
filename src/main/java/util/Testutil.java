@@ -9,6 +9,7 @@ public class Testutil {
 	  public static void main(String [] args) {
 		  int i=1;
 		 String listevent="(//sub-event-entries-list//div[@class='row m0']//div[@class='eventslist-card'])"+"["+(i+1)+"]"+"//div[@class='eventscard-title']";
-	     System.out.print(listevent);   
+	     System.out.println(listevent);
+	     
 	  }
 }
