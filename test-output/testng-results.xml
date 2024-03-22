@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-22T05:17:22Z" name="Default suite" finished-at="2024-03-22T05:39:36Z" duration-ms="1334406">
+  <suite started-at="2024-03-22T12:01:46Z" name="Default suite" finished-at="2024-03-22T12:23:38Z" duration-ms="1312034">
     <groups>
     </groups>
-    <test started-at="2024-03-22T05:17:22Z" name="Default test" finished-at="2024-03-22T05:39:36Z" duration-ms="1334406">
+    <test started-at="2024-03-22T12:01:46Z" name="Default test" finished-at="2024-03-22T12:23:38Z" duration-ms="1312034">
       <class name="testcases.OES.OESPlayerEntryDetailsClosedSubevents">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T10:47:20Z" name="setUp" finished-at="2024-03-22T10:47:22Z" duration-ms="1715" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T17:31:44Z" name="setUp" finished-at="2024-03-22T17:31:46Z" duration-ms="2556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="OEsplayerentrydetailsclosedevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T10:47:22Z" name="OEsplayerentrydetailsclosedevents" finished-at="2024-03-22T11:09:36Z" duration-ms="1334381" status="PASS">
+        <test-method signature="OEsplayerentrydetailsclosedevents()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T17:31:46Z" name="OEsplayerentrydetailsclosedevents" finished-at="2024-03-22T17:53:38Z" duration-ms="1312006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OEsplayerentrydetailsclosedevents -->
-        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T11:09:36Z" name="screenShot" finished-at="2024-03-22T11:09:36Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T17:53:38Z" name="screenShot" finished-at="2024-03-22T17:53:38Z" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenShot -->
-        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T11:09:36Z" name="destroyDriver" finished-at="2024-03-22T11:09:37Z" duration-ms="904" status="PASS">
+        <test-method is-config="true" signature="destroyDriver()[pri:0, instance:testcases.OES.OESPlayerEntryDetailsClosedSubevents@6d167f58]" started-at="2024-03-22T17:53:38Z" name="destroyDriver" finished-at="2024-03-22T17:53:40Z" duration-ms="1486" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->

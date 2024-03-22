@@ -77,7 +77,7 @@ public class OESPlayerentrydetails extends TestClass {
 		base.wait(1);
 		driver.switchTo().alert().accept();
 		base.wait(16);
-		base.takescreenshoot(subevent_name+"_playerdetailsentry");
+		base.takescreenshoot(EventCreationSnippet.eventname+subevent_name+"_playerdetailsentry");
 		OEs_player.button_OEs_event_playerentries_Back.click();
 		base.wait(8);
 		
@@ -138,7 +138,7 @@ public class OESPlayerentrydetails extends TestClass {
 			 Assert.assertEquals( driver.switchTo().alert().getText(), "All old entries will be deleted. Can proceed?");
 			 driver.switchTo().alert().accept();
 			 base.wait(8);
-			 base.takescreenshoot(subevent_name+"_playerdetailsentry");
+			 base.takescreenshoot(EventCreationSnippet.eventname+subevent_name+"_playerdetailsentry");
 			 OEs_player.button_OEs_event_playerentries_Back.click();
 		     base.wait(8);
 			}
