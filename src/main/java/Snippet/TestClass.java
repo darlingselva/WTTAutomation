@@ -15,24 +15,23 @@ import org.testng.annotations.BeforeSuite;
 import base.CommonPaths;
 import base.Commonmethods;
 import base.DriverInitialisation;
-import util.SpecializedScreenRecorder;
 
 public class TestClass extends DriverInitialisation{
-	
+
 	Commonmethods commonmethod=new Commonmethods(driver,wait);
-	
+
 	@BeforeSuite
 	public void setUp() throws Exception{
-	
+
 		initialization();
-		
+
 		commonmethod.startRecording();
 	}
-	
-	
+
+
 	@AfterMethod
 	public void screenShot(ITestResult result){
-	//using ITestResult.FAILURE is equals to result.getStatus then it enter into if condition
+		//using ITestResult.FAILURE is equals to result.getStatus then it enter into if condition
 		if(ITestResult.FAILURE==result.getStatus()){
 			try{
 				// To create reference of TakesScreenshot
@@ -40,25 +39,25 @@ public class TestClass extends DriverInitialisation{
 				// Call method to capture screenshot
 				File src=screenshot.getScreenshotAs(OutputType.FILE);
 				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss"); 
-				   LocalDateTime now = LocalDateTime.now();  
-				      File f1 = new File(CommonPaths.Screenshot_failure_path+dtf.format(now).toString()); 
-				      if (!f1.exists()){
-				    	  f1.mkdirs();
-				    	} 
+				LocalDateTime now = LocalDateTime.now();  
+				File f1 = new File(CommonPaths.Screenshot_failure_path+dtf.format(now).toString()); 
+				if (!f1.exists()){
+					f1.mkdirs();
+				} 
 				File DestFile=new File(CommonPaths.Screenshot_failure_path+dtf.format(now).toString()+"/"+result.getName()+".png");
 				FileUtils.copyFile(src, DestFile);
-				
+
 				//FileUtils.copyFile(src, new File("D:\\"+result.getName()+".png"));
 				System.out.println("Failure method name="+result.getName());
 				System.out.println("Successfully captured a screenshot");
 			}catch (Exception e){
 				System.out.println("Exception while taking screenshot "+e.getMessage());
 			} 
+		}
 	}
-	}
-	
-	
-	
+
+
+
 	@AfterSuite
 	public void destroyDriver() throws Exception{
 		commonmethod.stopRecording();

@@ -1,26 +1,20 @@
 package testcases.OES;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import base.CommonPaths;
-import base.Commonmethods;
-import pages.AdminPortalElements.Admin_login_page_Elements;
 import Snippet.TestClass;
 import Snippet.OES.OESLoginSnippet;
 import Snippet.OES.OESLogoutSnippet;
 import testcases.AdminPortal.LoginPageTest;
-import base.Commonmethods;
 public class OESloginpageTest extends TestClass{
 
 	public static Logger logger = Logger.getLogger(LoginPageTest.class);
-	
+
 
 	@Test(priority=1)
 	public void OES_portal_loginPageTitleTest() throws Exception{
-		
+
 		OESLoginSnippet.login();
 		OESLogoutSnippet.logout();
 	}

@@ -7,9 +7,9 @@
 	</listeners>
 
 
-	<test name="WTT App Test Cases">
+	<test name="WTT App Test Cases for subevent creation">
 		<classes>
-			<class name="testcases.AdminPortal.SubEventcreation"></class>
+			<class name="testcases.AdminPortal.OpenSubEventcreation"></class>
 
 		</classes>
 	</test>

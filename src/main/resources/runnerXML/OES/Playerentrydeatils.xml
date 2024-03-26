@@ -7,9 +7,9 @@
 	</listeners>
 
 
-	<test name="WTT App Test Cases">
+	<test name="WTT App Test Cases for OES player entry details">
 		<classes>
-			<class name="testcases.AdminPortal.LoginPageTest"></class>
+			<class name="testcases.OES.OESPlayerEntryDetailsClosedSubevents"></class>
 
 		</classes>
 	</test>

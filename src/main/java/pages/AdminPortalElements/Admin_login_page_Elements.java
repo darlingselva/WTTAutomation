@@ -8,23 +8,23 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Admin_login_page_Elements {
 
-	 WebDriver driver;
+	WebDriver driver;
 
 	public Admin_login_page_Elements(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
 	@FindBy(xpath = "//input[@name='username']")
-    public WebElement ittf_username;
-	
+	public WebElement ittf_username;
+
 	@FindBy(xpath = "//input[@name='password']")
-    public WebElement ittf_password;
-	
+	public WebElement ittf_password;
+
 	@FindBy(xpath = "//span[text()='Sign In']")
-    public WebElement ittf_Sign_button;
-	
+	public WebElement ittf_Sign_button;
+
 	@FindBy(xpath = "//div[text()='Logout']")
-    public WebElement ittf_logout_button;
-		
+	public WebElement ittf_logout_button;
+
 }

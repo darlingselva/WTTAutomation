@@ -36,10 +36,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.AssertJUnit;
 import org.openqa.selenium.OutputType;
 
-import org.apache.commons.io.FileUtils;
-import java.util.ResourceBundle;
-
-
 import java.awt.*;
 import org.monte.media.Format;
 import org.monte.media.math.Rational;
@@ -51,24 +47,24 @@ import util.SpecializedScreenRecorder;
 public class Commonmethods {
 	public WebDriver driver;
 	public WebDriverWait wait;
-	
+
 
 	public ScreenRecorder screenRecorder;
-public static ResourceBundle resource;
-	
+	public static ResourceBundle resource;
+
 	public static String properties_file="null";
-	
-	
+
+
 	public static String setpropertiesname(String properties_file1) {
 		return properties_file=properties_file1;
 	}
-	
+
 	public static String getvaluefrompropertiesfile(String value) {
 		resource=ResourceBundle.getBundle(properties_file);
-	     return resource.getObject(value).toString();
+		return resource.getObject(value).toString();
 	}
-	
-	
+
+
 	// Constructor
 	public Commonmethods(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
@@ -82,31 +78,31 @@ public static ResourceBundle resource;
 	}
 
 	public void doubleClick(By elementLocation) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		Actions action = new Actions(driver);
 		WebElement element = driver.findElement(elementLocation);
 		action.doubleClick(element).perform();
-		
+
 	}
 
 	public void doubleClick(WebElement Webelement) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(Webelement));
 		Actions action = new Actions(driver);
 		//WebElement element = driver.findElement(elementLocation);
 		action.doubleClick(Webelement).perform();
-		
+
 	}
 	public void click(WebElement webElement) {
-		
-//		wait.until(ExpectedConditions.elementToBeClickable(webElement));
+
+		//		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		webElement.click();
-		
+
 	}
 
 	public void clickWithoutSpinner(WebElement webElement) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		webElement.click();
 	}
@@ -121,67 +117,67 @@ public static ResourceBundle resource;
 
 	// Write Text
 	public void writeText(By elementLocation, String text) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		driver.findElement(elementLocation).sendKeys(text);
 	}
 
 	public void writeText(WebElement webElement, String text) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		webElement.sendKeys(text);
 	}
 
 	public void sendKeys(By elementLocation, String text) {
-		
+
 		driver.findElement(elementLocation).sendKeys(text);
 	}
 
 	public void sendKeys(By elementLocation, Keys text) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		driver.findElement(elementLocation).sendKeys(text);
 	}
 
 	public void sendEnter(By elementLocation) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		driver.findElement(elementLocation).sendKeys(Keys.ENTER);
 	}
 
 	public List<WebElement> findElements(By elementLocation) {
-		
+
 		return driver.findElements(elementLocation);
 	}
 
 	// Clear Text
 	public void clearText(By elementLocation) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		driver.findElement(elementLocation).clear();
 		driver.findElement(elementLocation).sendKeys(Keys.BACK_SPACE);
 	}
 
 	public void clearText(WebElement webElement) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		webElement.clear();
 	}
 
 	public void selectFromDropdown(By elementLocation, int index) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		Select dropDown = getDropdown(elementLocation);
 		dropDown.selectByIndex(index);
-		
+
 	}
 
 	public void selectFromDropdown(By elementLocation, String text) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(elementLocation));
 		Select dropDown = getDropdown(elementLocation);
 		dropDown.selectByVisibleText(text);
-		
+
 	}
 
 	// better selectize, uses values instead of text, needed for currencies
@@ -205,27 +201,27 @@ public static ResourceBundle resource;
 	}
 
 	public WebElement hoverOver(By elementLocation) {
-		
+
 		Actions action = new Actions(driver);
 		WebElement elementToHover = driver.findElement(elementLocation);
 		action.moveToElement(elementToHover).perform();
-		
+
 		return elementToHover;
 	}
 
 	public WebElement hoverOver(WebElement elm) {
-		
+
 		Actions action = new Actions(driver);
 		WebElement elementToHover = elm;
 		action.moveToElement(elementToHover).perform();
-		
+
 		return elementToHover;
 	}
 
 	public void dragAndDrop(By elementLocationFrom, By elementLocationTo) {
 		Actions act = new Actions(driver);
 		act.dragAndDrop(driver.findElement(elementLocationFrom), driver.findElement(elementLocationTo)).build()
-				.perform();
+		.perform();
 	}
 
 	public void dragAndDrop(WebElement from, WebElement to) {
@@ -273,7 +269,7 @@ public static ResourceBundle resource;
 	}
 
 	public void selectFromDropdown(WebElement webElement, String text) {
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		Select dropDown = getDropdown(webElement);
 		dropDown.selectByVisibleText(text);
@@ -309,7 +305,7 @@ public static ResourceBundle resource;
 		}
 		AssertJUnit.assertTrue(searchSuccess);
 	}
-	
+
 	public void searchDropdownByFilter(By elementLocation, String elementName, By dropdownElementClass,
 			By filterLocation) {
 		click(elementLocation);
@@ -532,7 +528,7 @@ public static ResourceBundle resource;
 		if (m.find()) {
 			targetFileRepository = m.group(1);
 		} else { // If targetFileLocation is not in form C:/path/to/file.ext, defaulting to C:/QA
-					// Scripts/PROJECTDIRECTORY/downloads
+			// Scripts/PROJECTDIRECTORY/downloads
 			targetFileRepository = System.getProperty("user.dir") + "\\downloads";
 			System.out.println("File path " + targetFileLocation + " could not be parsed. Default of "
 					+ targetFileRepository + " will be used");
@@ -759,7 +755,7 @@ public static ResourceBundle resource;
 	public void switchToDefaut() {
 		driver.switchTo().defaultContent();
 	}
-	
+
 	public void clickOnTabElement(String xpathLocaton) {
 		// Switch to tab
 		String originalHandle = driver.getWindowHandle();
@@ -772,54 +768,54 @@ public static ResourceBundle resource;
 		}
 		driver.switchTo().window(originalHandle);
 	}
-	
+
 	public String exeScript(String script) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;		
 		String psudoCssValue =jse.executeScript(script).toString();
 		return psudoCssValue;
 	}	
-	
+
 	public void takescreenshoot() throws IOException {
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-		   LocalDateTime now = LocalDateTime.now();  
-		      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
-		      if (!f1.exists()){
-		    	  f1.mkdirs();
-		    	}
-		      
-		      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
-		      LocalDateTime now1 = LocalDateTime.now();  
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+		LocalDateTime now = LocalDateTime.now();  
+		File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+		if (!f1.exists()){
+			f1.mkdirs();
+		}
+
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		LocalDateTime now1 = LocalDateTime.now();  
 		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
-	
+
 	public void takescreenshoot(String screenshotname) throws IOException {
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-		   LocalDateTime now = LocalDateTime.now();  
-		      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
-		      if (!f1.exists()){
-		    	  f1.mkdirs();
-		    	}
-		      
-		     // DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
-		     // LocalDateTime now1 = LocalDateTime.now();  
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+		LocalDateTime now = LocalDateTime.now();  
+		File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+		if (!f1.exists()){
+			f1.mkdirs();
+		}
+
+		// DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		// LocalDateTime now1 = LocalDateTime.now();  
 		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+screenshotname.toString()+".png");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
-	
-	
+
+
 	public void Sendkey(WebElement  objName,String key) throws Exception {
-		
+
 		wait.until(ExpectedConditions.visibilityOf(objName));
-       
+
 		objName.sendKeys(key);
-       
-    }
-	
+
+	}
+
 	/*
 	public void wait_timeunit(int waittime,String TU) throws InterruptedException {
 		TimeUnit time = null;
@@ -832,7 +828,7 @@ public static ResourceBundle resource;
 			time=time.MINUTES;
 			time.sleep(waittime);
 			break;
-			
+
 		case "MILLISECONDS":
 			time=time.MILLISECONDS;
 			time.sleep(waittime);
@@ -845,97 +841,97 @@ public static ResourceBundle resource;
 			time=time.SECONDS;
 			time.sleep(waittime);
 			break;
-		
+
 		}
 	}
-	*/
+	 */
 	public void wait(int waittime) throws InterruptedException {
 		TimeUnit time=TimeUnit.SECONDS;
 		time.sleep(waittime);
-		
-	}
-	
-	
-	public  void startRecording() throws Exception
-    {
-		File srcfile = new File(CommonPaths.Video_recording_path);
-        
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = screenSize.width;
-        int height = screenSize.height;
-                      
-        Rectangle captureSize = new Rectangle(0,0, width, height);
-                      
-      GraphicsConfiguration gc = GraphicsEnvironment
-         .getLocalGraphicsEnvironment()
-         .getDefaultScreenDevice()
-         .getDefaultConfiguration();
 
-     this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
-         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
-         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-              CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-              DepthKey, 24, FrameRateKey, Rational.valueOf(15),
-              QualityKey, 1.0f,
-              KeyFrameIntervalKey, 15 * 60),
-         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
-              FrameRateKey, Rational.valueOf(30)),
-         null, srcfile, "MyVideo");
-    this.screenRecorder.start();
-                         
-//    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-//	   LocalDateTime now = LocalDateTime.now();  
-//	      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
-//	      if (!f1.exists()){
-//	    	  f1.mkdirs();
-//	    	}
-//	      
-//	      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
-//	      LocalDateTime now1 = LocalDateTime.now();  
-//	File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
-//	FileUtils.copyFile(srcfile, DestFile);
-     
-    }
-	
+	}
+
+
+	public  void startRecording() throws Exception
+	{
+		File srcfile = new File(CommonPaths.Video_recording_path);
+
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int width = screenSize.width;
+		int height = screenSize.height;
+
+		Rectangle captureSize = new Rectangle(0,0, width, height);
+
+		GraphicsConfiguration gc = GraphicsEnvironment
+				.getLocalGraphicsEnvironment()
+				.getDefaultScreenDevice()
+				.getDefaultConfiguration();
+
+		this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
+				new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
+				new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+						CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+						DepthKey, 24, FrameRateKey, Rational.valueOf(15),
+						QualityKey, 1.0f,
+						KeyFrameIntervalKey, 15 * 60),
+				new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
+						FrameRateKey, Rational.valueOf(30)),
+				null, srcfile, "MyVideo");
+		this.screenRecorder.start();
+
+		//    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
+		//	   LocalDateTime now = LocalDateTime.now();  
+		//	      File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
+		//	      if (!f1.exists()){
+		//	    	  f1.mkdirs();
+		//	    	}
+		//	      
+		//	      DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
+		//	      LocalDateTime now1 = LocalDateTime.now();  
+		//	File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
+		//	FileUtils.copyFile(srcfile, DestFile);
+
+	}
+
 	public void scrolldown(WebElement element) {
 		JavascriptExecutor je = (JavascriptExecutor)driver;
 		je.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
-    public void stopRecording() throws Exception
-    {
-      this.screenRecorder.stop();
-    }
-	
-    public void jclick(WebElement element) {
-    	JavascriptExecutor executor = (JavascriptExecutor)driver;
-    	executor.executeScript("arguments[0].click();", element);
-    }
-    
-    
-    public void checkelementvisibility(WebElement element) {
-    	try
-    	{
-    		if(element.isDisplayed()==true) {
-    			
-    		}
-    		else {
-    			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-    		}
-    	}
+	public void stopRecording() throws Exception
+	{
+		this.screenRecorder.stop();
+	}
+
+	public void jclick(WebElement element) {
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+	}
+
+
+	public void checkelementvisibility(WebElement element) {
+		try
+		{
+			if(element.isDisplayed()==true) {
+
+			}
+			else {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+			}
+		}
 		catch(NoSuchElementException e) {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		}
-    	catch(Exception e) {
-    		
-    		System.out.println(e.getMessage());
-    	}
+		catch(Exception e) {
+
+			System.out.println(e.getMessage());
+		}
 	}
 
-//	public static void main(String[] args) {
-//		ResourceBundle resource = ResourceBundle.getBundle("config");
-//		
-//		//resource.getStringArray("url");
-//		System.out.println(resource.getObject("username"));
-//	}
+	//	public static void main(String[] args) {
+	//		ResourceBundle resource = ResourceBundle.getBundle("config");
+	//		
+	//		//resource.getStringArray("url");
+	//		System.out.println(resource.getObject("username"));
+	//	}
 }

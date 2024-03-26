@@ -4,16 +4,28 @@
   <listeners>
     <listener class-name="ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test name="WTT App Test Cases(failed)">
+  <test parallel="classes" name="WTT App Test Cases1(failed)">
     <classes>
-      <class name="testcases.AdminPortal.SubEventcreation">
+      <class name="testcases.OES.OESPlayerEntryDetailsClosedSubevents">
         <methods>
-          <include name="subcrateevent"/>
+          <include name="screenShot"/>
+          <include name="OEsplayerentrydetailsclosedevents"/>
+          <include name="setUp"/>
+          <include name="destroyDriver"/>
+        </methods>
+      </class> <!-- testcases.OES.OESPlayerEntryDetailsClosedSubevents -->
+    </classes>
+  </test> <!-- WTT App Test Cases1(failed) -->
+  <test parallel="classes" name="WTT App Test Cases2(failed)">
+    <classes>
+      <class name="testcases.OES.OESPlayerEntryDetailsOpenSubevents">
+        <methods>
+          <include name="OEsplayerentrydetailsopensubevents"/>
           <include name="screenShot"/>
           <include name="setUp"/>
           <include name="destroyDriver"/>
         </methods>
-      </class> <!-- testcases.AdminPortal.SubEventcreation -->
+      </class> <!-- testcases.OES.OESPlayerEntryDetailsOpenSubevents -->
     </classes>
-  </test> <!-- WTT App Test Cases(failed) -->
+  </test> <!-- WTT App Test Cases2(failed) -->
 </suite> <!-- Failed suite [WTT Application Test Automation Test Suite] -->
